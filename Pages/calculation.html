@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>7k Calculations</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/calculation.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    <script defer src="../js/calculation.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!---------------------------->
+        <!--     Navigation Bar     -->
+        <!---------------------------->
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <a href="../index.html">
+                        <div class="homepage-icon"></div>
+                    </a>
+                </li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="goals.html">Goals</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="calculation.html">Calculation</a></li>
+            </ul>
+        </nav>
+
+        <!------------------------------------------->
+        <!--        Calculation of total pp        -->
+        <!------------------------------------------->
+        <h1>Total pp Calculation (Up to 100 Scores)</h1>
+
+        <fieldset class="formula">
+            <legend>Total pp</legend>
+            <p>Total pp = \( \frac{pp(1 - 0.95^n)}{0.05} \), Assuming every play has the same pp</p>
+            <p>Where <code style="color: var(--pp);">pp</code> is the pp of every play</p>
+            <p>and <code style="color: var(--quantity);">n</code> is the number of plays</p>
+        </fieldset>
+
+        <div class="value-display">
+
+            <label>pp of play : </label>
+            <input class="value-input" type="number" id="ppInput" placeholder="Enter pp value">
+
+            <p class="subsection">Total pp : <span id="ppTotal">0.00pp</span></p>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <!---------------------------------------------------->
+        <!--      Calculation of specific pp weightage      -->
+        <!---------------------------------------------------->
+        <h1>Specific pp Weightage Calculation</h1>
+
+        <fieldset class="formula">
+            <legend>Formula</legend>
+            <p>Specific pp Weightage = \( pp \cdot 0.95^{n - 1} \)</p>
+            <p>Where <code style="color: var(--pp);">pp</code> is the pp of the song</p>
+            <p>and <code style="color: var(--quantity);">n</code> is the position of the song (1st song would be n = 1)</p>
+        </fieldset>
+
+        <div class="value-display">
+            
+            <div>
+                <label>pp of play : </label>
+                <input class="value-input" id="ppScore" type="number" placeholder="Enter pp value">
+            </div>
+
+            <div>
+                <label>Position of Score : </label>
+                <input class="value-input" id="scorePos" type="number" placeholder="Enter Score Position">
+            </div>
+
+            <p class="subsection">Score pp Weightage : <span id="ppWeight">0.00pp</span></p>
+            
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------------------------->
+        <!--     Calculation of Score Accuracy     -->
+        <!------------------------------------------->
+        <h1 id="AccuracyCalculation">Score Accuracy Calculation</h1>
+
+        <fieldset class="formula">
+            <legend>Score V1</legend>
+            <p>\[ \frac{300N_{(Marvellous + Perfect)} + 200N_{Great} + 100N_{Good} + 50N_{Bad}}{300N_{Total}} \]</p>
+            <p>Where <code style="color: var(--quantity);">N</code> is the number of said Judgement Type.</p>
+        </fieldset>
+
+        <fieldset class="formula">
+            <legend>Score V2</legend>
+            <p>\[ \frac{305N_{Marvellous} + 300N_{Perfect} + 200N_{Great} + 100N_{Good} + 50N_{Bad}}{305N_{Total}} \]</p>
+            <p>Where <code style="color: var(--quantity);">N</code> is the number of said Judgement Type.</p>
+        </fieldset>
+
+        <div class="value-display">
+
+            <div>
+                <label class="marvellous">Marvellous : </label>
+                <input class="value-input" id="marv" type="text" inputmode="numeric" placeholder="Marvellous Count">
+            </div>
+
+            <div>
+                <label class="perfect">Perfect : </label>
+                <input class="value-input" id="perf" type="number" placeholder="Perfect Count">
+            </div>
+
+            <div>
+                <label class="great">Great : </label>
+                <input class="value-input" id="great" type="number" placeholder="Great Count">
+            </div>
+
+            <div>
+                <label class="good">Good : </label>
+                <input class="value-input" id="good" type="number" placeholder="Good Count">
+            </div>
+
+            <div>
+                <label class="bad">Bad : </label>
+                <input class="value-input" id="bad" type="number" placeholder="Bad Count">
+            </div>
+
+            <div>
+                <label class="miss">Miss : </label>
+                <input class="value-input" id="miss" type="number" placeholder="Miss Count">
+            </div>
+
+            <span>Score V2</span>
+            <label class="switch">
+                <input type="checkbox" id="scoreV2">
+                <span class="slider"></span>
+            </label>
+
+            <p class="subsection">Score Accuracy : <span id="scoreAcc">0.00%</span></p>
+            <p>Ratio : <span id="scoreRatio">0.00</span></p>
+
+         </div>
+
+    </div>
+
+</body>
+
+
+</html>

@@ -1,0 +1,278 @@
+/* ============================
+        GLOBAL VARIABLES 
+============================= */
+:root {
+    --pp: rgb(161, 116, 136);
+    --quantity: rgb(163, 143, 152);
+    --contrast: rgb(180, 140, 255);
+    --important: rgb(255, 110, 110);
+    --concept: rgb(120, 190, 255);
+
+    --accent-brown: 205, 163, 112;
+    --accent-brown-dark: 179, 138, 90;
+    --accent-brown-light: 226, 187, 142;
+    --accent-highlight: rgba(165, 120, 80, 0.5);
+}
+
+
+
+
+/* ============================
+        MAIN PAGE SETUP 
+============================= */
+html, body { /* Main configuration for the background */
+    height: 100%;
+    margin: 0;
+    background: url("../Images/Background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    color: rgb(220, 220, 220);
+    font-family: "Arial Rounded MT";
+    scroll-behavior: smooth;
+}
+
+p { /* Removes Margin space from all p elements */
+    margin: 0;
+    line-height: 1.2em;
+}
+
+h1 { /* Makes h1 elements a centered section header */
+    font-size: 40px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+h2 { /* Makes h2 elements a content header */
+    font-size: 32px;
+    margin: 0 0.75rem;
+}
+
+h3 {
+    font-size: 26px;
+    margin: 0;
+}
+
+.default-list li::marker {
+    content: "◆ ";
+    color: rgb(var(--accent-brown-light));
+}
+
+a {
+    color: rgb(var(--accent-brown));
+}
+
+a:focus {
+    color: rgb(var(--accent-brown-dark));
+}
+
+mark {
+    background: var(--accent-highlight);
+    color: rgb(220, 220, 220);
+    border-radius: 3px;
+}
+
+.target-highlight {
+    animation: navigation-highlight 2s ease;
+}
+
+@keyframes navigation-highlight {
+    from {background: rgb(100, 80, 58);}
+    to {background: transparent;}
+}
+
+::selection { /* Changes the color of selection highlight */
+    background: rgb(130, 188, 255, 0.5);
+}
+
+code {
+    padding: 0 7.5px 2px;
+    background: rgb(30, 30, 30);
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+}
+
+iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    border: none;
+}
+
+/* ============================
+        CENTRAL CONTAINER
+============================= */
+
+.container { /* Creates a centered container on the page for content */
+    width: 75%;
+    max-width: 1000px;
+    min-height: 100%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    background: rgba(30, 30, 30, 0.9);
+    border-left: 2px solid rgb(127, 127, 127);
+    border-right: 2px solid rgb(127, 127, 127);
+    backdrop-filter: blur(5px);
+}
+
+/* ============================
+        NAVIGATION BAR
+============================= */
+
+.navbar { /* Creates the Navigation Bar's box & organizes items inside */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 75px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: rgb(206, 90, 97);
+    box-shadow: 0 0 20px inset rgba(0, 0, 0, 0.5);
+}
+
+.navbar a:not(:has([class])) { /* Applies Default design to items without a class */
+    position: relative;
+    color: white;
+    opacity: 0.75;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: "Arial Rounded MT";
+    font-weight: bold;
+    transition: opacity 0.25s ease;
+}
+
+.navbar a:not(:has([class]))::after { /* Creates an underline for the items (initially hidden) */
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    top: 100%;
+    background: white;
+    border-radius: 99999px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s ease;
+}
+
+.navbar a:not(:has([class])):hover { /* Applies Default hover effect to items without a class */
+    opacity: 1;
+}
+
+.navbar a:not(:has([class])):hover::after { /* Creates an underline animation for the items */
+    transform: scaleX(1);
+}
+
+.homepage-icon { /* Creates the Icon for homepage (My pfp) */
+    display: block;
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    background: url("../Images/Yoshimi_pfp.jpg") center no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.homepage-icon:hover { /* Hover effect for homepage Icon */
+    box-shadow: 0 0 0 3px white;
+}
+
+/* ============================
+            BANNERS
+============================= */
+
+.banner { /* Makes banner struture, used for <img> */
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    mask: linear-gradient(
+        to bottom,
+        black 50%,
+        rgba(0, 0, 0, 0.9) 60%,
+        rgba(0, 0, 0, 0.75) 70%,
+        rgba(0, 0, 0, 0.55) 80%,
+        rgba(0, 0, 0, 0.3) 90%,
+        transparent 100%);
+}
+
+.page-title {
+    display: inline-block;
+    position: relative;
+    font-size: 40px;
+    font-family: "Arial Rounded MT";
+    margin: -20px 0 50px 50px;
+    white-space: nowrap;
+    animation: reveal 0.5s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+}
+
+.page-title::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: white;
+    animation: swipe 0.5s cubic-bezier(0.7, 0, 0.3, 1) forwards, shrink 0.25s cubic-bezier(1, 0, 1, 1) 0.5s forwards;
+}
+
+@keyframes reveal {
+    0% {clip-path: inset(0 calc(100% - 4px) 0 0);}
+    100% {clip-path: inset(0 -10px 0 0);}
+}
+
+@keyframes swipe {
+    0% {left: 0%;}
+    100% {left: calc(100% + 6px);}
+}
+
+@keyframes shrink {
+    0% {transform: scaleY(1);}
+    100% {transform: scaleY(0);}
+}
+
+/* ============================
+         CONTENT SPACE
+============================= */
+
+.content-box {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 0 0.75em;
+    margin: 0.5em 0 1.5em 0.75em;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.content-box::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    background: rgb(var(--accent-brown-light));
+    border-radius: 99999px;
+}
+
+.subsection {
+    margin-top: 1rem;
+}
+
+.divider {
+    display: block;
+    width: 90%;
+    height: 2.5px;
+    margin: 20px auto;
+    background: rgb(130, 130, 130);
+    border-radius: 99999px;
+}

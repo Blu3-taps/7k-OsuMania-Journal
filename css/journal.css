@@ -1,0 +1,384 @@
+/* ============================
+            CALENDER
+============================= */
+
+.date-carousel {
+    width: 100%;
+    aspect-ratio: 3 / 1;
+    padding: 4rem 0;
+    perspective-origin: center center;
+    overflow: hidden;
+}
+
+.selector-track {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    width: max-content;
+    height: 100%;
+    transform-style: preserve-3d;
+    pointer-events: none;
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-shrink: 0;
+    width: 125px;
+    height: 250px;
+    padding: 1rem 0.5rem;
+    color: rgb(225, 225, 225);
+    background: linear-gradient(to bottom, rgba(101, 139, 227, 0.3), rgba(195, 239, 249, 0.3));
+    border-radius: 0 10px 0 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    user-select: none;
+    pointer-events: all;
+    transition: box-shadow 0.1s ease;
+}
+
+.date:hover {
+    box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.75);
+}
+
+.date-period {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.date-period::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 0.125rem;
+    top: 110%;
+    left: 50%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+    transform: translateX(-50%);
+}
+
+.date-title {
+    font-size: 0.7rem;
+    font-style: italic;
+    opacity: 0.8;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.date-carousel.dragging .date {
+    pointer-events: none;
+}
+
+/* ============================
+          CHART SIZING
+============================= */
+.chart-container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+/* ============================
+      WEEK TITLE AND STATS
+============================= */
+
+.week-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 75%;
+    height: max-content;
+    margin: 1rem auto;
+}
+
+.week-title {
+    color: rgb(225, 225, 225);
+    font-size: 2rem;
+}
+
+.week-subtitle {
+    color: rgb(170, 187, 211);
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.week-stats-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.week-stat {
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.week-stat.pp {
+    background: rgba(100, 160, 255, 0.18);
+    color: rgb(144, 188, 255);
+}
+
+.week-stat.SR {
+    background: rgba(255, 180, 60, 0.18);
+    color: rgb(255, 204, 112);
+}
+
+
+/* ============================
+            CALLOUT
+============================= */
+
+.callout { /* Styles a callout for journal entries */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    width: 75%;
+    height: 50px;
+    margin: 0 auto 30px;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    color: white;
+    text-shadow: 0 0 2.5px rgba(0, 0, 0, 1);
+    border-radius: 4px;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: height 0.5s cubic-bezier(0, 1, 1, 1);
+    z-index: 0;
+}
+
+.callout:hover { /* Outline effect when callout is hovered */
+    box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.75);
+}
+
+.callout-title { /* The title of the callout */
+    display: flex;
+    align-items: center;
+    color: white;
+    text-shadow: 0 0 2.5px rgba(0, 0, 0, 1);
+    font-size: 1.77rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.callout-title::before { /* The Callout Icon before the Callout Title */
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+    background: var(--callout-icon);
+}
+
+.callout-title::after { /* Makes a pointer arrow after the Callout Title */
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: rgba(34, 37, 38, 0.4);
+    margin-left: 0.5rem;
+    clip-path: path("M 8 2 S 8 0, 10 0 L 18 8 S 20 10, 18 12 L 10 20 S 8 20, 8 18 L 16 10 Z");
+    transition: transform 0.5s cubic-bezier(0, 1, 1, 1);
+}
+
+.callout.opened .callout-title::after { /* Rotate the pointer arrow when callout is opened */
+    transform: rotate(90deg);
+}
+
+.amazing { /* Callout color for amazing sessions */
+    background: linear-gradient(
+        135deg,
+        rgb(25, 222, 251),
+        rgb(79, 123, 253),
+        rgb(244, 178, 247)
+    );
+    --callout-icon: url("../svgs/sparkles_icon.svg");
+}
+
+.amazing::after { /* Shine effect for the Callout with amazing status */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.75) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-20deg);
+    animation: shine 4s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes shine { /* Shine animation */
+    0% {left: -150%;}
+    60% {left: 150%;}
+    100% {left: 150%;}
+}
+
+.good { /* Callout color for good sessions */
+    background: rgb(36, 224, 101);
+    --callout-icon: url("../svgs/thumbs-up_icon.svg");
+}
+
+.decent { /* Callout color for decent sessions */
+    background: rgb(123, 240, 143);
+    --callout-icon: url("../svgs/smile_icon.svg");
+}
+
+.fair { /* Callout color for fair sessions */
+    background: rgb(240, 231, 130);
+    --callout-icon: url("../svgs/meh_icon.svg");
+}
+
+.bad { /* Callout color for bad sessions */
+    background: rgb(240, 181, 108);
+    --callout-icon: url("../svgs/frown_icon.svg");
+}
+
+.terrible { /* Callout color for terrible sessions */
+    background: rgb(240, 105, 105);
+    --callout-icon: url("../svgs/thumbs-down_icon.svg");
+}
+
+.unplayable { /* Callout color for unplayable sessions */
+    background: rgb(235, 20, 20);
+    --callout-icon: url("../svgs/x_icon.svg");
+}
+
+.rest { /* Callout color for rest days */
+    background: rgb(57, 232, 127);
+    --callout-icon: url("../svgs/heart-pulse_icon.svg");
+}
+
+.song-title { /* Design the Title of the song */
+    display: inline-block;
+    color: white;
+    font-size: 1.75rem;
+    font-family: "Arial Rounded MT";
+    cursor: default;
+    user-select: none;
+}
+
+.song-title::after { /* Adds the Star Rating of the song */
+    content: "★" attr(data-difficulty);
+    color: rgb(var(--diff-text-color)); /* Handled by Javascript */
+    background: rgb(var(--diff-color)); /* Handled by Javascript */
+    font-size: 20px;
+    font-family: "Torus Notched";
+    border-radius: 15px;
+    padding: 0 15px 2.5px 10px;
+    margin: 0 0 0 10px;
+    text-shadow: none;
+}
+
+.play-stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+    height: max-content;
+    padding: 1rem;
+    background: radial-gradient(circle at 0 0, rgba(44, 44, 44, 0.75), rgb(21, 21, 21));
+    font-size: 1.25rem;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.stats::before {
+    content: var(--stat-type);
+    display: block;
+}
+
+.stats.score {
+    --stat-type: "Score";
+}
+
+.stats.accuracy {
+    --stat-type: "Accuracy";
+}
+
+.stats.max-combo {
+    --stat-type: "Max Combo";
+}
+
+.stats.pp {
+    --stat-type: "Performance Points";
+}
+
+.callout-section {
+    display: block;
+    width: 100%;
+    height: max-content;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.callout-section::before {
+    content: var(--callout-section-header);
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.callout-section.thoughts p {
+    font-size: 1.5rem;
+    padding: 5px 0;
+    user-select: none;
+    cursor: default;
+}
+
+.callout-section.session-stats p {
+    position: relative;
+    width: max-content;
+    margin: 0 auto;
+    font-size: 1.75rem;
+    padding: 5px 2rem;
+    user-select: none;
+    cursor: default;
+}
+
+.callout-section.session-stats p::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), transparent);
+}
+
+.callout-section.thoughts p::before {
+    content: "✦ ";
+    color: rgb(var(--accent-brown));
+}
+
+.callout-section.thoughts p:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.thoughts {
+    --callout-section-header: "Thoughts";
+}
+
+.session-stats {
+    --callout-section-header: "Session Stats";
+}
+
+.gain {
+    color: rgb(100, 255, 100);
+}

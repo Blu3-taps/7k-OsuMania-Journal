@@ -1,0 +1,116 @@
+/* ============================
+        FORMULA DISPLAY
+============================= */
+
+.formula { /* Used for <fieldset> to style it */
+    display: block;
+    width: 75%;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* ============================
+        INPUT DESIGN
+============================= */
+
+.value-display {
+    display: block;
+    width: 75%;
+    height: max-content;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.value-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 2px;
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Arial Rounded MT";
+}
+
+.value-input:focus {
+    border-bottom: 2px solid rgb(150, 213, 255);
+}
+
+.value-input::-webkit-inner-spin-button,
+.value-input::-webkit-outer-spin-button {
+    appearance: none;
+}
+
+.switch {
+    display: inline-flex;
+    align-items: center;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    width: 40px;
+    height: 20px;
+    background: rgb(75, 75, 75);
+    border-radius: 99999px;
+}
+
+.slider::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    aspect-ratio: 1 / 1;
+    left: 2px;
+    background: rgb(200, 200, 200);
+    border-radius: 50%;
+    transition: transform 0.25s ease;
+}
+
+.switch input:checked + .slider {
+    background: rgb(50, 129, 255);
+}
+
+.switch input:checked + .slider::after {
+    transform: translateX(20px);
+}
+
+/* ============================
+      JUDGEMENT COLORING
+============================= */
+
+.marvellous { /* Marvellous Judgement Color */
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 12.5px rgb(255, 255, 255);
+}
+
+.perfect { /* Perfect Judgement Color */
+    color: rgb(244,219,159);
+    text-shadow: 0 0 12.5px rgb(244,219,159);
+}
+
+.great { /* Great Judgement Color */
+    color: rgb(104,198,106);
+    text-shadow: 0 0 12.5px rgb(104,198,106);
+}
+
+.good { /* Good Judgement Color */
+    color: rgb(28,177,243);
+    text-shadow: 0 0 12.5px rgb(28,177,243);
+}
+
+.bad { /* Bad Judgement Color */
+    color: rgb(205,8,208);
+    text-shadow: 0 0 12.5px rgb(205,8,208);
+}
+
+.miss { /* Miss Judgement Color */
+    color: rgb(244,44,44);
+    text-shadow: 0 0 12.5px rgb(244,44,44);
+}

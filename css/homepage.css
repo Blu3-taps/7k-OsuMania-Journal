@@ -1,0 +1,171 @@
+/* ===========================
+        PROFILE SETUP
+============================ */
+
+.profile-banner { /* Creates the Profile's Banner */
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 0.25;
+    background-image: url("../Images/Yoshimi_Banner.jpg");
+    background-size: cover;
+    background-position: 0 25%;
+}
+
+.profile-picture { /* Creates the Profile Picture */
+    position: absolute;
+    width: 120px;
+    aspect-ratio: 1 / 1;
+    border-radius: 35%;
+    left: 7.5%;
+    top: 80%;
+    background: url("../Images/Yoshimi_pfp.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+    z-index: 2;
+    will-change: transform;
+    transition: transform 0.25s ease, filter 0.5s ease;
+}
+
+.profile-picture::after { /* Creates a Snore Bubble for the Profile Picture */
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 60%;
+  right: 47.5%;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px 50px 5px 50px;
+  background: rgba(50, 150, 255, 0.1);
+  box-shadow: inset 0 0 10px rgba(100, 150, 255, 0.75);
+  transform-origin: bottom right;
+  animation: snore 5s ease-in-out infinite;
+}
+
+@keyframes snore { /* Creates the Snoring animation for the Snore Bubble */
+  0% {transform: scale(1);}
+  50% {transform: scale(1.25);}
+  100% {transform: scale(1);}
+}
+
+.profile-picture:hover { /* Profile Picture hover animation */
+  transform: rotate(5deg);
+  filter: grayscale(75%);
+}
+
+.profile-bar { /* Creates a little Display Bar for Profile */
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 85px;
+    background: rgb(150, 150, 150);
+}
+
+.profile-username { /* Creates the Profile Username */
+    display: block;
+    position: absolute;
+    left: 22.5%;
+    top: 5%;
+    background: linear-gradient(to right, white, rgb(254, 240, 203), rgb(248,161,178));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.75));
+    font-size: 32px;
+    font-family: "Torus Notched";
+    font-weight: bold;
+    cursor: default;
+}
+
+.profile-subtext { /* Creates text below Profile Username */
+    display: block;
+    position: relative;
+    width: 65%;
+    height: 30px;
+    left: 22.5%;
+    top: 50%;
+    overflow: hidden;
+}
+
+.profile-subtext::before { /* Display Journey Start date (Initially hidden) */
+  content: "Started on 16 June 2025💫";
+  position: absolute;
+  font-size: 20px;
+  font-family: "Torus Notched";
+  background: linear-gradient(to right, rgb(255, 182, 193), rgb(255, 213, 128), rgb(135, 206, 235));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 2.5px rgba(0, 0, 0, 1));
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.profile-subtext::after { /* Displays motive and reason for Journey (Default display) */
+  content: "Journey to becoming the 7k World Champion👑";
+  position: absolute;
+  left: 5px;
+  font-size: 20px;
+  font-family: "Torus Notched";
+  background: linear-gradient(to right, rgb(255, 220, 160), rgb(255, 180, 170), rgb(220, 160, 255));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 2.5px rgba(0, 0, 0, 1));
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.profile-username:hover + .profile-subtext::before { /* Slides subtext in from the left */
+  transform: translateX(calc(0% + 5px));
+  opacity: 1;
+}
+
+.profile-username:hover + .profile-subtext::after { /* Slides subtext out to the right */
+  transform: translateX(110%);
+  opacity: 0;
+}
+
+/* ===========================
+       MAIN PAGE CONTENT
+============================ */
+
+.manual-button {
+  background: black;
+  color: white;
+  border-radius: 99999px;
+  border: 1px solid rgb(255, 128, 82);
+  box-shadow: 0 0 5px rgb(206, 90, 97);
+  padding: 0 5px;
+  font-size: 20px;
+  font-family: 'Arial Rounded MT';
+}
+
+.pop-up {
+  display: block;
+  position: fixed;
+  opacity: 0;
+  width: 50%;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  background: rgb(45, 45, 45);
+  border-radius: 20px;
+  border: 2px solid rgb(20, 20, 20);
+}
+
+.keybind-display {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    padding: 0 12px;
+    margin: 10px 0 30px;
+}
+
+.keybinds {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    aspect-ratio: 1 / 1;
+    border-radius: 20%;
+    background: rgb(43, 43, 43);
+}

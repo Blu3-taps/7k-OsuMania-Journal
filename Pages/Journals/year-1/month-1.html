@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>7k Year 1</title>
+    <title>7k Month 1</title>
     <link rel="stylesheet" href="../../../css/global.css">
     <link rel="stylesheet" href="../../../css/journal.css">
 </head>
@@ -31,8 +31,13 @@
         <img class="banner" src="../../../Images/Yoimiya_Banner.jpg">
         <div class="page-title">Osu!Mania 7k Month 1</div>
 
+        <div class="chart-selector">
+            <button class="chart-type" onclick="switchChart('pp')">Total pp</button>
+            <button class="chart-type" onclick="switchChart('sr')">Star Range(★)</button>
+        </div>
+
         <div class="chart-container">
-            <canvas id="pp-chart"></canvas>
+            <canvas id="chart"></canvas>
         </div>
 
         <div class="divider"></div>
@@ -282,6 +287,53 @@
             </div>
         </div>
 
+        <!-- 23 June 2025 -->
+        <div class="callout decent">
+            <p class="callout-title">23 June 2025</p>
+
+            <div>
+                <p class="song-title" data-difficulty="3.37">Starlight Wonder</p>
+                <iframe
+                    src="https://www.youtube.com/embed/a2nQJULKvvQ?si=7F8mbSK-09AlsHvw"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">877,472</p>
+                    <p class="stats accuracy">97.95%</p>
+                    <p class="stats max-combo">832x</p>
+                    <p class="stats pp">88pp</p>
+                </div>
+            </div>
+
+            <div>
+                <p class="song-title" data-difficulty="3.69">Electroman Adventures</p>
+                <iframe
+                    src="https://www.youtube.com/embed/TN_-l3W-AUM?si=TpDH76ateUMzXz5L"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">884,963</p>
+                    <p class="stats accuracy">98.07%</p>
+                    <p class="stats max-combo">510x</p>
+                    <p class="stats pp">108pp (New top/First 100pp)</p>
+                </div>
+            </div>
+
+            <div class="callout-section thoughts">
+                <p>Felt kinda tired and sleepy today</p>
+                <p>Decent Session, did well</p>
+                <p>Visible improvement in roll smoothness</p>
+                <p>I need to improve Reading Stamina & Finger Control</p>
+            </div>
+
+            <div class="callout-section session-stats">
+                <p>Total 7k pp: 1992pp (<span class="gain">+102pp</span>)</p>
+                <p>Session Playtime: ???</p>
+            </div>
+        </div>
+
         <div class="divider"></div>
 
         <!------------------------>
@@ -333,42 +385,8 @@
             </div>
         </div>
 
-        <div class="divider"></div>
-
-        <div class="callout amazing">
-            <p class="callout-title">Amazing</p>
-        </div>
-
-        <div class="callout good">
-            <p class="callout-title">Good</p>
-        </div>
-
-        <div class="callout decent">
-            <p class="callout-title">Decent</p>
-        </div>
-
-        <div class="callout fair">
-            <p class="callout-title">Fair</p>
-        </div>
-
-        <div class="callout bad">
-            <p class="callout-title">Bad</p>
-        </div>
-
-        <div class="callout terrible">
-            <p class="callout-title">Terrible</p>
-        </div>
-
-        <div class="callout unplayable">
-            <p class="callout-title">Unplayable</p>
-        </div>
-
-        <div class="callout rest">
-            <p class="callout-title">Rest</p>
-        </div>
-
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <script src="../../../js/chart.min.js"></script>
     <script src="../../../js/journal.js"></script>
 </body>

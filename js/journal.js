@@ -10,7 +10,7 @@ const carousel = document.querySelector(".date-carousel");
 const track = document.querySelector(".selector-track");
 
 const GAP = 64;
-DRAG_THRESHOLD = 5;
+const DRAG_THRESHOLD = 5;
 
 let originalDates = [];
 let snapOffset = 0;
@@ -65,7 +65,7 @@ function render3D() { // Applies 3D to the dates position on the z-axis based on
     })
 }
 
-function updatePerspective() {
+function updatePerspective() { // Sets the perspective based on the carousel's width
     carousel.style.perspective = `${carousel.offsetWidth * 3}px`;
 }
 
@@ -81,6 +81,7 @@ function recycleDates() { // Shuffle Dates orderly and shift them to the opposit
     } else if (lastDate.getBoundingClientRect().left > carousel.getBoundingClientRect().right + step) {
         track.prepend(lastDate);
         xScroll -= step;
+
     }
 }
 
@@ -129,7 +130,7 @@ function onDrag(mouseEvent) { // Moves the dates while dragging and tracks veloc
         console.log(mouseEvent.clientX - dragStartX);
 
         if (!carousel.classList.contains("dragging") && Math.abs(mouseEvent.clientX - dragStartX) > DRAG_THRESHOLD) {
-            carousel.classList.add("dragging");
+            carousel.classList.add("dragging"); // .dragging class prevents browser behaviour from interfering
         }
 
         recycleDates();
@@ -175,78 +176,141 @@ if (carousel) { // Checks if .carousel exists before initializing
 //            Graphs & Charts            //
 //---------------------------------------//
 const weekHeaders = document.querySelectorAll(".week-header");
-const ppCanvas = document.getElementById("pp-chart");
+const chart = document.getElementById("chart");
 
-const labels = [];
-const ppData = [];
+//===== Data Points extracted from the DOM that is used for plotting =====//
+const weeks = [];
+const performancePoints = [];
+const lowerStarRatings = [];
+const upperStarRatings = [];
+
+let activeChart = null; // The current chart being displayed
 
 weekHeaders.forEach(header => {
     const week = header.querySelector(".week-title").dataset.week;
     const pp = Number(header.querySelector(".week-stat.pp").dataset.pp);
+    const lowerSR = Number(header.querySelector(".week-stat.SR").dataset.lower);
+    const upperSR = Number(header.querySelector(".week-stat.SR").dataset.upper);
 
-    labels.push(week);
-    ppData.push(pp);
+    weeks.push(week);
+    performancePoints.push(pp);
+    lowerStarRatings.push(lowerSR);
+    upperStarRatings.push(upperSR);
 })
 
-new Chart(ppCanvas, {
-    type: "line",
+const legendConfig = { // Axis label style
+    labels: {
+        color: "rgba(225, 225, 225, 0.8)"
+    }
+}
 
-    data: {
-        labels: labels,
-        datasets: [{
-            label: "pp",
-            data: ppData,
-            fill: true,
-            backgroundColor: "rgba(100, 160, 255, 0.2)",
-            borderColor: "rgba(100, 160, 255, 0.8)",
-            tension: 0.4
-        }]
-    },
+const tooltipConfig = { // Data point tooltip style
+    backgroundColor: "rgba(20, 25, 40, 0.9)",
+    titleColor: "rgba(225, 225, 225, 0.9)",
+    bodyColor: "rgba(225, 225, 225, 0.7)"
+}
 
-    options: {
-        responsive: true,
+const axisConfig = { // Background grid style
+    ticks: {color: "rgba(225, 225, 225, 0.6)" },
+    grid: {color: "rgba(255, 255, 255, 0.05)"},
+    border: {color: "rgba(255, 255, 255, 0.1)"}
+}
 
-        animation: {
-            duration: 500
+const ppChart = { // Configuration for Performance Point Chart
+        type: "line",
+
+        data: {
+            labels: weeks,
+            datasets: [{
+                label: "pp",
+                data: performancePoints,
+                fill: true,
+                backgroundColor: "rgba(100, 160, 255, 0.2)",
+                borderColor: "rgba(100, 160, 255, 0.8)",
+                tension: 0.4
+            }]
         },
 
-        plugins: {
-            title: {
-                display: true,
-                text: "pp Progression",
-                color: "rgba(225, 225, 225, 0.9)",
-                font: {size: 16},
+        options: {
+            responsive: true,
+
+            animation: {duration: 500},
+
+            plugins: {
+                legend: legendConfig,
+                tooltip: tooltipConfig
             },
 
-            legend: {
-                labels: {
-                    color: "rgba(225, 225, 225, 0.8)"
-                }
-            },
-
-            tooltip: {
-                backgroundColor: "rgba(20, 25, 40, 0.9)",
-                titleColor: "rgba(225, 225, 225, 0.9)",
-                bodyColor: "rgba(225, 225, 225, 0.7)"
+            scales: {
+                x: axisConfig,
+                y: axisConfig
             }
-        },
 
-        scales: {
-            x: {
-                ticks: {color: "rgba(225, 225, 225, 0.6)" },
-                grid: {color: "rgba(255, 255, 255, 0.05)"},
-                border: {color: "rgba(255, 255, 255, 0.1)"}
-            },
-
-            y: {
-                ticks: {color: "rgba(225, 225, 225, 0.6)" },
-                grid: {color: "rgba(255, 255, 255, 0.05)"},
-                border: {color: "rgba(255, 255, 255, 0.1)"}
-            }
         }
+    }
+
+const starRangeChart = { // Configuration for Star Range Chart
+        type: "line",
+
+        data: {
+            labels: weeks,
+            datasets: [
+                {
+                    label: "Lower ★ Range",
+                    data: lowerStarRatings,
+                    borderColor: "rgba(100, 180, 255, 0.8)",
+                    backgroundColor: "transparent",
+                    fill: false,
+                },
+                {
+                    label: "Upper ★ Range",
+                    data: upperStarRatings,
+                    borderColor: "rgba(255, 100, 100, 0.8)",
+                    backgroundColor: "rgba(180, 100, 255, 0.15)",
+                    fill: "-1",
+                }
+            ]
+        },
+
+        options: {
+            responsive: true,
+
+            animation: {duration: 500},
+
+            plugins: {
+                legend: legendConfig,
+                tooltip: tooltipConfig
+            },
+
+            scales: {
+                x: axisConfig,
+                y: axisConfig
+            }
+
+        }
+    }
+
+function switchChart(type) { // Changes the chart according to the type selected
+    if (activeChart) {
+        activeChart.destroy();
+    }
+
+    document.querySelectorAll(".chart-type").forEach(chartType => {
+        chartType.classList.remove("active");
+    })
+
+    document.querySelector(`[onclick="switchChart('${type}')"]`).classList.add("active");
+
+    if (type == "pp") {
+        activeChart = new Chart(chart, ppChart);
+
+    } else if (type == "sr") {
+        activeChart = new Chart(chart, starRangeChart);
 
     }
-});
+}
+
+switchChart("pp"); // Initiate Default as pp chart
 
 //---------------------------------------//
 //         Callout Functionality         //

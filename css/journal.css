@@ -1,5 +1,5 @@
 /* ============================
-            CALENDER
+        DATE NAVIGATION
 ============================= */
 
 .date-carousel {
@@ -77,6 +77,45 @@
 /* ============================
           CHART SIZING
 ============================= */
+.chart-selector {
+    display: flex;
+    width: 75%;
+    height: 40px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+}
+
+.chart-type {
+    position: relative;
+    flex: 1;
+    padding: 0;
+    color: white;
+    font-size: 1.25rem;
+    font-family: "Arial Rounded MT";
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+}
+
+.chart-type::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    top: 4px;
+    left: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    transform: scale(0);
+    transition: transform 0.25s ease;
+}
+
+.chart-type.active::after {
+    transform: scale(1);
+}
+
 .chart-container {
     width: 75%;
     margin: 0 auto;
@@ -117,6 +156,7 @@
     border-radius: 20px;
     font-size: 1rem;
     font-weight: 500;
+    user-select: none;
 }
 
 .week-stat.pp {

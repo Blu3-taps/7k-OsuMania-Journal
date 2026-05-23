@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>7k Month 2</title>
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../css/journal.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Navigation Bar -->
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <a href="../../../index.html">
+                        <div class="homepage-icon"></div>
+                    </a>
+                </li>
+                <li><a href="../../journal.html">Journal</a></li>
+                <li><a href="../../goals.html">Goals</a></li>
+                <li><a href="../../tips.html">Tips</a></li>
+                <li><a href="../../calculation.html">Calculation</a></li>
+            </ul>
+        </nav>
+
+        <!-- Banner Image & Page Title -->
+        <img class="banner" src="../../../Images/Yoimiya_Banner.jpg">
+        <div class="page-title">Osu!Mania 7k Month 2</div>
+
+        <div class="chart-selector">
+            <button class="chart-type" onclick="switchChart('pp')">Total pp</button>
+            <button class="chart-type" onclick="switchChart('sr')">Star Range(★)</button>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="chart"></canvas>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------>
+        <!--   WEEK 6 ENTRIES   -->
+        <!------------------------>
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 6">Week 6</p>
+                <p class="week-subtitle">Improvement of past struggles</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="2996">2,996pp (<span class="gain">+69pp</span>)</span>
+                <span class="week-stat SR" data-lower="3.4" data-upper="3.8">3.4★ ~ 3.8★</span>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------>
+        <!--   WEEK 7 ENTRIES   -->
+        <!------------------------>
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 7">Week 7</p>
+                <p class="week-subtitle">A period of frustration and stagnation</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="3004">3,004pp (<span class="gain">+8pp</span>)</span>
+                <span class="week-stat SR" data-lower="3.4" data-upper="3.9">3.4★ ~ 3.9★</span>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------>
+        <!--   WEEK 8 ENTRIES   -->
+        <!------------------------>
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 8">Week 8</p>
+                <p class="week-subtitle">Carried by a second wind</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="3071">3,071pp (<span class="gain">+67pp</span>)</span>
+                <span class="week-stat SR" data-lower="3.5" data-upper="3.9">3.5★ ~ 3.9★</span>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------>
+        <!--   WEEK 9 ENTRIES   -->
+        <!------------------------>
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 9">Week 9</p>
+                <p class="week-subtitle">A slight tumble after the sprint</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="3108">3,108pp (<span class="gain">+37pp</span>)</span>
+                <span class="week-stat SR" data-lower="3.5" data-upper="4.0">3.5★ ~ 4.0★</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <script src="../../../js/journal.js"></script>
+
+</body>
+
+</html>

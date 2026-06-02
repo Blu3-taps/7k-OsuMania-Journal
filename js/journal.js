@@ -343,7 +343,7 @@ callouts.forEach(callout => { // Get all callouts on the page
 //---------------------------------------//
 //          Difficulty Coloring          //
 //---------------------------------------//
-const songTitles = document.querySelectorAll(".song-title"); // Get all elements with class "song-title"
+const songDifficulties = document.querySelectorAll(".song-difficulty"); // Get all elements with class "song-title"
 const weekSR = document.querySelectorAll(".week-stat.SR");
 
 const difficultyAnchors = [0.1, 1.25, 2, 2.5, 3.3, 4.2, 4.9, 5.8, 6.7, 7.7, 9]; // Difficulty Anchor Points
@@ -448,7 +448,7 @@ function getDifficultyColor(starRating) {
     return {r, g, b, textColor};
 }
 
-songTitles.forEach(title => {
+songDifficulties.forEach(title => {
     const starRating = Number(title.dataset.difficulty);
 
     const {r, g, b, textColor} = getDifficultyColor(starRating);

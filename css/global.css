@@ -14,8 +14,21 @@
     --accent-highlight: rgba(165, 120, 80, 0.5);
 }
 
+/* ============================
+            FONTS 
+============================= */
+@font-face {
+    font-family: "Nunito";
+    src: url("../Fonts/Nunito/Nunito-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+}
 
-
+@font-face {
+    font-family: "Nunito";
+    src: url("../Fonts/Nunito/Nunito-Italic-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: italic;
+}
 
 /* ============================
         MAIN PAGE SETUP 

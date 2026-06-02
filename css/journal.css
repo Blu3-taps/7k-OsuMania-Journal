@@ -77,7 +77,7 @@
 /* ============================
           CHART SIZING
 ============================= */
-.chart-selector {
+.chart-selector { /* Creates the selection container for the chart types */
     display: flex;
     width: 75%;
     height: 40px;
@@ -86,37 +86,41 @@
     border-radius: 8px;
 }
 
-.chart-type {
+.chart-type { /* Individual elements for selecting chart types */
     position: relative;
     flex: 1;
     padding: 0;
-    color: white;
+    color: rgb(245, 245, 245);
+    opacity: 0.75;
     font-size: 1.25rem;
-    font-family: "Arial Rounded MT";
+    font-weight: 700;
+    font-family: "Nunito";
     background: transparent;
     border: none;
     border-radius: 8px;
+    transition: opacity 0.25s ease;
 }
 
-.chart-type::after {
+.chart-type::after { /* Selection effect that displays when a chart type is selected via Javascript */
     content: "";
     display: block;
     position: absolute;
-    width: calc(100% - 8px);
-    height: calc(100% - 8px);
-    top: 4px;
-    left: 4px;
+    inset: 4px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 4px;
     transform: scale(0);
     transition: transform 0.25s ease;
 }
 
-.chart-type.active::after {
+.chart-type.active { /* Makes the selected chart type fully opaque to stand out */
+    opacity: 1;
+}
+
+.chart-type.active::after { /* Expands the selection effect on the active chart type */
     transform: scale(1);
 }
 
-.chart-container {
+.chart-container { /* Used for controlling the structure of charts made with <canvas> */
     width: 75%;
     margin: 0 auto;
 }
@@ -132,16 +136,19 @@
     width: 75%;
     height: max-content;
     margin: 1rem auto;
+    font-family: "Nunito";
 }
 
 .week-title {
     color: rgb(225, 225, 225);
     font-size: 2rem;
+    font-weight: 700;
 }
 
 .week-subtitle {
     color: rgb(170, 187, 211);
     font-size: 1.1rem;
+    font-weight: 700;
     font-style: italic;
 }
 
@@ -155,7 +162,7 @@
     padding: 3px 10px;
     border-radius: 20px;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 700;
     user-select: none;
 }
 
@@ -183,8 +190,8 @@
     height: 50px;
     margin: 0 auto 30px;
     padding: 0.5rem 0.5rem 0.5rem 1rem;
-    color: white;
-    text-shadow: 0 0 2.5px rgba(0, 0, 0, 1);
+    color: rgb(245, 245, 245);
+    font-family: "Nunito";
     border-radius: 4px;
     box-sizing: border-box;
     overflow: hidden;
@@ -197,11 +204,9 @@
 }
 
 .callout-title { /* The title of the callout */
-    display: flex;
-    align-items: center;
-    color: white;
     text-shadow: 0 0 2.5px rgba(0, 0, 0, 1);
     font-size: 1.77rem;
+    font-weight: 700;
     cursor: pointer;
     user-select: none;
 }
@@ -230,12 +235,24 @@
     transform: rotate(90deg);
 }
 
+.gameplay {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: rgb(245, 245, 245);
+    background: rgb(225, 0, 45);
+    
+}
+
+.gameplay::before {
+    content: "▶ Gameplay";
+}
+
 .amazing { /* Callout color for amazing sessions */
     background: linear-gradient(
         135deg,
-        rgb(25, 222, 251),
-        rgb(79, 123, 253),
-        rgb(244, 178, 247)
+        rgba(25, 222, 251, 0.8),
+        rgba(79, 123, 253, 0.8),
+        rgba(244, 178, 247, 0.8)
     );
     --callout-icon: url("../svgs/sparkles_icon.svg");
 }
@@ -265,59 +282,103 @@
 }
 
 .good { /* Callout color for good sessions */
-    background: rgb(36, 224, 101);
+    background: rgb(50, 203, 96);
     --callout-icon: url("../svgs/thumbs-up_icon.svg");
 }
 
 .decent { /* Callout color for decent sessions */
-    background: rgb(123, 240, 143);
+    background: rgb(109, 212, 126);
     --callout-icon: url("../svgs/smile_icon.svg");
 }
 
 .fair { /* Callout color for fair sessions */
-    background: rgb(240, 231, 130);
+    background: rgb(222, 213, 121);
     --callout-icon: url("../svgs/meh_icon.svg");
 }
 
 .bad { /* Callout color for bad sessions */
-    background: rgb(240, 181, 108);
+    background: rgb(210, 158, 94);
     --callout-icon: url("../svgs/frown_icon.svg");
 }
 
 .terrible { /* Callout color for terrible sessions */
-    background: rgb(240, 105, 105);
+    background: rgb(212, 92, 92);
     --callout-icon: url("../svgs/thumbs-down_icon.svg");
 }
 
 .unplayable { /* Callout color for unplayable sessions */
-    background: rgb(235, 20, 20);
+    background: rgb(198, 56, 56);
     --callout-icon: url("../svgs/x_icon.svg");
 }
 
 .rest { /* Callout color for rest days */
-    background: rgb(57, 232, 127);
+    background: rgb(50, 207, 134);
     --callout-icon: url("../svgs/heart-pulse_icon.svg");
 }
 
+.song-title-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
 .song-title { /* Design the Title of the song */
-    display: inline-block;
-    color: white;
-    font-size: 1.75rem;
-    font-family: "Arial Rounded MT";
+    margin: 0 0.5rem 0 0.25rem;
+    font-size: clamp(1rem, 1.5rem, 2rem);
+    font-weight: 700;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 1);
     cursor: default;
     user-select: none;
 }
 
-.song-title::after { /* Adds the Star Rating of the song */
-    content: "★" attr(data-difficulty);
+.song-difficulty { /* Adds the Star Rating of the song */
     color: rgb(var(--diff-text-color)); /* Handled by Javascript */
     background: rgb(var(--diff-color)); /* Handled by Javascript */
-    font-size: 20px;
-    font-family: "Torus Notched";
-    border-radius: 15px;
-    padding: 0 15px 2.5px 10px;
-    margin: 0 0 0 10px;
-    text-shadow: none;
+    font-size: 0.9rem;
+    font-weight: 800;
+    border-radius: 99999px;
+    padding: 0 10px 0 5px;
+}
+
+.song-difficulty::before {
+    content: "★ " attr(data-difficulty);
+}
+
+.replay-download {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    opacity: 0.75;
+    background: url(../svgs/download_icon.svg);
+    transition: opacity 0.25s ease;
+}
+
+.replay-download::after {
+    content: "Download Replay";
+    position: absolute;
+    top: 125%;
+    left: 125%;
+    padding: 4px 8px;
+    opacity: 0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: rgb(245, 245, 245);
+    white-space: nowrap;
+    background: black;
+    border: 2px solid white;
+    border-radius: 0 8px 8px 8px;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.replay-download:hover::after {
+    opacity: 1;
+    transition-delay: 0.1s;
+}
+
+.replay-download:hover {
+    opacity: 1;
 }
 
 .play-stats {
@@ -327,15 +388,21 @@
     width: 100%;
     height: max-content;
     padding: 1rem;
-    background: radial-gradient(circle at 0 0, rgba(44, 44, 44, 0.75), rgb(21, 21, 21));
+    background: rgba(0, 0, 0, 0.75);
     font-size: 1.25rem;
+    font-weight: 700;
     border-radius: 10px;
     box-sizing: border-box;
+    user-select: none;
 }
 
 .stats::before {
     content: var(--stat-type);
     display: block;
+    color: rgb(215, 215, 215);
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .stats.score {
@@ -354,69 +421,125 @@
     --stat-type: "Performance Points";
 }
 
-.callout-section {
+.new-top {
+    padding: 2px 4px;
+    color: rgb(92, 58, 0);
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: linear-gradient(135deg,rgb(255, 229, 153), rgb(230, 168, 23));
+    border: 2px solid rgba(92, 58, 0, 0.5);
+    border-radius: 5px;
+}
+
+.new-top::before {
+    content: "New Top";
+}
+
+.thoughts {
     display: block;
+    position: relative;
     width: 100%;
     height: max-content;
     padding: 1rem;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    text-shadow: none;
     box-sizing: border-box;
 }
 
-.callout-section::before {
-    content: var(--callout-section-header);
+.thoughts::before {
+    content: "Thoughts";
     display: block;
     width: 100%;
-    text-align: center;
-    font-size: 2.5rem;
-    letter-spacing: 0.5px;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-}
-
-.callout-section.thoughts p {
+    color: rgb(255, 210, 120);
     font-size: 1.5rem;
-    padding: 5px 0;
-    user-select: none;
-    cursor: default;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 0.05rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
 }
 
-.callout-section.session-stats p {
-    position: relative;
-    width: max-content;
-    margin: 0 auto;
-    font-size: 1.75rem;
-    padding: 5px 2rem;
-    user-select: none;
-    cursor: default;
-}
-
-.callout-section.session-stats p::before {
+.thoughts::after {
     content: "";
+    display: block;
     position: absolute;
-    width: 100%;
-    height: 2px;
-    top: 100%;
-    left: 0;
-    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), transparent);
+    inset: 0.25rem;
+    border: 2.5px solid rgba(255, 210, 120, 0.25);
+    border-radius: inherit;
+    pointer-events: none;
 }
 
-.callout-section.thoughts p::before {
+.thoughts p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 5px 0;
+    border-radius: 5px;
+    user-select: none;
+    cursor: default;
+}
+
+.thoughts p::before {
     content: "✦ ";
     color: rgb(var(--accent-brown));
 }
 
-.callout-section.thoughts p:hover {
+.thoughts p:hover {
     background: rgba(0, 0, 0, 0.3);
 }
 
-.thoughts {
-    --callout-section-header: "Thoughts";
+.session-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;   
 }
 
-.session-stats {
-    --callout-section-header: "Session Stats";
+.session-stats::before {
+    content: "Session Stats";
+    display: block;
+    grid-column: 1 / -1;
+    padding: 0.5rem;
+    color: rgb(156, 178, 222);
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 0.05rem;
+    background: rgb(0, 0, 0, 0.6);
+    border-left: 15px solid rgb(120, 140, 160);
+    border-radius: 5px;
+}
+
+.session-stats p {
+    display: block;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    background: rgba(0, 0, 0, 0.6);
+    border-left: 15px solid rgb(var(--stat-color));
+    border-radius: 5px;
+    user-select: none;
+}
+
+.session-stats p::before {
+    content: var(--type);
+    display: block;
+    color: rgb(200, 200, 200);
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.session-stats p:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.total-pp {
+    --type: "Total 7k pp";
+    --stat-color: 100, 160, 255;
+}
+
+.playtime {
+    --type: "Session Playtime";
+    --stat-color: 180, 140, 255;
 }
 
 .gain {

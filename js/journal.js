@@ -227,7 +227,7 @@ const ppChart = { // Configuration for Performance Point Chart
                 fill: true,
                 backgroundColor: "rgba(100, 160, 255, 0.2)",
                 borderColor: "rgba(100, 160, 255, 0.8)",
-                tension: 0.4
+                tension: 0.3
             }]
         },
 
@@ -455,7 +455,7 @@ songDifficulties.forEach(title => {
 
     title.style.setProperty("--diff-color", `${r}, ${g}, ${b}`);
     title.style.setProperty("--diff-text-color", textColor);
-})
+});
 
 weekSR.forEach(weeklySR => {
     const lowerSR = Number(weeklySR.dataset.lower);
@@ -468,9 +468,19 @@ weekSR.forEach(weeklySR => {
     const color1 = `rgb(${lowerColor.r}, ${lowerColor.g}, ${lowerColor.b})`;
     const color2 = `rgb(${upperColor.r}, ${upperColor.g}, ${upperColor.b})`;
 
-    weeklySR.style.background = `linear-gradient(to right, ${color1}, ${color2})`;
-    weeklySR.style.color = `rgb(${getDifficultyColor(midSR).textColor})`;
-    
-})
+    let gradientStops = `${color1} 0%`;
 
+    difficultyAnchors.forEach(anchor => {
+        if (anchor > lowerSR && anchor < upperSR) {
+            const anchorColor = getDifficultyColor(anchor);
+            const percentage = ((anchor - lowerSR) / (upperSR - lowerSR)) * 100;
+            gradientStops += `, rgb(${anchorColor.r}, ${anchorColor.g}, ${anchorColor.b}) ${percentage}%`;
+        }
+    });
+
+    gradientStops += `, ${color2} 100%`;
+
+    weeklySR.style.background = `linear-gradient(to right, ${gradientStops})`;
+    weeklySR.style.color = `rgb(${getDifficultyColor(midSR).textColor})`;  
+});
 

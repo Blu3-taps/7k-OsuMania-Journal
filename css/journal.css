@@ -235,16 +235,18 @@
     transform: rotate(90deg);
 }
 
-.gameplay {
+.has-gameplay::before {
+    content: "▶ Gameplay";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 4px 2px 12px;
     font-size: 0.75rem;
     font-weight: 700;
-    color: rgb(245, 245, 245);
-    background: rgb(225, 0, 45);
-    
-}
-
-.gameplay::before {
-    content: "▶ Gameplay";
+    background: black;
+    border-radius: 0 0 0 20px;
+    pointer-events: none;
 }
 
 .amazing { /* Callout color for amazing sessions */

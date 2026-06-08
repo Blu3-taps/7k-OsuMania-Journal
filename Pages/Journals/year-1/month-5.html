@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>7k Month 5</title>
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../css/journal.css">
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <!-- Navigation Bar -->
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <a href="../../../index.html">
+                        <div class="homepage-icon"></div>
+                    </a>
+                </li>
+                <li><a href="../../journal.html">Journal</a></li>
+                <li><a href="../../goals.html">Goals</a></li>
+                <li><a href="../../tips.html">Tips</a></li>
+                <li><a href="../../calculation.html">Calculation</a></li>
+            </ul>
+        </nav>
+
+        <!-- Banner Image & Page Title -->
+        <img class="banner" style="object-position: 0 20%;" src="../../../Images/Furina_Banner.jpg">
+        <div class="page-title">Osu!Mania 7k Month 5</div>
+
+        <!-- The Chart Selection Navigation Bar -->
+        <div class="chart-selector">
+            <button class="chart-type" onclick="switchChart('pp')">Total pp</button>
+            <button class="chart-type" onclick="switchChart('sr')">Star Range(★)</button>
+        </div>
+
+        <!-- Chart Element -->
+        <div class="chart-container">
+            <canvas id="chart"></canvas>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 19 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 19">Week 19</p>
+                <p class="week-subtitle">Pushing past the voices that lead astray</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="3691">3,691pp (<span class="gain">+29pp</span>)</span>
+                <span class="week-stat SR" data-lower="3.9" data-upper="4.3">3.9★ ~ 4.3★</span>
+            </div>
+        </div>
+
+        <!-- 20 October 2025 -->
+        <div class="callout bad">
+            <p class="callout-title">20 October 2025</p>
+            <div class="thoughts">
+                <p>Trained Long notes today</p>
+                <p>Either barely improved or did worse</p>
+                <p><span style="text-decoration: line-through;">Feel like giving up</span> No. I won't give up, get up.</p>
+                <p>Tired and irritated</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,665pp (<span class="gain">+3pp</span>)</p>
+                <p class="playtime">50min</p>
+            </div>
+        </div>
+
+        <!-- 21 October 2025 -->
+        <div class="callout fair">
+            <p class="callout-title">21 October 2025</p>
+            <div class="thoughts">
+                <p>Didn't feel very good at first, lack of sleep</p>
+                <p>Focus was impaired, fingers could barely move properly</p>
+                <p>Played 2★'s only, some on DT</p>
+                <p>Tried Hidden, Flashlight & Fade In mods for fun (actually got S-ranks)</p>
+                <p>Light casual session, played for fun and some exposure</p>
+                <p>Going to rest up for tomorrow</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,665pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">41min</p>
+            </div>
+        </div>
+
+        <!-- 22 October 2025 -->
+        <div class="callout bad">
+            <p class="callout-title">22 October 2025</p>
+            <div class="thoughts">
+                <p>Didn't do that well</p>
+                <p>Kind of sleepy</p>
+                <p>Ratio is worse than normal</p>
+                <p><span style="text-decoration: line-through;">Feeling quite discouraged</span> There's no time to be sad, we have to move on.</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,666pp (<span class="gain">+1pp</span>)</p>
+                <p class="playtime">35min</p>
+            </div>
+        </div>
+
+        <!-- 23 October 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">23 October 2025</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+            </div>
+        </div>
+
+        <!-- 24 October 2025 -->
+        <div class="callout good has-gameplay">
+            <p class="callout-title">24 October 2025</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-5/GIMME DA BLOOD-[Future]-24October2025.osr" download></a>
+                    <p class="song-title">GIMME DA BLOOD</p>
+                    <div class="song-difficulty" data-difficulty="4.38"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/83jygs_Na_I?si=vl4-wVTNlgaX0hu0"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">948,937</p>
+                    <p class="stats accuracy">98.88%</p>
+                    <p class="stats max-combo">833x</p>
+                    <p class="stats pp">172pp</p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>Felt really tired and sleepy pre-session</p>
+                <p>Kind of sucked at first but ended up a pretty good session</p>
+                <p>Challenged myself with mid 4★'s</p>
+                <p>Ratio still quite ass</p>
+                <p>Increased Scroll Speed to 28</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,680pp (<span class="gain">+14pp</span>)</p>
+                <p class="playtime">1h 1min</p>
+            </div>
+        </div>
+
+        <!-- 25 October 2025 -->
+        <div class="callout amazing has-gameplay">
+            <p class="callout-title">25 October 2025</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-5/Pixel Planet-[Insane]-25October2025.osr" download></a>
+                    <p class="song-title">Pixel Planet</p>
+                    <div class="song-difficulty" data-difficulty="4.50"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/L0A6sR2cD1c?si=1WA-0TItByMuJrow"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">806,691</p>
+                    <p class="stats accuracy">95.28%</p>
+                    <p class="stats max-combo">538x</p>
+                    <p class="stats pp">137pp</p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>Felt sleepy today</p>
+                <p>Trained Streams/Rolls today</p>
+                <p>Accuracy consistency for Streams improved</p>
+                <p>Streams felt easier and more natural</p>
+                <p>Challenged myself with low-mid & mid 4★'s</p>
+                <p>Improved Significantly</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,691pp (<span class="gain">+11pp</span>)</p>
+                <p class="playtime">1h 7min</p>
+            </div>
+        </div>
+
+        <!-- 26 October 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">26 October 2025</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 20 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 20">Week 20</p>
+                <p class="week-subtitle">One step into the fire, onward higher</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="3849">3,849pp (<span class="gain">+158pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.0" data-upper="4.5">4.0★ ~ 4.5★</span>
+            </div>
+        </div>
+
+        <!-- 27 October 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">27 October 2025</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+            </div>
+        </div>
+
+        <!-- 28 October 2025 -->
+        <div class="callout fair">
+            <p class="callout-title">28 October 2025</p>
+            <div class="thoughts">
+                <p>Quite tired, rather unfocused</p>
+                <p>Didn't get much sleep</p>
+                <p>Played Mostly 4★ Half time</p>
+                <p>Chill session, Slow paced</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,691pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">1h 3min</p>
+            </div>
+        </div>
+
+        <!-- 29 October 2025 -->
+        <div class="callout good">
+            <p class="callout-title">29 October 2025</p>
+            <div class="thoughts">
+                <p>Quite tired at first, a little sluggish</p>
+                <p>Practiced Long Notes</p>
+                <p>Improved some bit</p>
+                <p>Managed to learn to relax while holding Long Notes (still unstable)</p>
+                <p>Improved on Inverse Long Notes</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,697pp (<span class="gain">+6pp</span>)</p>
+                <p class="playtime">1h 15min</p>
+            </div>
+        </div>
+
+        <!-- 30 October 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">30 October 2025</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+            </div>
+        </div>
+
+        <!-- 31 October 2025 -->
+        <div class="callout amazing has-gameplay">
+            <p class="callout-title">31 October 2025</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-5/CLICK (Soleily Remix)-[Memories 7K]-31October2025.osr" download></a>
+                    <p class="song-title">CLICK (Soleily Remix)</p>
+                    <div class="song-difficulty" data-difficulty="4.64"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/mhUsuyVIeEo?si=R-z4HK09nheNKr68"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">958,752</p>
+                    <p class="stats accuracy">99.00%</p>
+                    <p class="stats max-combo">1,808x</p>
+                    <p class="stats pp">207pp <span class="new-top"></span></p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>Felt a little tired initially</p>
+                <p>Massive Improvement, Insane Skill Boost</p>
+                <p>Trained Jacks and Chords</p>
+                <p>Got 200pp plays</p>
+                <p>Could do Double Streams decently well now</p>
+                <p>Had another 207pp play but I can't show it cause the background is...well, questionable.</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,797pp (<span class="gain">+100pp</span>)</p>
+                <p class="playtime">53min</p>
+            </div>
+        </div>
+
+        <!-- 1 November 2025 -->
+        <div class="callout amazing has-gameplay">
+            <p class="callout-title">1 November 2025</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-5/Materialize Anything (Improved)-[Another]-1November2025.osr" download></a>
+                    <p class="song-title">Materialize Anything</p>
+                    <div class="song-difficulty" data-difficulty="4.09"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/8bYtGAGFruM?si=_x3kZO7hVsrN49YB"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">995,103</p>
+                    <p class="stats accuracy">100.00%</p>
+                    <p class="stats max-combo">1,487x</p>
+                    <p class="stats pp">171pp</p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>Mangaged to get my first 4★ SS Rank</p>
+                <p>Skill Boost from yesterday did not disappear, actual improvement</p>
+                <p>Able to do well on low 4★'s without too much struggle</p>
+                <p>Tapping has become more Relaxed</p>
+                <p>Able to tap faster and do Streams smoother</p>
+                <p>Starting to develop strong belief in myself</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,839pp (<span class="gain">+42pp</span>)</p>
+                <p class="playtime">1h 14min</p>
+            </div>
+        </div>
+
+        <!-- 2 November 2025 -->
+        <div class="callout good">
+            <p class="callout-title">2 November 2025</p>
+            <div class="thoughts">
+                <p>Felt quite tired</p>
+                <p>Managed to get 99% on several low 4★'s</p>
+                <p>mid 4★'s are now somewhat manageable albeit with struggle</p>
+                <p>Still need more speed</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,849pp (<span class="gain">+10pp</span>)</p>
+                <p class="playtime">1h 20min</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 21 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 21">Week 21</p>
+                <p class="week-subtitle">Where it all went wrong</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="3913">3,913pp (<span class="gain">+64pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.1" data-upper="4.5">4.1★ ~ 4.5★</span>
+            </div>
+        </div>
+
+        <!-- 3 November 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">3 November 2025</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+            </div>
+        </div>
+
+        <!-- 4 November 2025 -->
+        <div class="callout fair">
+            <p class="callout-title">4 November 2025</p>
+            <div class="thoughts">
+                <p>Quite tired</p>
+                <p>Low on energy</p>
+                <p>Fingers felt hard to control, couldn't lift properly</p>
+                <p>Stamina was not very good today</p>
+                <p>Passable performance I suppose</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,858pp (<span class="gain">+19pp</span>)</p>
+                <p class="playtime">1h</p>
+            </div>
+        </div>
+
+        <!-- 5 November 2025 -->
+        <div class="callout bad has-gameplay">
+            <p class="callout-title">5 November 2025</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-5/DiSANiMATE (+DT)-[Hard]-5November2025.osr" download></a>
+                    <p class="song-title">DiSANiMATE (+DT)</p>
+                    <div class="song-difficulty" data-difficulty="4.41"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/Y5FnAnEDg-4?si=gi3V30z9lh6xffM9"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">917,774</p>
+                    <p class="stats accuracy">98.35%</p>
+                    <p class="stats max-combo">776x</p>
+                    <p class="stats pp">170pp</p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>My left ring finger feels quite weak</p>
+                <p>Kind of tired and sluggish</p>
+                <p>Played DT on lower difficulties and HT on high 4★'s</p>
+                <p>Didn't expect Low 3★ DT to give so much pp</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,869pp (<span class="gain">+11pp</span>)</p>
+                <p class="playtime">47min</p>
+            </div>
+        </div>
+
+        <!-- 6 November 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">6 November 2025</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+            </div>
+        </div>
+
+        <!-- 7 November 2025 -->
+        <div class="callout good">
+            <p class="callout-title">7 November 2025</p>
+            <div class="thoughts">
+                <p>Left ring finger still rather limp</p>
+                <p>Trained speed today using DT</p>
+                <p>Learning to tap more relaxed</p>
+                <p>Did pretty well today</p>
+                <p>100pp more to 4k pp :o</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,900pp (<span class="gain">+31pp</span>)</p>
+                <p class="playtime">1h 22min</p>
+            </div>
+        </div>
+
+        <!-- 8 November 2025 -->
+        <div class="callout decent">
+            <p class="callout-title">8 November 2025</p>
+            <div class="thoughts">
+                <p>Left ring finger seems back to normal mid-session??</p>
+                <p>Practiced tapping lighter and more relaxed</p>
+                <p>Finally 99%'d Speedcore Sonata 3.91★ (Speed Stream/Tech)</p>
+                <p>Finally 99%'d Fractured Heaven 3.78★ (Speed Stream/Tech)</p>
+                <p>Decent session, not bad but not that good</p>
+                <p>Going to continue observing my ring finger</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,912pp (<span class="gain">+12pp</span>)</p>
+                <p class="playtime">1h 20min</p>
+            </div>
+        </div>
+
+        <!-- 9 November 2025 -->
+        <div class="callout terrible">
+            <p class="callout-title">9 November 2025</p>
+            <div class="thoughts">
+                <p>Honestly kind of scared for my left ring finger</p>
+                <p>7k Training did not go very well</p>
+                <p>Ended up playing 6k as an Off-Session instead</p>
+                <p>Did really well in 6k compared to back then</p>
+                <p>Managed to gain some pp from 6k lmao</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,913 (<span class="gain">+1pp</span>)</p>
+                <p class="playtime">36min</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 22 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 22">Week 22</p>
+                <p class="week-subtitle">Disaster struck (Cubital Tunnel Syndrome)</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="3913">3,913pp (<span class="gain">+0pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.1" data-upper="4.5">4.1★ ~ 4.5★</span>
+            </div>
+        </div>
+
+        <!-- 10 November 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">10 November 2025</p>
+            <div class="thoughts">
+                <p>No much change to elbow sensation, finger still hard to control</p>
+                <p>
+                    Apparently, I have mild Cubital Tunnel Syndrome where my Ulnar Nerve gets pinched,
+                    affecting my Ring and Pinky Finger making it difficult for me to control them.
+                </p>
+            </div>
+        </div>
+
+        <!-- 11 November 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">11 November 2025</p>
+            <div class="thoughts">
+                <p>Elbow regained a bit of sensation, finger is still hard to control</p>
+            </div>
+        </div>
+
+        <!-- 12 November 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">12 November 2025</p>
+            <div class="thoughts">
+                <p>Elbow Sensation still rather dull & numb, Ring Finger control improved very slightly</p>
+            </div>
+        </div>
+
+        <!-- 13 November 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">13 November 2025</p>
+            <div class="thoughts">
+                <p>Elbow still feels numb and ring finger is still hard to control</p>
+            </div>
+        </div>
+
+        <!-- 14 November 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">14 November 2025</p>
+            <div class="thoughts">
+                <p>Elbow sensation is better but still quite numb and ring finger is still hard to control</p>
+            </div>
+        </div>
+
+        <!-- 15 November 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">15 November 2025</p>
+            <div class="thoughts">
+                <p>Sensation has returned to my elbow but just a little dull and ring finger control has improved a little bit</p>
+            </div>
+        </div>
+
+        <!-- 16 November 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">16 November 2025</p>
+            <div class="thoughts">
+                <p>Elbow sensation is a little dull and ring finger feels about the same</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/chart.min.js"></script>
+    <script src="../../../js/journal.js"></script>
+</body>
+
+</html>

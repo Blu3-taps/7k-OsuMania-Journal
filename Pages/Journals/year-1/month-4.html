@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>7k Month 4</title>
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../css/journal.css">
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <!-- Navigation Bar -->
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <a href="../../../index.html">
+                        <div class="homepage-icon"></div>
+                    </a>
+                </li>
+                <li><a href="../../journal.html">Journal</a></li>
+                <li><a href="../../goals.html">Goals</a></li>
+                <li><a href="../../tips.html">Tips</a></li>
+                <li><a href="../../calculation.html">Calculation</a></li>
+            </ul>
+        </nav>
+
+        <!-- Banner Image & Page Title -->
+        <img class="banner" src="../../../Images/Yoimiya_Banner.jpg">
+        <div class="page-title">Osu!Mania 7k Month 4</div>
+
+        <!-- The Chart Selection Navigation Bar -->
+        <div class="chart-selector">
+            <button class="chart-type" onclick="switchChart('pp')">Total pp</button>
+            <button class="chart-type" onclick="switchChart('sr')">Star Range(★)</button>
+        </div>
+
+        <!-- Chart Element -->
+        <div class="chart-container">
+            <canvas id="chart"></canvas>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 15 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 15">Week 15</p>
+                <p class="week-subtitle">Back from hiatus and better than before</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="3498">3,498pp (<span class="gain">+76pp</span>)</span>
+                <span class="week-stat SR" data-lower="3.7" data-upper="4.2">3.7★ ~ 4.2★</span>
+            </div>
+        </div>
+
+        <!-- 22 September 2025 -->
+        <div class="callout good">
+            <p class="callout-title">22 September 2025</p>
+            <div class="thoughts">
+                <p>Improved a little after 1 week hiatus</p>
+                <p>Streams seems to have improved?</p>
+                <p>Feel quite unconfident and uneasy after not playing for 8 days</p>
+                <p>Skill did not drop, only feel about 5% rusty</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,422 (<span class="gain">+0pp</span>)</p>
+            </div>
+        </div>
+
+        <!-- 23 September 2025 -->
+        <div class="callout amazing has-gameplay">
+            <p class="callout-title">23 September 2025</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-4/in the Garden-[LordRaika's 7K Insane]-23September2025.osr" download></a>
+                    <p class="song-title">in the Garden</p>
+                    <div class="song-difficulty" data-difficulty="4.35"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/sC-5xYBKKx0?si=2AZv_L4Nvkc1kKSf"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">924,651</p>
+                    <p class="stats accuracy">98.30%</p>
+                    <p class="stats max-combo">1,367x</p>
+                    <p class="stats pp">165pp</p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>Amazing Session</p>
+                <p>Got my first 3★ SS rank</p>
+                <p>Streams have improved but skill is unstable</p>
+                <p>Overall skill seems to have improved</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,451pp (<span class="gain">+29pp</span>)</p>
+            </div>
+        </div>
+
+        <!-- 24 September 2025 -->
+        <div class="callout amazing">
+            <p class="callout-title">24 September 2025</p>
+            <div class="thoughts">
+                <p>Streams improved a lot</p>
+                <p>Managed to 99% Gregorius | Symphony 3.25★(Stream/Stamina Song)</p>
+                <p>Managed to improve on songs I struggled with before</p>
+                <p>Popped off today, pushed myself to my limits</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,464pp (<span class="gain">+13pp</span>)</p>
+            </div>
+        </div>
+
+        <!-- 25 September 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">25 September 2025</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+            </div>
+        </div>
+
+        <!-- 26 September 2025 -->
+        <div class="callout bad">
+            <p class="callout-title">26 September 2025</p>
+            <div class="thoughts">
+                <p>Low on Energy</p>
+                <p>Couldn't play well, was choking on chords</p>
+                <p>Base skill seems to have improved</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,498pp (<span class="gain">+34pp</span>)</p>
+            </div>
+        </div>
+
+        <!-- 27 September 2025 -->
+        <div class="callout fair">
+            <p class="callout-title">27 September 2025</p>
+            <div class="thoughts">
+                <p>Didn't sleep well yesterday</p>
+                <p>Played casually / Light Session</p>
+                <p>Did quite okay</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,498pp (<span class="gain">+0pp</span>)</p>
+            </div>
+        </div>
+
+        <!-- 28 September 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">28 September 2025</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 16 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 16">Week 16</p>
+                <p class="week-subtitle">Instability and feeling stuck</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="3555">3,555pp (<span class="gain">+57pp</span>)</span>
+                <span class="week-stat SR" data-lower="3.8" data-upper="4.2">3.8★ ~ 4.2★</span>
+            </div>
+        </div>
+
+        <!-- 29 September 2025 -->
+        <div class="callout decent has-gameplay">
+            <p class="callout-title">29 September 2025</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-4/Onegai! Cinderella (M@STER VERSION)-[Glass Shoes]-29September2025.osr" download></a>
+                    <p class="song-title">Onegai! Cinderella (M@STER VERSION)</p>
+                    <div class="song-difficulty" data-difficulty="4.36"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/IWuq-a7TvBg?si=eoqpx211QEpMa2wE"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">956,045</p>
+                    <p class="stats accuracy">98.93%</p>
+                    <p class="stats max-combo">1,519x</p>
+                    <p class="stats pp">171pp</p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>Didn't feel very good at first</p>
+                <p>Practiced Long Notes</p>
+                <p>Was able to play and improve Long Note Scores</p>
+                <p>Reached 3.5k pp</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,516pp (<span class="gain">+18pp</span>)</p>
+            </div>
+        </div>
+
+        <!-- 30 September 2025 -->
+        <div class="callout terrible">
+            <p class="callout-title">30 September 2025</p>
+            <div class="thoughts">
+                <p>Can't play very well today</p>
+                <p>Felt quite like sh*t</p>
+                <p>Choking very easily</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,517pp (<span class="gain">+1pp</span>)</p>
+            </div>
+        </div>
+
+        <!-- 1 October 2025 -->
+        <div class="callout bad has-gameplay">
+            <p class="callout-title">1 October 2025</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-4/Hanatachi ni Kibou o (2020 Remaster)-[Another]-1October2025.osr" download></a>
+                    <p class="song-title">Hanatachi ni Kibou o (2020 Remaster)</p>
+                    <div class="song-difficulty" data-difficulty="4.41"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/h3lzi6rqD7I?si=DDFSIPGIQDuwHJJj"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">919,862</p>
+                    <p class="stats accuracy">98.33%</p>
+                    <p class="stats max-combo">497x</p>
+                    <p class="stats pp">176pp</p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>Didn't seem to improve at jacks (T-T)</p>
+                <p>Went back from S rank to A rank on Glucagon (-_-)</p>
+                <p>Session wasn't that good</p>
+                <p>Quite disappointed</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,545pp (<span class="gain">+28pp</span>)</p>
+            </div>
+        </div>
+
+        <!-- 2 October 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">2 October 2025</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+            </div>
+        </div>
+
+        <!-- 3 October 2025 -->
+        <div class="callout fair">
+            <p class="callout-title">3 October 2025</p>
+            <div class="thoughts">
+                <p>Okay Session</p>
+                <p>Didn't sleep very well</p>
+                <p>Consistency was a bit unstable today</p>
+                <p>Managed to get my first 4★ FC</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,548pp (<span class="gain">+3pp</span>)</p>
+            </div>
+        </div>
+
+        <!-- 4 October 2025 -->
+        <div class="callout bad">
+            <p class="callout-title">4 October 2025</p>
+            <div class="thoughts">
+                <p>Can't really play to standard today</p>
+                <p>Choking rather often</p>
+                <p>Focus is quite off</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,555pp (<span class="gain">+7pp</span>)</p>
+            </div>
+        </div>
+
+        <!-- 5 October 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">5 October 2025</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 17 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 17">Week 17</p>
+                <p class="week-subtitle">Bouncing back and pushing through</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="3578">3,578pp (<span class="gain">+23pp</span>)</span>
+                <span class="week-stat SR" data-lower="3.9" data-upper="4.2">3.9★ ~ 4.2★</span>
+            </div>
+        </div>
+
+        <!-- 6 October 2025 -->
+        <div class="callout good">
+            <p class="callout-title">6 October 2025</p>
+            <div class="thoughts">
+                <p>Didn't sleep that well yesterday</p>
+                <p>Was initially planning to have a light session but eh</p>
+                <p>Inadvertently trained Streams & Chords today</p>
+                <p>Somehow managed to get 98.28% on Gregorius | Symphony - 4.06★</p>
+                <p>Did surprisingly better than I thought I would</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,559pp (<span class="gain">+4pp</span>)</p>
+            </div>
+        </div>
+
+        <!-- 7 October 2025 -->
+        <div class="callout unplayable">
+            <p class="callout-title">7 October 2025</p>
+            <div class="thoughts">
+                <p>Skipped today's session</p>
+                <p>Did not feel well</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,559pp (<span class="gain">+0pp</span>)</p>
+            </div>
+        </div>
+
+        <!-- 8 October 2025 -->
+        <div class="callout bad has-gameplay">
+            <p class="callout-title">8 October 2025</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-4/Grin-[Hikari's Insane]-8October2025.osr" download></a>
+                    <p class="song-title">Grin</p>
+                    <div class="song-difficulty" data-difficulty="4.36"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/PZ-HGjC1Me8?si=vTSlMhQcmC6N3Nhh"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">896,903</p>
+                    <p class="stats accuracy">97.19%</p>
+                    <p class="stats max-combo">1,429x</p>
+                    <p class="stats pp">150pp</p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>Can't play that good today</p>
+                <p>Accuracy wasn't very good</p>
+                <p>focus was a bit off</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,562pp (<span class="gain">+3pp</span>)</p>
+            </div>
+        </div>
+
+        <!-- 9 October 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">9 October 2025</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+            </div>
+        </div>
+
+        <!-- 10 October 2025 -->
+        <div class="callout amazing has-gameplay">
+            <p class="callout-title">10 October 2025</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-4/Endless Carnival (Improved)-[Insane]-10October2025.osr" download></a>
+                    <p class="song-title">Endless Carnival (Improved)</p>
+                    <div class="song-difficulty" data-difficulty="4.37"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/sCGlKmSmJWM?si=Ou0jVaG4HPxFASLt"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">984,447</p>
+                    <p class="stats accuracy">99.83%</p>
+                    <p class="stats max-combo">1,545x</p>
+                    <p class="stats pp">192pp <span class="new-top"></span></p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>Felt a bit tired initially</p>
+                <p>Did really well today</p>
+                <p>Popped off and improved massively</p>
+                <p>Still could not do double streams though (x_x)</p>
+                <p>Started recording session playtime</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,577pp (<span class="gain">+15pp</span>)</p>
+                <p class="playtime">1h 11min</p>
+            </div>
+        </div>
+
+        <!-- 11 October 2025 -->
+        <div class="callout fair">
+            <p class="callout-title">11 October 2025</p>
+            <div class="thoughts">
+                <p>Okay Session I suppose</p>
+                <p>felt a little sluggish and off</p>
+                <p>played mostly Half Time</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,578pp (<span class="gain">+1pp</span>)</p>
+                <p class="playtime">43min</p>
+            </div>
+        </div>
+
+        <!-- 12 October 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">12 October 2025</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+        
+        <!------------------------->
+        <!--   WEEK 18 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 18">Week 18</p>
+                <p class="week-subtitle">Improving drastically then getting slapped in the face</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="3662">3,662pp (<span class="gain">+84pp</span>)</span>
+                <span class="week-stat SR" data-lower="3.9" data-upper="4.2">3.9★ ~ 4.2★</span>
+            </div>
+        </div>
+
+        <!-- 13 October 2025 -->
+        <div class="callout good">
+            <p class="callout-title">13 October 2025</p>
+            <div class="thoughts">
+                <p>Focused on Long notes today</p>
+                <p>Didn't do that well at first</p>
+                <p>Improved in some aspects</p>
+                <p>Ironically improved more at Streams</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,585 (<span class="gain">+7pp</span>)</p>
+                <p class="playtime">1h 15min</p>
+            </div>
+        </div>
+
+        <!-- 14 October 2025 -->
+        <div class="callout amazing has-gameplay">
+            <p class="callout-title">14 October 2025</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-4/Eviternity-[Another]-14October2025.osr" download></a>
+                    <p class="song-title">Eviternity</p>
+                    <div class="song-difficulty" data-difficulty="4.21"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/M_R_1LHdC98?si=p6f9C6i7QQOblwLX"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">894,059</p>
+                    <p class="stats accuracy">96.87%</p>
+                    <p class="stats max-combo">1,019x</p>
+                    <p class="stats pp">137pp</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-4/Electroman Adventures-[Another]-14October2025.osr" download></a>
+                    <p class="song-title">Electroman Adventures</p>
+                    <div class="song-difficulty" data-difficulty="4.47"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/k9IUBzowK3U?si=wfyflPxIgldUELD-"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">943,557</p>
+                    <p class="stats accuracy">99.28%</p>
+                    <p class="stats max-combo">664x</p>
+                    <p class="stats pp">199pp <span class="new-top"></span></p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>Felt fresh today</p>
+                <p>Insane Skill boost, Pattern Ability levelled up drastically</p>
+                <p>Improved A LOT, set many improved scores</p>
+                <p>Got edged from 200pp top play</p>
+                <p>7k is starting to feel natural and easier</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,650pp (<span class="gain">+65pp</span>)</p>
+                <p class="playtime">1h</p>
+            </div>
+        </div>
+
+        <!-- 15 October 2025 -->
+        <div class="callout fair">
+            <p class="callout-title">15 October 2025</p>
+            <div class="thoughts">
+                <p>Not that good a session</p>
+                <p>Felt a little sluggish / low on energy / Endurance compromised</p>
+                <p>Performance wasn't that good</p>
+                <p>Trained jacks today, almost 99%'ed Glucagon</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,654pp (<span class="gain">+4pp</span>)</p>
+                <p class="playtime">54min</p>
+            </div>
+        </div>
+
+        <!-- 16 October 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">16 October 2025</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+            </div>
+        </div>
+
+        <!-- 17 October 2025 -->
+        <div class="callout terrible">
+            <p class="callout-title">17 October 2025</p>
+            <div class="thoughts">
+                <p>Could not play well, Performed worse than normal</p>
+                <p>Accuracy dropped</p>
+                <p>Feeling quite frustrated</p>
+                <p>Ended Session early</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,654pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">41min</p>
+            </div>
+        </div>
+
+        <!-- 18 October 2025 -->
+        <div class="callout bad">
+            <p class="callout-title">18 October 2025</p>
+            <div class="thoughts">
+                <p>Intended to train streams but gave up</p>
+                <p>Performed rather poorly</p>
+                <p>feel quite demotivated</p>
+                <p>Need to rest</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,662pp (<span class="gain">+8pp</span>)</p>
+                <p class="playtime">51min</p>
+            </div>
+        </div>
+
+        <!-- 19 October 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">19 October 2025</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/chart.min.js"></script>
+    <script src="../../../js/journal.js"></script>
+</body>
+
+</html>

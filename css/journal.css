@@ -130,9 +130,8 @@
 ============================= */
 
 .week-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 75%;
     height: max-content;
     margin: 1rem auto;
@@ -154,6 +153,8 @@
 
 .week-stats-box {
     display: flex;
+    justify-self: end;
+    align-self: start;
     flex-wrap: wrap;
     gap: 0.5rem;
 }
@@ -421,6 +422,13 @@
 
 .stats.pp {
     --stat-type: "Performance Points";
+}
+
+.loved {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../svgs/heart_icon.svg");
 }
 
 .new-top {

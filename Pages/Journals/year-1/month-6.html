@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>7k Month 6</title>
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../css/journal.css">
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <!-- Navigation Bar -->
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <a href="../../../index.html">
+                        <div class="homepage-icon"></div>
+                    </a>
+                </li>
+                <li><a href="../../journal.html">Journal</a></li>
+                <li><a href="../../goals.html">Goals</a></li>
+                <li><a href="../../tips.html">Tips</a></li>
+                <li><a href="../../calculation.html">Calculation</a></li>
+            </ul>
+        </nav>
+
+        <!-- Banner Image & Page Title -->
+        <img class="banner" src="../../../Images/Yoimiya_Banner.jpg">
+        <div class="page-title">Osu!Mania 7k Month 6</div>
+
+        <!-- The Chart Selection Navigation Bar -->
+        <div class="chart-selector">
+            <button class="chart-type" onclick="switchChart('pp')">Total pp</button>
+            <button class="chart-type" onclick="switchChart('sr')">Star Range(★)</button>
+        </div>
+
+        <!-- Chart Element -->
+        <div class="chart-container">
+            <canvas id="chart"></canvas>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 23 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 23">Week 23</p>
+                <p class="week-subtitle">Taking a step back for good measure</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="3923">3,923pp (<span class="gain">+10pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.1" data-upper="4.5">4.1★ ~ 4.5★</span>
+            </div>
+        </div>
+
+        <!-- 17 November 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">17 November 2025</p>
+            <div class="thoughts">
+                <p>Elbow Sensation is still dull and ring finger is still quite lazy</p>
+            </div>
+        </div>
+
+        <!-- 18 November 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">18 November 2025</p>
+            <div class="thoughts">
+                <p>Elbow sensation still dull and ring finger is still lazy</p>
+            </div>
+        </div>
+
+        <!-- 19 November 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">19 November 2025</p>
+            <div class="thoughts">
+                <p>Elbow sensation has gotten better but ring finger is still rather weak</p>
+            </div>
+        </div>
+
+        <!-- 20 November 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">20 November 2025</p>
+            <div class="thoughts">
+                <p>Elbow sensation is decently strong now, ring finger improved a little but still hard to control</p>
+            </div>
+        </div>
+
+        <!-- 21 November 2025 -->
+        <div class="callout fair">
+            <p class="callout-title">21 November 2025</p>
+            <div class="thoughts">
+                <p>Starting light training to ease back in</p>
+                <p>Playing max 20 mins and less than 3.5★ (Some mishaps so session duration exceeded by some bit)</p>
+                <p>Ring finger control is better than before but still weak</p>
+                <p>
+                    Had quite the mocking coincidence, my Q key switch was faulty
+                    which was also on the exact finger that was "faulty" (my left ring finger).
+                    I actually couldn't tell if I was missing because of my finger or the key until I tested.
+                </p>
+                <p>Manged to still improve over the break</p>
+                <p>At least I know how to change keys and switches now</p>
+                <p>Stamina dipped a bit but rust is minimal</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,913pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">36min</p>
+            </div>
+        </div>
+
+        <!-- 22 November 2025 -->
+        <div class="callout fair">
+            <p class="callout-title">22 November 2025</p>
+            <div class="thoughts">
+                <p>Played a little bit</p>
+                <p>Played a bit higher difficulty but short session duration</p>
+                <p>Ring finger is still sluggish</p>
+                <p>Okay session, not good but not bad</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,913pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">26min</p>
+            </div>
+        </div>
+
+        <!-- 23 November 2025 -->
+        <div class="callout decent">
+            <p class="callout-title">23 November 2025</p>
+            <div class="thoughts">
+                <p>Short session but played higher difficulty</p>
+                <p>Overall not bad, decent session</p>
+                <p>Ring finger can move better a little but still some ways to go</p>
+                <p>Accuracy improved but slightly more misses than usual</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,923pp (<span class="gain">+10pp</span>)</p>
+                <p class="playtime">23min</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 24 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 24">Week 24</p>
+                <p class="week-subtitle">Trying to regain my footing</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="3930">3,930pp (<span class="gain">+7pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.1" data-upper="4.5">4.1★ ~ 4.5★</span>
+            </div>
+        </div>
+
+        <!-- 24 November 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">24 November 2025</p>
+            <div class="thoughts">
+                <p>Elbow Sensation is 80% back to normal and ring finger control is about 60%</p>
+            </div>
+        </div>
+
+        <!-- 25 November 2025 -->
+        <div class="callout decent has-gameplay">
+            <p class="callout-title">25 November 2025</p>
+            
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-6/Future Cider-[Insane]-25November2025.osr" download></a>
+                    <p class="song-title">Future Cider</p>
+                    <div class="song-difficulty" data-difficulty="4.50"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/drmpGr9ej3A?si=pSUW2oP6mSifT5X1"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">887,891</p>
+                    <p class="stats accuracy">97.67%</p>
+                    <p class="stats max-combo">786x</p>
+                    <p class="stats pp"><span class="loved"></span></p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>Not bad session</p>
+                <p>Played higher difficulty but short session</p>
+                <p>Ring finger keeps ghost tapping</p>
+                <p>Accuracy is better but missing more than usual</p>
+                <p>Stamina is worse after not playing for quite some time</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,928pp (<span class="gain">+5pp</span>)</p>
+                <p class="playtime">27min</p>
+            </div>
+        </div>
+
+        <!-- 26 November 2025 -->
+        <div class="callout bad">
+            <p class="callout-title">26 November 2025</p>
+            <div class="thoughts">
+                <p>Not very good session</p>
+                <p>Ring finger is ghost tapping quite a lot</p>
+                <p>Barely played much</p>
+                <p>Just played a little for fun</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,928pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">9min</p>
+            </div>
+        </div>
+
+        <!-- 27 November 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">27 November 2025</p>
+            <div class="thoughts">
+                <p>No much changes to elbow sensation still dull and ring finger is still quite lazy</p>
+            </div>
+        </div>
+
+        <!-- 28 November 2025 -->
+        <div class="callout good">
+            <p class="callout-title">28 November 2025</p>
+            <div class="thoughts">
+                <p>Good session</p>
+                <p>Ring finger is slightly better, not ghost tapping as much</p>
+                <p>Played some bit</p>
+                <p>Improving but ring finger makes me feel uneasy</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,929 (<span class="gain">+1pp</span>)</p>
+                <p class="playtime">22min</p>
+            </div>
+        </div>
+
+        <!-- 29 November 2025 -->
+        <div class="callout fair">
+            <p class="callout-title">29 November 2025</p>
+            <div class="thoughts">
+                <p>Okay session</p>
+                <p>Ring finger is still quite hard to control properly</p>
+                <p>Played harder difficulties</p>
+                <p>Not performing as well as normal</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,930pp (<span class="gain">+1pp</span>)</p>
+                <p class="playtime">24min</p>
+            </div>
+        </div>
+
+        <!-- 30 November 2025 -->
+        <div class="callout terrible">
+            <p class="callout-title">30 November 2025</p>
+            <div class="thoughts">
+                <p>Not good session</p>
+                <p>Ring finger feels weak and uncooperative today</p>
+                <p>Decided to not play today</p>
+                <p>Going to take a rest and avoid playing for a bit</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,930pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">3min</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 25 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 25">Week 25</p>
+                <p class="week-subtitle">Playing just doesn't feel the same</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="3951">3,951pp (<span class="gain">+21pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.1" data-upper="4.5">4.1★ ~ 4.5★</span>
+            </div>
+        </div>
+
+        <!-- 1 December 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">1 December 2025</p>
+            <div class="thoughts">
+                <p>
+                    Elbow sensation is practically 95% back to normal but 
+                    i noticed the top part of my hand connecting to my ring finger lacks sensation and is a little numb.
+                </p>
+            </div>
+        </div>
+
+        <!-- 2 December 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">2 December 2025</p>
+            <div class="thoughts">
+                <p>Ring finger is a bit better</p>
+            </div>
+        </div>
+
+        <!-- 3 December 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">3 December 2025</p>
+            <div class="thoughts">
+                <p>No much change to ring finger</p>
+            </div>
+        </div>
+
+        <!-- 4 December 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">4 December 2025</p>
+            <div class="thoughts">
+                <p>No much improvement to ring finger</p>
+            </div>
+        </div>
+
+        <!-- 5 December 2025 -->
+        <div class="callout unplayable">
+            <p class="callout-title">5 December 2025</p>
+            <div class="thoughts">
+                <p>Really bad session</p>
+                <p>Got worse at long notes</p>
+                <p>Feeling quite demotivated</p>
+                <p>Going to get back on track once finger improves</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,930pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">26min</p>
+            </div>
+        </div>
+
+        <!-- 6 December 2025 -->
+        <div class="callout amazing has-gameplay">
+            <p class="callout-title">6 December 2025</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-6/Campanella (+DT)-[NoName's 7K Hard]-6December2025.osr" download></a>
+                    <p class="song-title">Campanella (+DT)</p>
+                    <div class="song-difficulty" data-difficulty="4.54"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/6sfVaLX_Eaw?si=Fbts3PtoY_8BAV2Q"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">949,562</p>
+                    <p class="stats accuracy">98.56%</p>
+                    <p class="stats max-combo">1,104x</p>
+                    <p class="stats pp">183pp</p>
+                </div>
+            </div>
+            
+            <div class="thoughts">
+                <p>Really good session</p>
+                <p>Ring finger is better today but got tired really quickly</p>
+                <p>Short quick high intensity training</p>
+                <p>Couldn't keep up at the end anymore, too tired</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,941pp (<span class="gain">+11pp</span>)</p>
+                <p class="playtime">25min</p>
+            </div>
+        </div>
+
+        <!-- 7 December 2025 -->
+        <div class="callout good">
+            <p class="callout-title">7 December 2025</p>
+            <div class="thoughts">
+                <p>Pretty good session</p>
+                <p>Ring finger is better but still slacking</p>
+                <p>Still have mild ghost tapping</p>
+                <p>Performance did not deteriorate from yesterday</p>
+                <p>Recovery has gotten more stable</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,951pp (<span class="gain">+10pp</span>)</p>
+                <p class="playtime">32min</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 26 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 26">Week 26</p>
+                <p class="week-subtitle">Taking a detour</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="3951">3,951pp (<span class="gain">+0pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.1" data-upper="4.5">4.1★ ~ 4.5★</span>
+            </div>
+        </div>
+
+        <!-- 8 December 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">8 December 2025</p>
+            <div class="thoughts">
+                <p>No much changes to ring finger control</p>
+            </div>
+        </div>
+
+        <!-- 9 December 2025 -->
+        <div class="callout fair">
+            <p class="callout-title">9 December 2025</p>
+            <div class="thoughts">
+                <p>Regular session</p>
+                <p>Ring finger Seem to be worse a little</p>
+                <p>Played a while to practice playing bar skin</p>
+                <p>Modifying my own bar skin</p>
+                <p>I'm terrible at bars (T o T)</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,951pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">19min</p>
+            </div>
+        </div>
+
+        <!-- 10 December 2025 -->
+        <div class="callout decent">
+            <p class="callout-title">10 December 2025</p>
+            <div class="thoughts">
+                <p>Regular session</p>
+                <p>Ring finger slightly better than yesterday</p>
+                <p>Played a while to practice playing bar skin</p>
+                <p>Better at reading bars a little compared to yesterday</p>
+                <p>I'm still terrible at bars (T o T)</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,951pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">28min</p>
+            </div>
+        </div>
+
+        <!-- 11 December 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">11 December 2025</p>
+            <div class="thoughts">
+                <p>No much change in ring finger control</p>
+            </div>
+        </div>
+
+        <!-- 12 December 2025 -->
+        <div class="callout unplayable">
+            <p class="callout-title">12 December 2025</p>
+            <div class="thoughts">
+                <p>Terrible session</p>
+                <p>Ring finger feels very weak and hard to control</p>
+                <p>Ended very early</p>
+                <p>Feeling annoyed that it's taking so long to recover</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,951pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">5min</p>
+            </div>
+        </div>
+
+        <!-- 13 December 2025 -->
+        <div class="callout fair">
+            <p class="callout-title">13 December 2025</p>
+            <div class="thoughts">
+                <p>Normal session</p>
+                <p>Ring finger still feels weak but not as much as yesterday</p>
+                <p>Played with bar skin instead</p>
+                <p>Can do bars better than before</p>
+                <p>Going to practice reading bars until my ring finger recovers</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,951pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">23min</p>
+            </div>
+        </div>
+
+        <!-- 14 December 2025 -->
+        <div class="callout decent">
+            <p class="callout-title">14 December 2025</p>
+            <div class="thoughts">
+                <p>Normal session</p>
+                <p>Ring finger is slightly better than yesterday</p>
+                <p>Played with bar skin</p>
+                <p>Ability to read bars improved a bit</p>
+                <p>Modified my bar skin</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,951pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">22min</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 27 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 27">Week 27</p>
+                <p class="week-subtitle">Going on Hiatus to rest</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="3951">3,951pp (<span class="gain">+0pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.1" data-upper="4.5">4.1★ ~ 4.5★</span>
+            </div>
+        </div>
+
+        <!-- 15 December 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">15 December 2025</p>
+            <div class="thoughts">
+                <p>Ring finger still not that good</p>
+            </div>
+        </div>
+
+        <!-- 16 December 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">16 December 2025</p>
+            <div class="thoughts">
+                <p>Doesn't seem to be any change in Ring finger control</p>
+            </div>
+        </div>
+
+        <!-- 17 December 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">17 December 2025</p>
+            <div class="thoughts">
+                <p>Ring finger seems a little better but still lazy</p>
+            </div>
+        </div>
+
+        <!-- 18 December 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">18 December 2025</p>
+            <div class="thoughts">
+                <p>Ring finger is still not that good</p>
+            </div>
+        </div>
+
+        <!-- 19 December 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">19 December 2025</p>
+            <div class="thoughts">
+                <p>Wanted to play but decided to skip cause I can't play properly</p>
+            </div>
+        </div>
+
+        <!-- 20 December 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">20 December 2025</p>
+            <div class="thoughts">
+                <p>Practiced low difficulties using Bar skin on Quaver</p>
+            </div>
+        </div>
+
+        <!-- 21 December 2025 -->
+        <div class="callout rest">
+            <p class="callout-title">21 December 2025</p>
+            <div class="thoughts">
+                <p>Practiced Bar skin on Quaver</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/chart.min.js"></script>
+    <script src="../../../js/journal.js"></script>
+</body>
+
+</html>

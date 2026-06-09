@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>7k Month 8</title>
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../css/journal.css">
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <!-- Navigation Bar -->
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <a href="../../../index.html">
+                        <div class="homepage-icon"></div>
+                    </a>
+                </li>
+                <li><a href="../../journal.html">Journal</a></li>
+                <li><a href="../../goals.html">Goals</a></li>
+                <li><a href="../../tips.html">Tips</a></li>
+                <li><a href="../../calculation.html">Calculation</a></li>
+            </ul>
+        </nav>
+
+        <!-- Banner Image & Page Title -->
+        <img class="banner" src="../../../Images/Yoimiya_Banner.jpg">
+        <div class="page-title">Osu!Mania 7k Month 8</div>
+
+        <!-- The Chart Selection Navigation Bar -->
+        <div class="chart-selector">
+            <button class="chart-type" onclick="switchChart('pp')">Total pp</button>
+            <button class="chart-type" onclick="switchChart('sr')">Star Range(★)</button>
+        </div>
+
+        <!-- Chart Element -->
+        <div class="chart-container">
+            <canvas id="chart"></canvas>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 32 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 32">Week 32</p>
+                <p class="week-subtitle">Back in the dumps</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="3975">3,975pp (<span class="gain">+0pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.1" data-upper="4.5">4.1★ ~ 4.5★</span>
+            </div>
+        </div>
+
+        <!-- 19 January 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">19 January 2026</p>
+            <div class="thoughts">
+                <p>Ring Finger feels fine I suppose</p>
+                <p>Control has been improving steadily but slowly</p>
+            </div>
+        </div>
+
+        <!-- 20 January 2026 -->
+        <div class="callout unplayable">
+            <p class="callout-title">20 January 2026</p>
+            <div class="thoughts">
+                <p>I'm pissed the f*ck off</p>
+                <p>Got interrupted and couldn't play anymore</p>
+                <p>Didn't even set any proper scores</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,975pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">9min</p>
+            </div>
+        </div>
+
+        <!-- 21 January 2026 -->
+        <div class="callout terrible">
+            <p class="callout-title">21 January 2026</p>
+            <div class="thoughts">
+                <p>Bad Session</p>
+                <p>Couldn't play very well</p>
+                <p>Timing was very off</p>
+                <p>Accuracy got worse</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,975pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">14min</p>
+            </div>
+        </div>
+
+        <!-- 22 January 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">22 January 2026</p>
+            <div class="thoughts">
+                <p>Ring finger Doesn't seem to feel any much different</p>
+                <p>Hope I'm recovering even if slowly</p>
+            </div>
+        </div>
+
+        <!-- 23 January 2026 -->
+        <div class="callout terrible">
+            <p class="callout-title">23 January 2026</p>
+            <div class="thoughts">
+                <p>Not very good session</p>
+                <p>Skills seem to be regressing a bit</p>
+                <p>Gotten worse at Long Notes</p>
+                <p>Really frustrated and impatient</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,975pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">26min</p>
+            </div>
+        </div>
+
+        <!-- 24 January 2026 -->
+        <div class="callout fair">
+            <p class="callout-title">24 January 2026</p>
+            <div class="thoughts">
+                <p>Okay session</p>
+                <p>Could play better a bit today</p>
+                <p>Played Half Time on high 4★'s</p>
+                <p>Ring Finger is still holding me back</p>
+                <p>Slept later than usual so that's probably why I'm sluggish today</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,975pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">24min</p>
+            </div>
+        </div>
+
+        <!-- 25 January 2026 -->
+        <div class="callout decent">
+            <p class="callout-title">25 January 2026</p>
+            <div class="thoughts">
+                <p>Decent session I guess</p>
+                <p>Ring finger can lift higher during finger rolls (Still lazy)</p>
+                <p>Managed to improve on some low 3★ scores</p>
+                <p>Still can't play high 3★ to low 4★ properly</p>
+                <p>Kind of sleepy today</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,975pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">21min</p>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 33 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 33">Week 33</p>
+                <p class="week-subtitle">One hand out the coffin</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="4016">4,016pp (<span class="gain">+41pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.1" data-upper="4.5">4.1★ ~ 4.5★</span>
+            </div>
+        </div>
+
+        <!-- 26 January 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">26 January 2026</p>
+            <div class="thoughts">
+                <p>Ring finger control wasn't good</p>
+                <p>Didn't get enough sleep yesterday</p>
+            </div>
+        </div>
+
+        <!-- 27 January 2026 -->
+        <div class="callout unplayable">
+            <p class="callout-title">27 January 2026</p>
+            <div class="thoughts">
+                <p>Played like sh*t (Honestly had it coming for me)</p>
+                <p>Tried playing with my Bar skin, could read it but couldn't do that well</p>
+                <p>Didn't sleep well so I can't control my Ring finger properly</p>
+                <p>Already expected this session to not go well so I'm not as disappointed</p>
+                <p>Also I just realised I played on Battery Saving Mode bruh</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,975pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">19min</p>
+            </div>
+        </div>
+
+        <!-- 28 January 2026 -->
+        <div class="callout decent">
+            <p class="callout-title">28 January 2026</p>
+            <div class="thoughts">
+                <p>Decent session, not bad.</p>
+                <p>Could play better but was shit missing (T o T)</p>
+                <p>Got enough sleep but still felt a little tired</p>
+                <p>My lack of control in my ring finger is affecting my confidence (T ^ T)</p>
+                <p>Really hope to recovery soon :/</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,976pp (<span class="gain">+1pp</span>)</p>
+                <p class="playtime">32min</p>
+            </div>
+        </div>
+
+        <!-- 29 January 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">29 January 2026</p>
+            <div class="thoughts">
+                <p>Ring finger control was kind of weak</p>
+                <p>Forgot to write down my thoughts on time, my bad.</p>
+            </div>
+        </div>
+
+        <!-- 30 January 2026 -->
+        <div class="callout bad">
+            <p class="callout-title">30 January 2026</p>
+            <div class="thoughts">
+                <p>Couldn't play that well today</p>
+                <p>Ring finger felt weak</p>
+                <p>Honestly was quite unfocused during training</p>
+                <p>Was missing a lot even on easy patterns</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,976pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">13min</p>
+            </div>
+        </div>
+
+        <!-- 31 January 2026 -->
+        <div class="callout fair">
+            <p class="callout-title">31 January 2026</p>
+            <div class="thoughts">
+                <p>Okay session</p>
+                <p>Ring finger making me sh*t miss</p>
+                <p>Got a 191pp play after a long time of low pp plays</p>
+                <p>Please Ring Finger recover faster already(T o T)</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">3,992pp (<span class="gain">+16pp</span>)</p>
+                <p class="playtime">22min</p>
+            </div>
+        </div>
+
+        <!-- 1 February 2026 -->
+        <div class="callout decent">
+            <p class="callout-title">1 February 2026</p>
+            <div class="thoughts">
+                <p>Decent session</p>
+                <p>Ring finger still making things difficult</p>
+                <p>Finally reached 4000pp (should've reached way earlier though)</p>
+                <p>Going to push skill boundaries hard once I recover fully</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,016pp (<span class="gain">+24pp</span>)</p>
+                <p class="playtime">25min</p>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 34 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 34">Week 34</p>
+                <p class="week-subtitle">Trying to improve what little I can</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="4016">4,016pp (<span class="gain">+0pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.1" data-upper="4.5">4.1★ ~ 4.5★</span>
+            </div>
+        </div>
+
+        <!-- 2 February 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">2 February 2026</p>
+            <div class="thoughts">
+                <p>Ring finger was kind of limp</p>
+                <p>Forgot to write down my thoughts again (o_o)</p>
+            </div>
+        </div>
+
+        <!-- 3 February 2026 -->
+        <div class="callout bad">
+            <p class="callout-title">3 February 2026</p>
+            <div class="thoughts">
+                <p>Decent until I played Long notes</p>
+                <p>
+                    I think I can play Long notes better but my reading stamina and consistency is terrible, 
+                    I can do fine at first but I start breaking after some time
+                </p>
+                <p>I'm tapping too hard and I'm too tense</p>
+                <p>I need to learn to tap lighter and more relaxed</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,016pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">38min</p>
+            </div>
+        </div>
+
+        <!-- 4 February 2026 -->
+        <div class="callout bad">
+            <p class="callout-title">4 February 2026</p>
+            <div class="thoughts">
+                <p>Didn't have energy today</p>
+                <p>Practiced playing more relaxed Day 1 (Failed)</p>
+                <p>Ring finger made playing relaxed very unstable</p>
+                <p>Playing relaxed seems fine aside from some accuracy drops</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,016pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">18min</p>
+            </div>
+        </div>
+
+        <!-- 5 February 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">5 February 2026</p>
+            <div class="thoughts">
+                <p>Ring finger still lacking control</p>
+            </div>
+        </div>
+
+        <!-- 6 February 2026 -->
+        <div class="callout good">
+            <p class="callout-title">6 February 2026</p>
+            <div class="thoughts">
+                <p>Good Session</p>
+                <p>Day 2 of practicing Relaxation (Somewhat successful)</p>
+                <p>
+                    I could relax but accuracy would dip due to loss of control, 
+                    ring finger made it harder than it should be but I'll take on the challenge.
+                </p>
+                <p>Managed to get minimum strain on a 5min 4★ Stamina Song</p>
+                <p>Harder to effectively hit jacks while relaxed</p>
+                <p>I also noticed I tend to tense up when things get hard in order to compensate for lack of control</p>
+                <p>I should focus on making relaxed play a habit and work on accuracy and control after</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,016pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">29min</p>
+            </div>
+        </div>
+
+        <!-- 7 February 2026 -->
+        <div class="callout good">
+            <p class="callout-title">7 February 2026</p>
+            <div class="thoughts">
+                <p>Good Session</p>
+                <p>Day 3 of practicing Relaxation (Success)</p>
+                <p>Control while relaxing has improved but accuracy and timing still shaky, lacking speed while relaxing however.</p>
+                <p>Extremely fast burst causes me to miss or hit very inaccurately due to my lack of speed to catch up</p>
+                <p>In order to continue improving I should focus on finger control as well, but that would prove to be quite difficult due to my ring finger as of now.</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,016pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">30min</p>
+            </div>
+        </div>
+
+        <!-- 8 February 2026 -->
+        <div class="callout decent">
+            <p class="callout-title">8 February 2026</p>
+            <div class="thoughts">
+                <p>Decent session but not as good as yesterday</p>
+                <p>Day 4 of practicing Relaxation (Small Failure)</p>
+                <p>I still find it hard to balance the right force</p>
+                <p>Speed is still lacking which causes accuracy drops on burst sections</p>
+                <p>Maintaining consistent force on key holds for long notes prove to be rather tricky and difficult, I think more finger independence is needed.</p>
+                <p>I should continue to focus on hitting at the right force and maintain consistency</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,016pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">33min</p>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 35 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 35">Week 35</p>
+                <p class="week-subtitle">Reaching for the sliver light in a place shrouded in darkness</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="4036">4,036pp (<span class="gain">+20pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.1" data-upper="4.5">4.1★ ~ 4.5★</span>
+            </div>
+        </div>
+
+        <!-- 9 February 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">9 February 2026</p>
+            <div class="thoughts">
+                <p>Couldn't control my ring finger or my fingers in general very well because I didn't get enough sleep</p>
+            </div>
+        </div>
+
+        <!-- 10 February 2026 -->
+        <div class="callout decent">
+            <p class="callout-title">10 February 2026</p>
+            <div class="thoughts">
+                <p>Not Bad Session I guess</p>
+                <p>Day 5 of practicing Relaxation (Kind of Success?)</p>
+                <p>I think I might have found the right amount of force? I don't know though.</p>
+                <p>Ring finger is still being a liability</p>
+                <p>Speed and control is slightly better but still not that good</p>
+                <p>I can relax a bit while holding long notes but it's proving difficult and I tense up rather quickly</p>
+                <p>I should keep this training going, be consistent don't give up.</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,016pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">40min</p>
+            </div>
+        </div>
+
+        <!-- 11 February 2026 -->
+        <div class="callout bad">
+            <p class="callout-title">11 February 2026</p>
+            <div class="thoughts">
+                <p>Kind of bad session</p>
+                <p>Day 6 of practicing Relaxation (Partial Failure)</p>
+                <p>My speed improved a little but my accuracy and control are not good.</p>
+                <p>Ring finger is making it hard for me to reliably control my fingers</p>
+                <p>I can relax better while holding long notes though it takes conscious effort</p>
+                <p>There are improvements, it's just a bad day keep going</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,016pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">31min</p>
+            </div>
+        </div>
+
+        <!-- 12 February 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">12 February 2026</p>
+            <div class="thoughts">
+                <p>Ring finger doesn't seem to be any much better</p>
+            </div>
+        </div>
+
+        <!-- 13 February 2026 -->
+        <div class="callout good">
+            <p class="callout-title">13 February 2026</p>
+            <div class="thoughts">
+                <p>Good Session</p>
+                <p>Day 7 of practicing Relaxation (Success)</p>
+                <p>Accuracy, Control and Speed all improved some bit, but stability is wobbly</p>
+                <p>Ring finger misfires occasionally but does not hinder me that much anymore</p>
+                <p>Overall improved at tapping lighter and better</p>
+                <p>Don't stop now, keep giving it your all!</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,019pp (<span class="gain">+3pp</span>)</p>
+                <p class="playtime">34min</p>
+            </div>
+        </div>
+
+        <!-- 14 February 2026 -->
+        <div class="callout fair">
+            <p class="callout-title">14 February 2026</p>
+            <div class="thoughts">
+                <p>Normal session</p>
+                <p>Day 8 of practicing Relaxation (Failure)</p>
+                <p>Doesn't seem to have any improvement</p>
+                <p>Seem more tense than before, I played at night and was tired maybe that's why?</p>
+                <p>A setback, don't give up keep going!</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,019pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">32min</p>
+            </div>
+        </div>
+
+        <!-- 15 February 2026 -->
+        <div class="callout good">
+            <p class="callout-title">15 February 2026</p>
+            <div class="thoughts">
+                <p>Good Session but not very good at first</p>
+                <p>Day 9 of practicing Relaxation (Partial Success)</p>
+                <p>Stamina improved a lot but fine motor control needs work</p>
+                <p>Ring finger was not cooperating with me at first but managed to do better at the end</p>
+                <p>Managed to get a 99% on a 4.36★ stamina song while barely getting tired tapping lightly, I was shocked lol though I missed quite some times</p>
+                <p>Good work but you've got a long way to go!</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,036pp (<span class="gain">+17pp</span>)</p>
+                <p class="playtime">27min</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/chart.min.js"></script>
+    <script src="../../../js/journal.js"></script>
+</body>
+
+</html>

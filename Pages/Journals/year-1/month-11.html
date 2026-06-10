@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>7k Month 11</title>
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../css/journal.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Navigation Bar -->
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <a href="../../../index.html">
+                        <div class="homepage-icon"></div>
+                    </a>
+                </li>
+                <li><a href="../../journal.html">Journal</a></li>
+                <li><a href="../../goals.html">Goals</a></li>
+                <li><a href="../../tips.html">Tips</a></li>
+                <li><a href="../../calculation.html">Calculation</a></li>
+            </ul>
+        </nav>
+
+        <!-- Banner Image & Page Title -->
+        <img class="banner" src="../../../Images/Yoimiya_Banner.jpg">
+        <div class="page-title">Osu!Mania 7k Month 11</div>
+
+        <!-- The Chart Selection Navigation Bar -->
+        <div class="chart-selector">
+            <button class="chart-type" onclick="switchChart('pp')">Total pp</button>
+            <button class="chart-type" onclick="switchChart('sr')">Star Range(★)</button>
+        </div>
+
+        <!-- Chart Element -->
+        <div class="chart-container">
+            <canvas id="chart"></canvas>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 45 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 45">Week 45</p>
+                <p class="week-subtitle">Falling off Cloud 9 and breaking my legs</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="4209">4,209pp (<span class="gain">+61pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.1" data-upper="4.6">4.2★ ~ 4.7★</span>
+            </div>
+        </div>
+
+        <!-- 20 April 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">20 April 2026</p>
+            <div class="thoughts">
+                <p>Ring Finger is fine, just feeling extremely stressed today.</p>
+            </div>
+        </div>
+
+        <!-- 21 April 2026 -->
+        <div class="callout amazing has-gameplay">
+            <p class="callout-title">21 April 2026</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-11/Angel's Window-[Finale]-21April2026.osr" download></a>
+                    <p class="song-title">Angel's Window</p>
+                    <div class="song-difficulty" data-difficulty="4.70"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/HPz64IHBuLE?si=JRfehrMIHxXB-hEX"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">942,072</p>
+                    <p class="stats accuracy">98.86%</p>
+                    <p class="stats max-combo">1,984x</p>
+                    <p class="stats pp">209pp <span class="new-top"></span></p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>Amazing Session</p>
+                <p>Performed way better than I thought I would</p>
+                <p>Ring Finger is still lazy but workable.</p>
+                <p>I can get 98%+ on 4.5★-4.7★ now which is way better than I thought my skill was</p>
+                <p>Huge pp boost and skill boost again</p>
+                <p>Today's session is a huge motivation boost, time to keep up the momentum!</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,209pp (<span class="gain">+61pp</span>)</p>
+                <p class="playtime">34min</p>
+            </div>
+        </div>
+
+        <!-- 22 April 2026 -->
+        <div class="callout bad">
+            <p class="callout-title">22 April 2026</p>
+            <div class="thoughts">
+                <p>Not that good Session</p>
+                <p>Crashed after yesterday (TwT)</p>
+                <p>Ring Finger is slightly worse off today</p>
+                <p>I can't get SS ranks or play 4 stars well today</p>
+                <p>I guess today is just not it hm.</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,209pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">20min</p>
+            </div>
+        </div>
+
+        <!-- 23 April 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">23 April 2026</p>
+            <div class="thoughts">
+                <p>Forgot to record on time, Ring Finger isn't really all that much better honestly.</p>
+            </div>
+        </div>
+
+        <!-- 24 April 2026 -->
+        <div class="callout unplayable">
+            <p class="callout-title">24 April 2026</p>
+            <div class="thoughts">
+                <p>Literally unplayable Session</p>
+                <p>My Accuracy and timing is just non-existent today (- _ -)</p>
+                <p>Ring Finger feels slightly worse</p>
+                <p>Can't even play simple songs</p>
+                <p>Nothing much to say honestly, just disappointed.</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,209pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">11min</p>
+            </div>
+        </div>
+
+        <!-- 25 April 2026 -->
+        <div class="callout terrible">
+            <p class="callout-title">25 April 2026</p>
+            <div class="thoughts">
+                <p>Terrible Session</p>
+                <p>Accuracy is slightly better but not back to normal yet, I still can't play as well though.</p>
+                <p>Ring finger still not very good.</p>
+                <p>Don't even feel like commenting today</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,209pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">21min</p>
+            </div>
+        </div>
+
+        <!-- 26 April 2026 -->
+        <div class="callout terrible">
+            <p class="callout-title">26 April 2026</p>
+            <div class="thoughts">
+                <p>Terrible Session as well</p>
+                <p>Accuracy is kind of better? maybe not idk</p>
+                <p>Ring finger can't move that well, but it's not that bad</p>
+                <p>I think I'm going to take the next week off.</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,209pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">13min</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 46 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 46">Week 46</p>
+                <p class="week-subtitle">A much needed week of rest and embarking on a side quest</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="4209">4,209pp (<span class="gain">+0pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.1" data-upper="4.6">4.2★ ~ 4.7★</span>
+            </div>
+        </div>
+
+        <!-- 27 April 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">27 April 2026</p>
+            <div class="thoughts">
+                <p>Ring Finger is kind of fine</p>
+            </div>
+        </div>
+
+        <!-- 28 April 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">28 April 2026</p>
+            <div class="thoughts">
+                <p>Tried playing today, didn't go well.</p>
+                <p>I should probably just take this week off and lower my expectations</p>
+                <p>Also I think some of my keys are malfunctioning?</p>
+                <p>
+                    Decided to play Osu!Taiko for the first time, oh lord the headache was crazy. 
+                    I think I'll play Taiko for this entire week while I rest from 7k.
+                </p>
+            </div>
+        </div>
+
+        <!-- 29 April 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">29 April 2026</p>
+            <div class="thoughts">
+                <p>Day 2 of playing Taiko, I still suck lol</p>
+                <p>I'm still figuring things out</p>
+            </div>
+        </div>
+
+        <!-- 30 April 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">30 April 2026</p>
+            <div class="thoughts">
+                <p>Rest Day today, didn't play anything</p>
+                <p>Just worked on my website and stuff</p>
+            </div>
+        </div>
+
+        <!-- 1 May 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">1 May 2026</p>
+            <div class="thoughts">
+                <p>Day 3 of playing Taiko, I'm a little better I guess but I still suck xd</p>
+                <p>Reached 1000pp on Taiko somehow lmao</p>
+                <p>I seem to be able to tell notes apart and hit them correctly now but I'm just making mistakes quite frequently</p>
+            </div>
+        </div>
+
+        <!-- 2 May 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">2 May 2026</p>
+            <div class="thoughts">
+                <p>Day 4 of playing Taiko, I'm choking like crazy</p>
+                <p>My mind feels discombobulated, I feel worse lmao my performance feels worse as well</p>
+            </div>
+        </div>
+
+        <!-- 3 May 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">3 May 2026</p>
+            <div class="thoughts">
+                <p>Day 5 of playing Taiko, I'm still choking quite a lot</p>
+                <p>I'm still very confused on how to tap and alternate</p>
+                <p>Long string of notes make me choke easily</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 47 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 47">Week 47</p>
+                <p class="week-subtitle">The honing of skill and rise of expectations</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="4307">4,307pp (<span class="gain">+98pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.1" data-upper="4.6">4.2★ ~ 4.7★</span>
+            </div>
+        </div>
+
+        <!-- 4 May 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">4 May 2026</p>
+            <div class="thoughts">
+                <p>Nothing today, just a rest day</p>
+                <p>My Ring finger seems to be better now, still observing</p>
+                <p>Tomorrow 7k training will resume and I plan on pushing my limits a bit, also more Taiko practice</p>
+            </div>
+        </div>
+
+        <!-- 5 May 2026 -->
+        <div class="callout decent">
+            <p class="callout-title">5 May 2026</p>
+            <div class="thoughts">
+                <p>Honestly not that bad, but I felt terrible today</p>
+                <p>My accuracy is a little rusty but still good</p>
+                <p>Ring finger is kind of better, finger control is still quite wanky</p>
+                <p>Couldn't play songs as hard as I wanted to</p>
+                <p>Day 6 of playing Taiko, I played not very well today maybe I was tired or something I don't know</p>
+                <p>I still have no idea how the hell to alternate bruh</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,221pp (<span class="gain">+12pp</span>)</p>
+                <p class="playtime">34min</p>
+            </div>
+        </div>
+
+        <!-- 6 May 2026 -->
+        <div class="callout fair">
+            <p class="callout-title">6 May 2026</p>
+            <div class="thoughts">
+                <p>I felt terrible today as well, I could still play but not up to my standard</p>
+                <p>My accuracy is back but for some reason I still feel like it sucks</p>
+                <p>Ring finger is feeling better now but there's still some ways to go</p>
+                <p>I feel so doo doo in 7k</p>
+                <p>Day 7 of playing Taiko, I decided to humble myself and practice alternating on half time</p>
+                <p>I hope to see some improvements in my alternating for the next week</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,223pp (<span class="gain">+2pp</span>)</p>
+                <p class="playtime">35min</p>
+            </div>
+        </div>
+
+        <!-- 7 May 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">7 May 2026</p>
+            <div class="thoughts">
+                <p>No practice today, just some coding</p>
+            </div>
+        </div>
+
+        <!-- 8 May 2026 -->
+        <div class="callout good">
+            <p class="callout-title">8 May 2026</p>
+            <div class="thoughts">
+                <p>Today felt better, my accuracy is good and feels smooth</p>
+                <p>I'm struggling with relaxing and keep tensing up, I don't know why</p>
+                <p>Ring Finger feels slightly weaker today than before</p>
+                <p>The higher 4★'s are so hard to score accuracy man</p>
+                <p>Day 8 of playing Taiko, I'm a very little bit better at alternating but my reading stamina is so bad (T - T)</p>
+                <p>I'm going to be patient for improvement while I train</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,229pp (<span class="gain">+6pp</span>)</p>
+                <p class="playtime">30min</p>
+            </div>
+        </div>
+
+        <!-- 9 May 2026 -->
+        <div class="callout good">
+            <p class="callout-title">9 May 2026</p>
+            <div class="thoughts">
+                <p>Accuracy is getting more consistent and my timing is getting better, scoring less than 100UR more often on lower difficulties</p>
+                <p>I need more finger control practice and exposure to long notes</p>
+                <p>Ring finger is functionable now but still lagging behind on control</p>
+                <p>The Star rating on 4★'s are so unreliable lol</p>
+                <p>Day 9 of playing Taiko, There's visible improvement, I'm slowly getting better at alternating and reading patterns. Able to get A ranks on slower 2★'s</p>
+                <p>Wonder if I can reach 5★'s within the next 3 months on 7k?</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,278pp (<span class="gain">+49pp</span>)</p>
+                <p class="playtime">33min</p>
+            </div>
+        </div>
+
+        <!-- 10 May 2026 -->
+        <div class="callout good">
+            <p class="callout-title">10 May 2026</p>
+            <div class="thoughts">
+                <p>Accuracy is a little worse today but still decent I suppose</p>
+                <p>Able to get 97% - 98% on 4.6★ - 4.7★'s more consistently but I cannot hit the patterns cleanly and my ratio is quite rough</p>
+                <p>I need more practice and exposure on higher difficulties to get better at them</p>
+                <p>Day 10 of playing Taiko, I'm getting even better, but choking is still quite prominent at this point</p>
+                <p>Got my first 2★ FC on Taiko yay</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,307pp (<span class="gain">+29pp</span>)</p>
+                <p class="playtime">29min</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 48 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 48">Week 48</p>
+                <p class="week-subtitle">The start of a new era</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="4369">4,369pp (<span class="gain">+62pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.1" data-upper="4.6">4.2★ ~ 4.8★</span>
+            </div>
+        </div>
+
+        <!-- 11 May 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">11 May 2026</p>
+            <div class="thoughts">
+                <p>Rest Day, didn't practice today</p>
+            </div>
+        </div>
+
+        <!-- 12 May 2026 -->
+        <div class="callout decent">
+            <p class="callout-title">12 May 2026</p>
+            <div class="thoughts">
+                <p>Accuracy has gotten worse and more unstable</p>
+                <p>My skills improved but I still feel like I suck lol</p>
+                <p>I'm getting more 180pp - 200pp plays on 7k now</p>
+                <p>Day 11 of playing Taiko, I can alternate fairly reliably, choking is reduced but still there</p>
+                <p>Reached 1,500pp and SS'ed a 2★ on Taiko</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,321pp (<span class="gain">+14pp</span>)</p>
+                <p class="playtime">45min</p>
+            </div>
+        </div>
+
+        <!-- 13 May 2026 -->
+        <div class="callout amazing has-gameplay">
+            <p class="callout-title">13 May 2026</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-11/The Words I Never Said in D&B-[Remorse]-13May2026.osr" download></a>
+                    <p class="song-title">The Words I Never Said in D&B</p>
+                    <div class="song-difficulty" data-difficulty="4.80"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/mzl6c5YbEJg?si=S98b7VoaLW9rADks"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">927,977</p>
+                    <p class="stats accuracy">98.47%</p>
+                    <p class="stats max-combo">1,058x</p>
+                    <p class="stats pp">211pp <span class="new-top"></span></p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>Accuracy is fine today</p>
+                <p>I can do 4.5★ - 4.8★ on 7k pretty fairly now, albeit not with clean accuracy or Unstable Rate</p>
+                <p>Day 12 of playing Taiko, getting better but performance is still unstable and my processing is still not fast enough</p>
+                <p>Got another 2★ SS on Taiko lol, high BPM songs are still hard for me though.</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,343pp (<span class="gain">+22pp</span>)</p>
+                <p class="playtime">45min</p>
+            </div>
+        </div>
+
+        <!-- 14 May 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">14 May 2026</p>
+            <div class="thoughts">
+                <p>Rest Day today, just worked on other stuff while recovering</p>
+            </div>
+        </div>
+
+        <!-- 15 May 2026 -->
+        <div class="callout terrible">
+            <p class="callout-title">15 May 2026</p>
+            <div class="thoughts">
+                <p>I can't focus very well today, pretty bad session.</p>
+                <p>I kept choking on both 7k and Taiko</p>
+                <p>Day 13 of playing Taiko, choking exceptionally much today</p>
+                <p>Pretty demotivating session today I won't lie.</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,357pp (<span class="gain">+14pp</span>)</p>
+                <p class="playtime">32min</p>
+            </div>
+        </div>
+
+        <!-- 16 May 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">16 May 2026</p>
+            <div class="thoughts">
+                <p>Skipped today's training, didn't get enough or proper sleep so I'm not in the condition to practice.</p>
+            </div>
+        </div>
+
+        <!-- 17 May 2026 -->
+        <div class="callout amazing">
+            <p class="callout-title">17 May 2026</p>
+            <div class="thoughts">
+                <p>7k was quite alright but Taiko was very good</p>
+                <p>I'm slowly but steadily improving at 7k, 5★ is honestly starting to look reachable and playable</p>
+                <p>Day 14 of playing Taiko, feeling better today and kind of entered the flow state, skill is kind of unstable though</p>
+                <p>Got my first 3★ Muzukashii pass and reached 1,700pp</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,369pp (<span class="gain">+12pp</span>)</p>
+                <p class="playtime">32min</p>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="../../../js/chart.min.js"></script>
+    <script src="../../../js/journal.js"></script>
+</body>
+
+</html>

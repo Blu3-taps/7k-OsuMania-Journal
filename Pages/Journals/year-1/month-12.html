@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>7k Month 12</title>
+    <link rel="icon" type="image/png" href="../../../Images/Favicon.png">
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../css/journal.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Navigation Bar -->
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <a href="../../../index.html">
+                        <div class="homepage-icon"></div>
+                    </a>
+                </li>
+                <li><a href="../../journal.html">Journal</a></li>
+                <li><a href="../../goals.html">Goals</a></li>
+                <li><a href="../../tips.html">Tips</a></li>
+                <li><a href="../../calculation.html">Calculation</a></li>
+            </ul>
+        </nav>
+
+        <!-- Banner Image & Page Title -->
+        <img class="banner" style="object-position: 0 75%;" src="../../../Images/Banners/Firefly_Banner.jpg">
+        <div class="page-title">Osu!Mania 7k Month 12</div>
+
+        <!-- Back Button -->
+        <a class="back-button" href="index.html">Back⮌</a>
+
+        <!-- The Chart Selection Navigation Bar -->
+        <div class="chart-selector">
+            <button class="chart-type" onclick="switchChart('pp')">Total pp</button>
+            <button class="chart-type" onclick="switchChart('sr')">Star Range(★)</button>
+        </div>
+
+        <!-- Chart Element -->
+        <div class="chart-container">
+            <canvas id="chart"></canvas>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 49 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 49">Week 49</p>
+                <p class="week-subtitle">The start of a new era</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="4480">4,480pp (<span class="gain">+111pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.3" data-upper="4.9">4.3★ ~ 4.9★</span>
+            </div>
+        </div>
+
+        <!-- 18 May 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">18 May 2026</p>
+            <div class="thoughts">
+                <p>Rest Day today, no training.</p>
+            </div>
+        </div>
+
+        <!-- 19 May 2026 -->
+        <div class="callout amazing has-gameplay">
+            <p class="callout-title">19 May 2026</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-12/To the Shining MiLie-[Shining Future]-19May2026.osr" download></a>
+                    <p class="song-title">To the Shining MiLie</p>
+                    <div class="song-difficulty" data-difficulty="4.61"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/98FXtLcl2NA?si=IOE0-e4Ijs3e0_4T"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">975,026</p>
+                    <p class="stats accuracy">99.12%</p>
+                    <p class="stats max-combo">2,166x</p>
+                    <p class="stats pp">201pp</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-12/TuNGSTeN-[CS' 7K Command & Conquer]-19May2026.osr" download></a>
+                    <p class="song-title">TuNGSTeN</p>
+                    <div class="song-difficulty" data-difficulty="4.80"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/gXHKHrr2eos?si=ZLwZLKfFNpgRYpsE"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">937,425</p>
+                    <p class="stats accuracy">99.28%</p>
+                    <p class="stats max-combo">676x</p>
+                    <p class="stats pp">227pp <span class="new-top"></span></p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>I'm getting 97% - 98% on higher 4.6★ - 4.8★'s but I still feel like I'm doing badly, maybe because I'm not hitting the patterns cleanly?</p>
+                <p>7k is quite the struggle (o_o||)</p>
+                <p>Day 15 of playing Taiko, I don't have as much mental energy as before, choked quite easily</p>
+                <p>Overall 7k was pretty good, just didn't feel good</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,421pp (<span class="gain">+52pp</span>)</p>
+                <p class="playtime">38min</p>
+            </div>
+        </div>
+
+        <!-- 20 May 2026 -->
+        <div class="callout decent">
+            <p class="callout-title">20 May 2026</p>
+            <div class="thoughts">
+                <p>Decent session I suppose, pushing on 7k gives me some really ugly scores</p>
+                <p>Still got a long ways to go</p>
+                <p>Day 16 of playing Taiko, doing a little better today but still choking on long note sections</p>
+                <p>Got spectated by a pro Taiko player while I was training, I was so nervous lol</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,432pp (<span class="gain">+11pp</span>)</p>
+                <p class="playtime">43min</p>
+            </div>
+        </div>
+
+        <!-- 21 May 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">21 May 2026</p>
+            <div class="thoughts">
+                <p>Rest Day today, just focused on adding features to my website</p>
+            </div>
+        </div>
+
+        <!-- 22 May 2026 -->
+        <div class="callout good">
+            <p class="callout-title">22 May 2026</p>
+            <div class="thoughts">
+                <p>Pretty Good Session</p>
+                <p>Played higher 4★'s around my limits, don't notice any improvements for now</p>
+                <p>Day 17 of playing Taiko, choking lesser but still do from time to time</p>
+                <p>I can do 3★ muzukashii difficulties if I'm in the flow state</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,451pp (<span class="gain">+19pp</span>)</p>
+                <p class="playtime">41min</p>
+            </div>
+        </div>
+
+        <!-- 23 May 2026 -->
+        <div class="callout good has-gameplay">
+            <p class="callout-title">23 May 2026</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-12/Takane no Hanako-san-[What is Love]-23May2026.osr" download></a>
+                    <p class="song-title">Takane no Hanako-san</p>
+                    <div class="song-difficulty" data-difficulty="4.91"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/rqY2vknYhRY?si=Xpy09udgv-YwqUW_"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">938,742</p>
+                    <p class="stats accuracy">98.45%</p>
+                    <p class="stats max-combo">1,749x</p>
+                    <p class="stats pp">221pp</p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>Pretty good and smooth Session</p>
+                <p>Improved and set new good scores on higher difficulties</p>
+                <p>I'm confident I can start improving rapidly on 7k</p>
+                <p>Day 18 of playing Taiko, played a bunch of muzukashii difficulty songs and started choking a lot xd</p>
+                <p>Trying to push my limits in Taiko by playing songs that are difficult for me</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,479pp (<span class="gain">+28pp</span>)</p>
+                <p class="playtime">34min</p>
+            </div>
+        </div>
+
+        <!-- 24 May 2026 -->
+        <div class="callout terrible">
+            <p class="callout-title">24 May 2026</p>
+            <div class="thoughts">
+                <p>Pretty bad session, I'm very unfocused and agitated today</p>
+                <p>Didn't push today, was not in the right condition, just playing some lower 4★'s that I didn't do so well on last time</p>
+                <p>Day 19 of playing Taiko, tortured myself with low 3★'s</p>
+                <p>Probably just a bad day, it'll be fine</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,480pp (<span class="gain">+1pp</span>)</p>
+                <p class="playtime">28min</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 50 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 50">Week 50</p>
+                <p class="week-subtitle">A massive breakthrough, into a realm once unfathomable</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="4586">4,586pp (<span class="gain">+106pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.4" data-upper="5.0">4.4★ ~ 5.0★</span>
+            </div>
+        </div>
+
+        <!-- 25 May 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">25 May 2026</p>
+            <div class="thoughts">
+                <p>Rest Day today, focused on designing my website's journal entries</p>
+            </div>
+        </div>
+
+        <!-- 26 May 2026 -->
+        <div class="callout amazing has-gameplay">
+            <p class="callout-title">26 May 2026</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-12/United (L.A.O.S Remix)-[Stan's Black Another]-26May2026.osr" download></a>
+                    <p class="song-title">United (L.A.O.S Remix) (First 5★ Pass)</p>
+                    <div class="song-difficulty" data-difficulty="5.02"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/vRh7Ya4FswU?si=JBDxxVPOBHwJ6qW_"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">922,195</p>
+                    <p class="stats accuracy">98.22%</p>
+                    <p class="stats max-combo">1,130x</p>
+                    <p class="stats pp">236pp <span class="new-top"></span></p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>Insane session, breached into 5★ territory and got my first 5★ pass</p>
+                <p>Got so tired after doing three 5★'s I literally couldn't play anymore xd</p>
+                <p>Reached 4.5k pp on 7k</p>
+                <p>Day 20 of playing Taiko, I can consistently get good accuracy on low to mid 2★'s and I don't struggle as much anymore</p>
+                <p>Got 100pp play on Taiko and reached 2k pp</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,521pp (<span class="gain">+41pp</span>)</p>
+                <p class="playtime">28min</p>
+            </div>
+        </div>
+
+        <!-- 27 May 2026 -->
+        <div class="callout decent">
+            <p class="callout-title">27 May 2026</p>
+            <div class="thoughts">
+                <p>Got kind of mad cause I kept messing up, but overall it's a decent session</p>
+                <p>Still exhausted from yesterday so I didn't push much today, mainly focused on refining my skills and setting scores on 4.6★ and below</p>
+                <p>Finger control is slightly weaker than normal but it's most likely from yesterday's fatigue</p>
+                <p>Day 21 of playing Taiko, I'm still not very good at consistency and tend to choke on long chains</p>
+                <p>3★'s done messed me up</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,525pp (<span class="gain">+4pp</span>)</p>
+                <p class="playtime">38min</p>
+            </div>
+        </div>
+
+        <!-- 28 May 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">28 May 2026</p>
+            <div class="thoughts">
+                <p>Rest Day today, made some design additions and filled in some entries on my website</p>
+            </div>
+        </div>
+
+        <!-- 29 May 2026 -->
+        <div class="callout fair">
+            <p class="callout-title">29 May 2026</p>
+            <div class="thoughts">
+                <p>Nothing much special today, just a fair session</p>
+                <p>Didn't really do any much pushing today, just some accuracy refinement on lower 4★'s for 7k</p>
+                <p>Probably planning to do some chord practice and a little bit of pushing tomorrow</p>
+                <p>Day 22 of playing Taiko, I'm still not very confident in my ability yet but I'm getting better surely but slowly</p>
+                <p>Probably going to play more 3★'s on half time to practice the patterns</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,530pp (<span class="gain">+5pp</span>)</p>
+                <p class="playtime">33min</p>
+            </div>
+        </div>
+
+        <!-- 30 May 2026 -->
+        <div class="callout amazing has-gameplay">
+            <p class="callout-title">30 May 2026</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-12/Electric Angel (Theo Gobensen Remix)-[Extra]-30May2026.osr" download></a>
+                    <p class="song-title">Electric Angel (Theo Gobensen Remix)</p>
+                    <div class="song-difficulty" data-difficulty="5.00"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/Yw8qVNXdRng?si=RpilK3x3qT5MJp6L"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">958,538</p>
+                    <p class="stats accuracy">99.21%</p>
+                    <p class="stats max-combo">952x</p>
+                    <p class="stats pp">242pp <span class="new-top"></span></p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>Amazing Session, Pushed myself and played higher difficulties on 7k, scored another top play on a 5.00★</p>
+                <p>Did mostly chord jack today and high density songs</p>
+                <p>Day 23 of playing Taiko, I'm getting better and I can do low 3★ muzukashii difficulties with better accuracy now</p>
+                <p>Did amazing on Taiko today, actually starting to get fun</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,585pp (<span class="gain">+55pp</span>)</p>
+                <p class="playtime">36min</p>
+            </div>
+        </div>
+
+        <!-- 31 May 2026 -->
+        <div class="callout good">
+            <p class="callout-title">31 May 2026</p>
+            <div class="thoughts">
+                <p>Good Session</p>
+                <p>Focused on getting 99% on lower 4★ songs in 7k to train consistency and precision, didn't push today</p>
+                <p>Day 24 of playing Taiko, Getting a bit mind blocked, might need to take a break.</p>
+                <p>I hate doubles on Taiko so much.</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,586pp (<span class="gain">+1pp</span>)</p>
+                <p class="playtime">41min</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 51 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 51">Week 51</p>
+                <p class="week-subtitle">Reaching a whole other level</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="4802">4,802pp (<span class="gain">+216pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.5" data-upper="5.0">4.5★ ~ 5.0★</span>
+            </div>
+        </div>
+
+        <!-- 1 June 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">1 June 2026</p>
+            <div class="thoughts">
+                <p>Rest Day today, focused on filling in entries on my journal website</p>
+            </div>
+        </div>
+
+        <!-- 2 June 2026 -->
+        <div class="callout bad">
+            <p class="callout-title">2 June 2026</p>
+            <div class="thoughts">
+                <p>Pretty bad session, I wasn't playing to standard and kept making mistakes</p>
+                <p>Played some 5★ songs, I got smoked</p>
+                <p>Day 25 of playing Taiko, I'm mixing up my don's and ka's, really bad mind block</p>
+                <p>Going to take a break from Taiko for some time, won't be recording any more Taiko progress, will still be playing after though</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,621pp (<span class="gain">+35pp</span>)</p>
+                <p class="playtime">29min</p>
+            </div>
+        </div>
+
+        <!-- 3 June 2026 -->
+        <div class="callout decent">
+            <p class="callout-title">3 June 2026</p>
+            <div class="thoughts">
+                <p>Decent Session, kind of tired though.</p>
+                <p>Focused on getting higher acc on lower 4★'s to train consistency</p>
+                <p>stamina is a bit bad today cause I trained my grip strength yesterday, still managed to do quite well though</p>
+                <p>Played some 5★'s on half time</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,621pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">40min</p>
+            </div>
+        </div>
+
+        <!-- 4 June 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">4 June 2026</p>
+            <div class="thoughts">
+                <p>Rest Day, worked on the website</p>
+            </div>
+        </div>
+
+        <!-- 5 June 2026 -->
+        <div class="callout amazing has-gameplay">
+            <p class="callout-title">5 June 2026</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-12/Merry Snowy Fantasy feat. Hanon-[Extra]-5June2026.osr" download></a>
+                    <p class="song-title">Merry Snowy Fantasy feat. Hanon</p>
+                    <div class="song-difficulty" data-difficulty="5.06"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/31gpY77BFMY?si=vYkOZrNNolKcuOg8"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">939,989</p>
+                    <p class="stats accuracy">98.59%</p>
+                    <p class="stats max-combo">1,047x</p>
+                    <p class="stats pp">250pp <span class="new-top"></span></p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>HOLY INSANE SESSION</p>
+                <p>Pushed my limit with some low 5★</p>
+                <p>Got a very good play I'm very proud of, got my first 250pp play</p>
+                <p>I'm actually improving like crazy, even on long notes</p>
+                <p>I'm going to train with all I got for the last 3 days (including today) and take a whole week break before starting year 2</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,696pp (<span class="gain">+75pp</span>)</p>
+                <p class="playtime">28min</p>
+            </div>
+        </div>
+
+        <!-- 6 June 2026 -->
+        <div class="callout good has-gameplay">
+            <p class="callout-title">6 June 2026</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-12/Speedcore Sonata-[Allegro]-6June2026.osr" download></a>
+                    <p class="song-title">Speedcore Sonata</p>
+                    <div class="song-difficulty" data-difficulty="4.74"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/ldoERdm4w5o?si=gm9pcShJnH6gU9iN"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">956,385</p>
+                    <p class="stats accuracy">99.25%</p>
+                    <p class="stats max-combo">1,072x</p>
+                    <p class="stats pp">220pp</p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>Not as amazing as yesterday but still good session</p>
+                <p>Kept messing up on low difficulties for some reason idk why</p>
+                <p>Did some more 5★'s today, mainly dense chord streams and rapid streams, I didn't think I would get an S rank lmao</p>
+                <p>I somehow managed to 99% a 350bpm song at 4.74★ first try?? (O_O)</p>
+                <p>Almost at 4.75k pp, one more day tomorrow. Final push let's go!</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,734pp (<span class="gain">+38pp</span>)</p>
+                <p class="playtime">31min</p>
+            </div>
+        </div>
+
+        <!-- 7 June 2026 -->
+        <div class="callout good has-gameplay">
+            <p class="callout-title">7 June 2026</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-1/Month-12/Hanatachi ni Kibou o (2020 Remaster)-[Expert]-7June2026.osr" download></a>
+                    <p class="song-title">Hanatachi ni Kibou o (2020 Remaster)</p>
+                    <div class="song-difficulty" data-difficulty="5.12"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/B2ypJJrYt6s?si=4QlM7dvOq0mal354"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">944,925</p>
+                    <p class="stats accuracy">98.83%</p>
+                    <p class="stats max-combo">616x</p>
+                    <p class="stats pp">262pp <span class="new-top"></span></p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>Not on par with an amazing session but a good session as well</p>
+                <p>Got another top play again oh my days</p>
+                <p>Played a few 5★ songs to push, 5★ isn't super hard for me anymore just kinda hard to play very well</p>
+                <p>I somehow managed to 99% another 4.45★ song first try, this is honestly really amusing.</p>
+                <p>Reached 4.75k pp easily lol, even went to 4.8k pp (^ - ^)</p>
+                <p>Time to take a 1 week break before starting year 2 on a clean slate (- 3 -)</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,802pp (<span class="gain">+68pp</span>)</p>
+                <p class="playtime">36min</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------->
+        <!--   WEEK 52 ENTRIES   -->
+        <!------------------------->
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 52">Week 52</p>
+                <p class="week-subtitle">Taking a break before embarking on the 2nd chapter</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="4802">4,802pp (<span class="gain">+0pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.5" data-upper="5.0">4.5★ ~ 5.0★</span>
+            </div>
+        </div>
+
+        <!-- 8 June 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">8 June 2026</p>
+            <div class="thoughts">
+                <p>Rest Day, working on transferring my entry recordings</p>
+            </div>
+        </div>
+
+        <!-- 9 June 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">9 June 2026</p>
+            <div class="thoughts">
+                <p>Rest Day, still working on transferring my entry recordings</p>
+            </div>
+        </div>
+
+        <!-- 10 June 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">10 June 2026</p>
+            <div class="thoughts">
+                <p>Rest Day, Almost finished with transferring entries</p>
+            </div>
+        </div>
+
+        <!-- 11 June 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">11 June 2026</p>
+            <div class="thoughts">
+                <p>Rest Day, finished my entries</p>
+                <p>I have no motivation to do anything today</p>
+            </div>
+        </div>
+
+        <!-- 12 June 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">12 June 2026</p>
+            <div class="thoughts">
+                <p>Rest Day, tried my best to add things, no much motivation today though.</p>
+            </div>
+        </div>
+
+        <!-- 13 June 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">13 June 2026</p>
+            <div class="thoughts">
+                <p>Rest Day, forgot to record this day</p>
+            </div>
+        </div>
+
+        <!-- 14 June 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">14 June 2026</p>
+            <div class="thoughts">
+                <p>Rest Day, Working on finishing the designs</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/chart.min.js"></script>
+    <script src="../../../js/journal.js"></script>
+</body>
+
+</html>

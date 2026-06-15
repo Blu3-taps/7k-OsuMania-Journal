@@ -40,7 +40,7 @@ html, body { /* Main configuration for the background */
     background-size: cover;
     background-attachment: fixed;
     color: rgb(220, 220, 220);
-    font-family: "Arial Rounded MT";
+    font-family: "Nunito";
     scroll-behavior: smooth;
 }
 
@@ -70,11 +70,11 @@ h3 {
     color: rgb(var(--accent-brown-light));
 }
 
-a {
+a:not([class]) {
     color: rgb(var(--accent-brown));
 }
 
-a:focus {
+a:not([class]):hover {
     color: rgb(var(--accent-brown-dark));
 }
 

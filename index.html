@@ -32,15 +32,17 @@
         <!-- Profile Banner & Profile Picture -->
         <div class="profile-banner">
             <img class="profile-banner-img" src="Images/Banners//Yoimiya_Profile_Banner.jpg">
-            <a href="https://osu.ppy.sh/users/25182370" target="_blank">
-                <img class="profile-picture" src="Images/Yoimiya_pfp.png">
-            </a>
         </div>
 
         <!-- Profile Information -->
         <div class="profile-bar">
-            <div class="profile-username">Blu3_taps</div>
-            <div class="profile-subtext"></div>
+            <a class="profile-picture-frame" href="https://osu.ppy.sh/users/25182370" target="_blank">
+                <img class="profile-picture" src="Images/Yoimiya_pfp.png">
+            </a>
+            <div class="profile-info">
+                <div class="profile-username">Blu3_taps</div>
+                <div class="profile-subtext">Journey to becoming the 7k World Champion | Started on 16 June 2025</div>
+            </div>
         </div>
 
         <!-- Background Section Header -->
@@ -66,29 +68,97 @@
         <!-- Playstyle Section Header -->
          <h1>-My Playstyle-</h1>
 
-         <!-- 7k Osu!Mania Skins -->
-        <h2>Skin</h2>
-        <div class="content-box">
-            plox&chordxx (Myuka Edit)
+        <!-- 7k Osu!Mania Skins -->
+        <h2>Osu! Skins</h2>
+        <div class="two-column-grid">
+            <div class="skin-display">
+                <img src="Images/Gameplay/plox-chordxx (Myuka Edit).png">
+                <div class="skin-overlay">
+                    <span class="skin-name">plox&chordxx (Myuka Edit)</span>
+                    <a class="download-skin" href="Skins/pl0x-chordxx (Myuka Edit).osk" download="pl0x&chordxx (Myuka Edit).osk"></a>
+                </div>
+            </div>
+
+            <div class="skin-display">
+                <img src="Images/Gameplay/WhiteCat (1.0)-CK.png">
+                <div class="skin-overlay">
+                    <span class="skin-name">-# WhiteCat (1.0)『CK』#-</span>
+                    <a class="download-skin" href="Skins/WhiteCat (1.0)-CK.osk" download="-# WhiteCat (1.0)『CK』#-.osk"></a>
+                </div>
+            </div>
+
+            <div class="skin-display">
+                <img src="Images/Gameplay/(sigma) SilverWolf - Taiko.png">
+                <div class="skin-overlay">
+                    <span class="skin-name">「sigma」SilverWolf - Taiko</span>
+                    <a class="download-skin" href="Skins/(sigma) SilverWolf - Taiko.osk" download="「sigma」SilverWolf - Taiko.osk"></a>
+                </div>
+            </div>
         </div>
 
         <!-- Keyboard used -->
         <h2>Keyboard Set Up</h2>
         <div class="content-box">
-            Nuphy Halo75 V2 (<span style="color: rgb(255, 60, 95)">Raspberry</span> switches 46gf) <button id="manual" class="manual-button">Manual Guide</button>
-            <div id="pop-up" class="pop-up"></div>
+            Nuphy Halo75 V2 (<span style="color: rgb(255, 60, 95)">Raspberry</span> switches 46gf)
         </div>
 
         <!-- 7k Osu!Mania Keybinds -->
         <h2>Keybinds</h2>
-        <div class="keybind-display">
-            <div class="keybinds">Q</div>
-            <div class="keybinds">W</div>
-            <div class="keybinds">E</div>
-            <div class="keybinds" style="font-size: 0.5em;">Space</div>
-            <div class="keybinds">O</div>
-            <div class="keybinds">P</div>
-            <div class="keybinds">[</div>
+        <div class="two-column-grid">
+            <div class="spaced-rows">
+                <div class="split-bar">
+                    <span class="label">7k</span>
+                    <div class="keybind-display">
+                        <div class="keybinds">Q</div>
+                        <div class="keybinds">W</div>
+                        <div class="keybinds">E</div>
+                        <div class="keybinds" style="font-size: 0.5em;">Space</div>
+                        <div class="keybinds">O</div>
+                        <div class="keybinds">P</div>
+                        <div class="keybinds">[</div>
+                    </div>
+                </div>
+
+                <div class="split-bar">
+                    <span class="label">6k</span>
+                    <div class="keybind-display">
+                        <div class="keybinds">Q</div>
+                        <div class="keybinds">W</div>
+                        <div class="keybinds">E</div>
+                        <div class="keybinds">O</div>
+                        <div class="keybinds">P</div>
+                        <div class="keybinds">[</div>
+                    </div>
+                </div>
+
+                <div class="split-bar">
+                    <span class="label">4k</span>
+                    <div class="keybind-display">
+                        <div class="keybinds">W</div>
+                        <div class="keybinds">E</div>
+                        <div class="keybinds">O</div>
+                        <div class="keybinds">P</div>
+                    </div>
+                </div>
+
+                <div class="split-bar">
+                    <span class="label">Taiko (kddk)</span>
+                    <div class="keybind-display">
+                        <div class="keybinds">S</div>
+                        <div class="keybinds">D</div>
+                        <div class="keybinds">L</div>
+                        <div class="keybinds">;</div>
+                    </div>
+                </div>
+
+                <div class="split-bar">
+                    <span class="label">Standard</span>
+                    <div class="keybind-display">
+                        <div class="keybinds">W</div>
+                        <div class="keybinds">E</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- 7k Osu!Mania Scroll Speed -->
@@ -137,7 +207,7 @@
 
     </div>
 
-<script src="js/homepage.js"></script>
+    <script src="js/homepage.js"></script>
 </body>
 
 </html>

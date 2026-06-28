@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>7k Month 13</title>
+    <link rel="icon" type="image/png" href="../../../Images/Favicon.png">
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../css/journal.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Navigation Bar -->
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <a href="../../../index.html">
+                        <div class="homepage-icon"></div>
+                    </a>
+                </li>
+                <li><a href="../../journal.html">Journal</a></li>
+                <li><a href="../../goals.html">Goals</a></li>
+                <li><a href="../../tips.html">Tips</a></li>
+                <li><a href="../../calculation.html">Calculation</a></li>
+            </ul>
+        </nav>
+
+        <!-- Banner Image & Page Title -->
+        <img class="banner" style="object-position: 0 50%;" src="../../../Images/Banners/Yoimiya_Banner.jpg">
+        <div class="page-title">Osu!Mania 7k Month 13</div>
+
+        <!-- Back Button -->
+        <a class="back-button" href="index.html">Back⮌</a>
+
+        <!-- The Chart Selection Navigation Bar -->
+        <div class="chart-selector">
+            <button class="chart-type" onclick="switchChart('pp')">Total pp</button>
+            <button class="chart-type" onclick="switchChart('sr')">Star Range(★)</button>
+        </div>
+
+        <!-- Chart Element -->
+        <div class="chart-container">
+            <canvas id="chart"></canvas>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------>
+        <!--   WEEK 53 ENTRIES   -->
+        <!------------------------>
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 53">Week 53</p>
+                <p class="week-subtitle">Start of the 2nd year, LN training #1</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="4840">4,840pp (<span class="gain">+38pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.5" data-upper="5.0">4.5★ ~ 5.0★</span>
+                <span class="week-stat rank">#29751</span>
+            </div>
+        </div>
+
+        <!-- 15 June 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">15 June 2026</p>
+            <div class="thoughts">
+                <p>Finished up the entries for year 1</p>
+            </div>
+        </div>
+
+        <!-- 16 June 2026 -->
+        <div class="callout bad">
+            <p class="callout-title">16 June 2026</p>
+            <div class="thoughts">
+                <p>Not a good session</p>
+                <p>Day 1 of training LNs, I need to relax more while holding LNs</p>
+                <p>I had almost no mental energy, I felt like I was going to choke on every chord</p>
+                <p>I'm very trigger happy and keep lifting my finger even when a LN hasn't ended</p>
+                <p>I'm doing way worse on Full LN but better a bit on release timing</p>
+                <p>I still get very confused when multiple LNs are on screen</p>
+                <p>Could not push or do 5★'s today</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,802pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">56min</p>
+                <p class="rank">#29,625</p>
+            </div>
+        </div>
+
+        <!-- 17 June 2026 -->
+        <div class="callout good">
+            <p class="callout-title">17 June 2026</p>
+            <div class="thoughts">
+                <p>Good Session today</p>
+                <p>Day 2 of training LNs</p>
+                <p>I'm doing better on long notes, although I'm still choking a bit</p>
+                <p>Mainly practiced generic LN patterns like chord holds and release timing, no Full LN</p>
+                <p>Need to focus on accuracy, consistency and unstable rate</p>
+                <p>
+                    A bit of an update on Taiko, I'm doing better but I lost my confidence.
+                    It feels as if I forgot how to play Taiko, probably mental rusting.
+                </p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,802pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">51min</p>
+                <p class="rank">#29,650 (<span class="loss">-#25</span>)</p>
+            </div>
+        </div>
+
+        <!-- 18 June 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">18 June 2026</p>
+            <div class="thoughts">
+                <p>Rest Day today</p>
+                <p>
+                    Did some finger control practice, finger independence and release timing,
+                    practiced endurance while holding down on the keys
+                </p>
+                <p>
+                    Changed the skins section on the homepage, added skin image display for preview.
+                    When hovered, a small bar will slide up and display the skin's name and a download option.
+                </p>
+            </div>
+        </div>
+
+        <!-- 19 June 2026 -->
+        <div class="callout decent">
+            <p class="callout-title">19 June 2026</p>
+            <div class="thoughts">
+                <p>Decent Session today</p>
+                <p>Day 3 of training LNs, improving a little</p>
+                <p>I'm getting better and able to do LNs better than before</p>
+                <p>LN reading is far from good however, I can choke from time to time</p>
+                <p>Consistency also needs work since my performance on LNs can vary a lot</p>
+                <p>LN hit and release accuracy is getting better though so that's good</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,802pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">41min</p>
+                <p class="rank">#29,706 (<span class="loss">-#56</span>)</p>
+            </div>
+        </div>
+
+        <!-- 20 June 2026 -->
+        <div class="callout fair">
+            <p class="callout-title">20 June 2026</p>
+            <div class="thoughts">
+                <p>Fair session</p>
+                <p>Day 4 of training LNs, can't tell if there's any improvement</p>
+                <p>Improved my past 3★ LN scores by ~1% on most of them</p>
+                <p>My perception of my ability to play LNs is still bad though</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,803pp (<span class="gain">+1pp</span>)</p>
+                <p class="playtime">47min</p>
+                <p class="rank">#29,741 (<span class="loss">-#35</span>)</p>
+            </div>
+        </div>
+
+        <!-- 21 June 2026 -->
+        <div class="callout decent">
+            <p class="callout-title">21 June 2026</p>
+            <div class="thoughts">
+                <p>Decent session</p>
+                <p>Day 5 of training LNs, still very unstable</p>
+                <p>Managed to improve on LN songs I struggled with</p>
+                <p>My head hurts from LNs lol</p>
+                <p>Pushed a bit on some low 5★ but I was already quite exhausted</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,840pp (<span class="gain">+37pp</span>)</p>
+                <p class="playtime">44min</p>
+                <p class="rank">#29,751 (<span class="loss">-#10</span>)</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------>
+        <!--   WEEK 54 ENTRIES   -->
+        <!------------------------>
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 54">Week 54</p>
+                <p class="week-subtitle">LN training #2</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="4867">4,867pp (<span class="gain">+27pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.5" data-upper="5.0">4.5★ ~ 5.0★</span>
+                <span class="week-stat rank">#-</span>
+            </div>  
+        </div>
+
+        <!-- 22 June 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">22 June 2026</p>
+            <div class="thoughts">
+                <p>Rest Day, I don't feel like writing anything, I'm tired.</p>
+            </div>
+        </div>
+
+        <!-- 23 June 2026 -->
+        <div class="callout good">
+            <p class="callout-title">23 June 2026</p>
+            <div class="thoughts">
+                <p>Good Session</p>
+                <p>Day 6 of training LNs, getting better</p>
+                <p>Managed to get better scores on LN songs</p>
+                <p>I'm able to 99% some 3★ LN songs I couldn't before</p>
+                <p>
+                    I'm less tired after LN practice now so I'm starting to relax more
+                    and build more endurance, but LNs still don't come easy for me yet.
+                </p>
+                <p>Played some 5★ songs to push my limits, some good others not so much</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,867pp (<span class="gain">+27pp</span>)</p>
+                <p class="playtime">42min</p>
+                <p class="rank">#29,788 (<span class="loss">-#37</span>)</p>
+            </div>
+        </div>
+
+        <!-- 24 June 2026 -->
+        <div class="callout decent">
+            <p class="callout-title">24 June 2026</p>
+            <div class="thoughts">
+                <p>Decent Session</p>
+                <p>Day 7 of training LNs, performance is a bit unstable</p>
+                <p>My accuracy and timing is off today, but I did improve a little on LNs</p>
+                <p>Managed to barely get an S rank on a 4★ LN song 'Journey' from A ranks</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,867pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">43min</p>
+                <p class="rank">#29,819 (<span class="loss">-#31</span>)</p>
+            </div>
+        </div>
+
+        <!-- 25 June 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">25 June 2026</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+                <p>Added design and finished date navigation</p>
+                <p>Modified Javascript logic to be more efficient</p>
+            </div>
+        </div>
+
+        <!-- 26 June 2026 -->
+        <div class="callout bad">
+            <p class="callout-title">26 June 2026</p>
+            <div class="thoughts">
+                <p>Bad Session</p>
+                <p>Day 8 of training LNs, not doing very well</p>
+                <p>I seem to be doing worse on LNs today, I can't read them properly</p>
+                <p>I'm tapping harder than I should and expending too much energy</p>
+                <p>I'm quite frustrated today</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,867pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">40min</p>
+                <p class="rank">#29,879 (<span class="loss">-#60</span>)</p>
+            </div>
+        </div>
+
+        <!-- 27 June 2026 -->
+        <div class="callout fair">
+            <p class="callout-title">27 June 2026</p>
+            <div class="thoughts">
+                <p>Fair Session</p>
+                <p>Day 9 of training LNs, not as bad as yesterday but not that good</p>
+                <p>Don't really have that much energy or stamina today, both physical and mental</p>
+                <p>Probably going to practice something else next week</p>
+                <p>[Osu!Taiko] I was so close to getting 2.5k pp but I got edged (T^T)</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,867pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">35min</p>
+                <p class="rank">#29,920 (<span class="loss">-#41</span>)</p>
+            </div>
+        </div>
+
+        <!-- 28 June 2026 -->
+        <div class="callout terrible">
+            <p class="callout-title">28 June 2026</p>
+            <div class="thoughts">
+                <p>Pretty Bad Session</p>
+                <p>Day 10 of training LNs, I'm starting to choke on LNs</p>
+                <p>I'm not performing as well on LNs and my accuracy and focus is off today</p>
+                <p>I didn't play that many LN songs today</p>
+                <p>Going to take a one week break from LN training and focus on other skills</p>
+                <p>Reached 2.5k pp on Taiko, I'm getting better but my skill is quite inconsistent</p>
+                <p>Taiko was good but 7k was not</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">4,867pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">29min</p>
+                <p class="rank">#</p>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="../../../js/chart.min.js"></script>
+    <script src="../../../js/journal.js"></script>
+</body>
+
+</html>

@@ -2,14 +2,11 @@
 //          Date Drag Scrolling          //
 //---------------------------------------//
 
-// Problems to fix!
-// 1. Using the simpler version is slightly better
-// There is a small chance for it to snap properly but it still vibrates and still auto scrolls
-
 const carousel = document.querySelector(".date-carousel");
 const track = document.querySelector(".selector-track");
 
 const GAP = 64;
+const MINIMUM_CARDS = 10;
 const DRAG_THRESHOLD = 5;
 
 let originalDates = [];
@@ -22,10 +19,20 @@ let previousX;
 let velocity = 0;
 let animationId = null;
 
-function buildTrack() { // Make 5 total sets of dates and place them on to the Selector Track (1 orignal + 4 duplicates)
+function buildTrack() { // Automatically duplicates the dates based only on how much is needed and place them on the Selector Track
     originalDates = [...track.children];
+    const dateAmount = originalDates.length;
+    let duplicationCount = 1;
+    let setOffset = 1;
 
-    for (let count = 0; count < 4; count++) {
+    if (dateAmount < MINIMUM_CARDS) {
+        duplicationCount = Math.ceil(MINIMUM_CARDS / dateAmount);
+
+        const totalSets = duplicationCount + 1;
+        setOffset = Math.ceil(totalSets / 2);
+    }
+
+    for (let count = 0; count < duplicationCount; count++) {
         originalDates.forEach(date => {
             const clone = date.cloneNode(true); // duplicates the corresponding date 
             track.appendChild(clone); // Adds the corresponding duplicate to the track
@@ -36,7 +43,7 @@ function buildTrack() { // Make 5 total sets of dates and place them on to the S
     const carouselCenter = carousel.offsetWidth / 2;
     const dateCenter = track.firstElementChild.offsetWidth / 2;
     snapOffset = carouselCenter - dateCenter;
-    xScroll = -(step * originalDates.length * 2) + snapOffset;
+    xScroll = -(step * originalDates.length * setOffset) + snapOffset;
 
     updatePerspective();
     renderTrack();
@@ -127,7 +134,6 @@ function onDrag(mouseEvent) { // Moves the dates while dragging and tracks veloc
         xScroll += displacement;
         velocity = displacement;
         previousX = mouseEvent.clientX;
-        console.log(mouseEvent.clientX - dragStartX);
 
         if (!carousel.classList.contains("dragging") && Math.abs(mouseEvent.clientX - dragStartX) > DRAG_THRESHOLD) {
             carousel.classList.add("dragging"); // .dragging class prevents browser behaviour from interfering
@@ -310,7 +316,9 @@ function switchChart(type) { // Changes the chart according to the type selected
     }
 }
 
-switchChart("pp"); // Initiate Default as pp chart
+if (chart) {
+    switchChart("pp"); // Initiate Default as pp chart
+}
 
 //---------------------------------------//
 //         Callout Functionality         //
@@ -483,4 +491,3 @@ weekSR.forEach(weeklySR => {
     weeklySR.style.background = `linear-gradient(to right, ${gradientStops})`;
     weeklySR.style.color = `rgb(${getDifficultyColor(midSR).textColor})`;  
 });
-

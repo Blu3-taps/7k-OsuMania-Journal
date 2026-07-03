@@ -69,7 +69,7 @@
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 0 1px rgba(0, 0, 0, 1));
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .profile-subtext { /* Creates text below Profile Username */

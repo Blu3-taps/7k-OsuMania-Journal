@@ -240,6 +240,7 @@
 
 .week-stats-box { /* Wrapper box for all the recorded stats */
     display: flex;
+    justify-content: flex-end;
     justify-self: end;
     align-self: start;
     flex-wrap: wrap;

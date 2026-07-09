@@ -140,14 +140,14 @@ iframe {
 }
 
 #page-loading-icon.is-loading {
-    animation: chime-shake 1.6s ease-in-out infinite;
+    animation: chime-shake 1s ease-in-out infinite;
 }
 
 @keyframes chime-shake {
     0% { transform: rotate(0deg); }
-    10% { transform: rotate(5deg); }
-    20% { transform: rotate(-5deg); }
-    30% { transform: rotate(0deg); }
+    15% { transform: rotate(5deg); }
+    30% { transform: rotate(-5deg); }
+    45% { transform: rotate(0deg); }
     100% { transform: rotate(0deg); }
 }
 
@@ -327,7 +327,9 @@ iframe {
     border-radius: 99999px;
 }
 
-.subsection {
+.new-line {
+    display: inline-block;
+    width: max-content;
     margin-top: 1rem;
 }
 

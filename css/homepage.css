@@ -61,7 +61,7 @@
 .profile-username { /* Creates the Profile Username */
     background: linear-gradient(
         to right,
-        rgba(255, 255, 255),
+        rgb(255, 255, 255),
         rgb(254, 240, 203),
         rgb(248, 161, 178)
     );
@@ -73,15 +73,65 @@
 }
 
 .profile-subtext { /* Creates text below Profile Username */
+    background: linear-gradient(
+        to right,
+        rgb(255, 120, 120),
+        rgb(255, 247, 156),
+        rgb(172, 255, 176),
+        rgb(156, 212, 255),
+        rgb(233, 173, 255)
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 1rem;
     font-weight: 700;
-    color: rgb(255, 255, 255);
     filter: drop-shadow(0 0 1px rgba(0, 0, 0, 1));
 }
 
 /* ===========================
        MAIN PAGE CONTENT
 ============================ */
+
+.about-box { /* Content box for About Me section */
+    display: block;
+    width: auto;
+    height: max-content;
+    padding-left: 0.5rem;
+    margin: 0.5rem 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-left: 5px solid rgb(171, 145, 112);
+    box-sizing: border-box;
+}
+
+.stats-table { /* Used to style a table element */
+    width: calc(100% - 0.75rem * 2);
+    border-collapse: collapse;
+    margin: 0.75rem;
+}
+
+.stats-table th { /* Table header style */
+    padding: 0 0.5rem 0.25rem;
+    text-align: left;
+    color: rgb(133, 144, 151);
+}
+
+.stats-table td { /* Table data style */
+    padding: 0.25rem 0.5rem;
+    font-weight: 700;
+}
+
+.stats-table tbody tr td:first-child { /* Rounds the table row's left border */ 
+    border-radius: 5px 0 0 5px;
+}
+
+.stats-table tbody tr td:last-child { /* Rounds the table row's right border */
+    border-radius: 0 5px 5px 0;
+}
+
+.stats-table tbody tr:nth-of-type(odd) { /* Styles odd numbered rows */
+    background: rgb(0, 0, 0, 0.4);
+}
 
 .two-column-grid {
     display: grid;

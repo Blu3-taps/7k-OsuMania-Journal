@@ -5,15 +5,15 @@ const scriptSrc = document.currentScript.src;
 const BASE_PATH = new URL(scriptSrc).pathname.split("/js/")[0];
 
 const loadingScreen = document.createElement("div"); // Loading screen overlay background
-loadingScreen.id = "page-loading-screen";
+loadingScreen.classList.add("page-loading-screen");
 
 const loadingIcon = document.createElement("img"); // Loading screen icon
 loadingIcon.src = BASE_PATH + "/Images/Loading_Icon.png";
 loadingIcon.alt = "";
-loadingIcon.id = "page-loading-icon";
+loadingIcon.classList.add("page-loading-icon");
 
 const loadingMessage = document.createElement("p"); // Loading screen text
-loadingMessage.id = "page-loading-message";
+loadingMessage.classList.add("page.loading-text");
 
 const FADE_DURATION = 300;
 const CHIME_SHAKE_DURATION = 1000;

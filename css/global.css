@@ -78,6 +78,11 @@ a:not([class]):hover {
     color: rgb(var(--accent-brown-dark));
 }
 
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
 mark {
     background: var(--accent-highlight);
     color: rgb(220, 220, 220);
@@ -118,7 +123,7 @@ iframe {
        LOADING TRANSITION
 ============================= */
 
-#page-loading-screen {
+.page-loading-screen {
     display: flex;
     position: fixed;
     justify-content: center;
@@ -132,14 +137,14 @@ iframe {
     transition: opacity 0.3s ease;
 }
 
-#page-loading-icon {
+.page-loading-icon {
     height: 50%;
     aspect-ratio: 1 / 1;
     transform-origin: 50% 100%;
     will-change: transform;
 }
 
-#page-loading-icon.is-loading {
+.page-loading-icon.is-loading {
     animation: chime-shake 1s ease-in-out infinite;
 }
 
@@ -151,7 +156,7 @@ iframe {
     100% { transform: rotate(0deg); }
 }
 
-#page-loading-message {
+.page-loading-message {
     position: absolute;
     top: 80%;
     left: 50%;

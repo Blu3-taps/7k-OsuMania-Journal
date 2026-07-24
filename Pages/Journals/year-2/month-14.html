@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>7k Month 14</title>
+    <link rel="icon" type="image/png" href="../../../Images/Favicon.png">
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../css/journal.css">
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <!-- Navigation Bar -->
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <a href="../../../index.html">
+                        <div class="homepage-icon"></div>
+                    </a>
+                </li>
+                <li><a href="../../journal.html">Journal</a></li>
+                <li><a href="../../goals.html">Goals</a></li>
+                <li><a href="../../tips.html">Tips</a></li>
+                <li><a href="../../calculation.html">Calculation</a></li>
+            </ul>
+        </nav>
+
+        <!-- Banner Image & Page Title -->
+        <img class="banner" style="object-position: 0 50%;" src="../../../Images/Banners/HuTao_Banner.jpg">
+        <div class="page-title">Osu!Mania 7k Month 14</div>
+
+        <!-- Back Button -->
+        <a class="back-button" href="index.html">Back⮌</a>
+
+        <!-- The Chart Selection Navigation Bar -->
+        <div class="chart-selector">
+            <button class="chart-type" onclick="switchChart('pp')">Total pp</button>
+            <button class="chart-type" onclick="switchChart('sr')">Star Range(★)</button>
+        </div>
+
+        <!-- Chart Element -->
+        <div class="chart-container">
+            <canvas id="chart"></canvas>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------>
+        <!--   WEEK 58 ENTRIES  -->
+        <!------------------------>
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 58">Week 58</p>
+                <p class="week-subtitle">LN training #5, taking a leap of faith.</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="5260">5,260pp (<span class="gain">+_pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.5" data-upper="5.1">4.5★ ~ 5.1★</span>
+                <span class="week-stat rank">#27,584</span>
+            </div>
+        </div>
+
+        <!-- 20 July 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">20 July 2026</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+                <p>Still working on my goals page</p>
+            </div>
+        </div>
+
+        <!-- 21 July 2026 -->
+        <div class="callout amazing has-gameplay">
+            <p class="callout-title">21 July 2026</p>
+
+            <div>
+                <div class="song-title-wrapper">
+                    <a class="replay-download" href="../../../Replays/Year-2/Month-14/Electroman Adventures-[Extra]-21July2026.osr" download></a>
+                    <p class="song-title">Electroman Adventures</p>
+                    <div class="song-difficulty" data-difficulty="5.25"></div>
+                </div>
+                <iframe
+                    src="https://www.youtube.com/embed/yQLC3OtSUcc?si=2sowIl9uSQhW0tCy"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+                <div class="play-stats">
+                    <p class="stats score">965,241</p>
+                    <p class="stats accuracy">99.61%</p>
+                    <p class="stats max-combo">732x</p>
+                    <p class="stats pp">301pp <span class="new-top"></span></p>
+                </div>
+            </div>
+
+            <div class="thoughts">
+                <p>Amazing Session</p>
+                <p>Didn't train any much LNs today, I was choking a lot and I can't seem to read or play LNs</p>
+                <p>Managed to get my first 300pp play, felt I could've done better but not too shabby.</p>
+                <p>I still need to relax more though, playing higher difficulty maps make me tense up</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">5,343pp (<span class="gain">+83pp</span>)</p>
+                <p class="playtime">34min</p>
+                <p class="rank">#27,203 (<span class="gain">+#381</span>)</p>
+            </div>
+        </div>
+
+        <!-- 22 July 2026 -->
+        <div class="callout good">
+            <p class="callout-title">22 July 2026</p>
+            <div class="thoughts">
+                <p>Good Session</p>
+                <p>Day 20 of training LNs, honestly don't know if I'm better or worse</p>
+                <p>Managed to make quite some gains today</p>
+                <p>I'm quite decent at rice patterns on 5★'s, it's mostly heavy LNs that drag me down</p>
+                <p>LNs are really hard to learn though, even up to now I can't quite really grasp it</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">5,415pp (<span class="gain">+62pp</span>)</p>
+                <p class="playtime">33min</p>
+                <p class="rank">#26,867 (<span class="gain">+#336</span>)</p>
+            </div>
+        </div>
+
+        <!-- 23 July 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">23 July 2026</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+                <p>Added animations and design to my goals page</p>
+            </div>
+        </div>
+
+        <!-- 24 July 2026 -->
+        <div class="callout terrible">
+            <p class="callout-title">24 July 2026</p>
+            <div class="thoughts">
+                <p>Terrible Session</p>
+                <p>Was very unfocused and couldn't play well</p>
+                <p>My reading is quite off today, I can't "understand" patterns I used to</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">5,415pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">12min</p>
+                <p class="rank">#</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/global.js"></script>
+    <script src="../../../js/chart.min.js"></script>
+    <script src="../../../js/journal.js"></script>
+</body>
+
+</html>

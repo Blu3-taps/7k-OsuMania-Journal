@@ -13,7 +13,7 @@ loadingIcon.alt = "";
 loadingIcon.classList.add("page-loading-icon");
 
 const loadingMessage = document.createElement("p"); // Loading screen text
-loadingMessage.classList.add("page.loading-text");
+loadingMessage.classList.add("page-loading-message");
 
 const FADE_DURATION = 300;
 const CHIME_SHAKE_DURATION = 1000;

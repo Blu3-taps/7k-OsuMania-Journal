@@ -5,6 +5,7 @@
 .medal-display { /* Container for displaying medals */
     display: grid;
     grid-template-columns: repeat(auto-fill, 60px);
+    justify-content: center;
     gap: 50px;
     position: relative;
     width: 75%;
@@ -31,6 +32,12 @@
     transform: translateY(-50%) skewX(-10deg);
 }
 
+.medal-wrapper { /* A wrapper for medals that helps contain the medal and extra animation effects */
+    display: block;
+    position: relative;
+    transform: rotate(45deg);
+}
+
 .medal { /* Medal element (acts as the medal frame) */
     display: flex;
     justify-content: center;
@@ -39,55 +46,64 @@
     width: 60px;
     height: 60px;
     background: var(--tier-color, white);
-    transform: rotate(45deg);
     transition: 0.1s transform cubic-bezier(0.5, 1.5, 1, 1.5);
     z-index: 0;
     cursor: pointer;
+    overflow: hidden;
 }
 
-.bronze { /* Bronze medal tier color */
-    --tier-color: linear-gradient(
-        135deg,
-        rgb(184, 143, 122),
-        rgb(133, 92, 71)
-    );
+.medal.prismatic { /* Effect for prismatic medals */
+    box-shadow: 0 0 7.5px white;
+    background-size: 300% 300%;
+    animation: prismatic-shift 3s ease-in-out infinite alternate;
 }
 
-.silver { /* Silver medal tier color */
-    --tier-color: linear-gradient(
-        135deg,
-        rgb(224, 224, 235),
-        rgb(163, 163, 194)
-    );
+@keyframes prismatic-shift { /* Shifts the prismatic gradient for dynamic gradient color */
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
 }
 
-.gold { /* Gold medal tier color */
-    --tier-color: linear-gradient(
-        135deg,
-        rgb(240, 228, 168),
-        rgb(224, 201, 82)
+.medal.gold::before,
+.medal.diamond::before,
+.medal.prismatic::before { /* Shimmer overlay for gold, diamond or prismatic tier medals */
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: -100%;
+    background: linear-gradient(
+        105deg,
+        transparent 0 20%,
+        rgb(255, 255, 255) 50%,
+        transparent 80% 100%
     );
+    transform: rotate(-45deg) scale(1.4);
+    z-index: -2;
+    animation: shimmer 3s ease infinite;
 }
 
-.diamond { /* Diamond medal tier color */
-    --tier-color: linear-gradient(
-        135deg,
-        rgb(168, 240, 239),
-        rgb(82, 224, 223)
-    );
+@keyframes shimmer { /* Shimmer animation for gold, diamond or prismatic tier medals */
+    0% { top: 100%; left: -100%; }
+    60% { top: -100%; left: 100%; }
+    100% { top: -100%; left: 100%; }
 }
 
-.prismatic { /* Prismatic medal tier color */
-    --tier-color: linear-gradient(
-        135deg,
-        #ff5f5f,
-        rgb(255, 178, 85),
-        #ffe864,
-        #85ff85,
-        #85c2ff,
-        #c393ff,
-        rgb(255, 135, 251)
-    );
+.sparkle { /* Sparkle element for diamond tier medals (added via JavaScript) */
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    clip-path: polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%);
+    background: white;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    animation: twinkle 1.5s ease-in-out forwards;
+}
+
+@keyframes twinkle { /* Twinkle animation for the sparkle element */
+    0% { transform: translate(-50%, -50%) scale(0) rotate(-45deg); opacity: 0; }
+    50% { transform: translate(-50%, -50%) scale(1) rotate(135deg); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(0) rotate(315deg); opacity: 0; }
 }
 
 .medal::after { /* Internal medal design */
@@ -102,12 +118,21 @@
     z-index: -1;
 }
 
+.medal-display.pp .medal::after { /* Internal medal color for total pp medals */
+    --medal-color: rgb(134, 180, 254);
+}
+
+.medal-display.top-play .medal::after { /* Internal medal color for top play pp medals */
+    --medal-color: rgb(144, 136, 254);
+}
+
 .medal-pulse { /* Pulse effect for the medal when clicked (using Javascript) */
     content: "";
     display: block;
     position: absolute;
     inset: 0;
     box-shadow: inset 0 0 5px white;
+    pointer-events: none;
     animation: 0.5s fade-pulse ease forwards;
 }
 
@@ -117,7 +142,7 @@
 }
 
 .medal:hover { /* Medal hover animation */
-    transform: rotate(45deg) scale(1.1);
+    transform: scale(1.1);
 }
 
 .medal-text { /* Medal's text content */
@@ -126,6 +151,54 @@
     font-weight: 700;
     transform: rotate(-45deg);
     z-index: 1;
+}
+
+.bronze { /* Bronze medal tier color */
+    --tier-color: linear-gradient(
+        135deg,
+        rgb(184, 143, 122),
+        rgb(106, 73, 57)
+    );
+}
+
+.silver { /* Silver medal tier color */
+    --tier-color: linear-gradient(
+        135deg,
+        rgb(224, 224, 235),
+        rgb(111, 111, 132)
+    );
+}
+
+.gold { /* Gold medal tier color */
+    --tier-color: linear-gradient(
+        135deg,
+        rgb(240, 228, 168),
+        rgb(239, 228, 103),
+        rgb(255, 174, 0)
+    );
+}
+
+.diamond { /* Diamond medal tier color */
+    --tier-color: linear-gradient(
+        135deg,
+        rgb(210, 242, 251),
+        rgb(168, 240, 239),
+        rgb(99, 216, 216),
+        rgb(54, 146, 207)
+    );
+}
+
+.prismatic { /* Prismatic medal tier color */
+    --tier-color: linear-gradient(
+        135deg,
+        #ff5f5f,
+        rgb(255, 178, 85),
+        #ffe864,
+        #85ff85,
+        #85c2ff,
+        #c393ff,
+        rgb(255, 135, 251)
+    );
 }
 
 /* ===========================
@@ -185,11 +258,12 @@
     transition: 0.25s opacity ease 0.1s;
 }
 
-.achievements-image { /* An image of Yoimiya cheering */
+.achievements-overlay-image { /* An image of Yoimiya cheering */
     display: block;
     align-self: flex-end;
     height: 120%;
     aspect-ratio: 1 / 1;
+    opacity: 0;
     object-fit: cover;
     object-position: center;
 }
@@ -213,7 +287,8 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.achievements-overlay.active .achievement-details { /* Fade the details in when active */
+.achievements-overlay.active .achievement-details,
+.achievements-overlay.active .achievements-overlay-image { /* Fade the details and image in when active */
     opacity: 1;
     transition: 0.3s opacity ease;
 }
@@ -234,7 +309,6 @@
 
 .achievements-list { /* A box containing the achievements */
     display: flex;
-    flex: 1;
     flex-direction: column;
     row-gap: 0.5rem;
     width: 100%;
@@ -244,16 +318,17 @@
 
 .achievements-list p { /* Styling for the achievements themselves */
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     width: max-content;
     max-width: 100%;
     clip-path: inset(0 100% 0 0);
     transition: clip-path 0.25s cubic-bezier(0, 1, 1, 1);
 }
 
-.achievements-list p::before {
+.achievements-list p::before { /* Little tier rank icon colored accordingly using JavaScript */
     content: "";
     display: inline-block;
+    flex-shrink: 0;
     width: 20px;
     height: 20px;
     margin-right: 0.5rem;
@@ -263,6 +338,6 @@
     box-sizing: border-box;
 }
 
-.achievements-list p.reveal {
+.achievements-list p.reveal { /* Reveals the achievement with a swipe animation */
     clip-path: inset(0 0 0 0);
 }

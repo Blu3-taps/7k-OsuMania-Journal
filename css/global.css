@@ -176,6 +176,7 @@ iframe {
 .container { /* Creates a centered container on the page for content */
     width: 75%;
     max-width: 1000px;
+    min-width: 750px;
     min-height: 100%;
     margin: 0 auto;
     padding-bottom: 50px;
@@ -207,8 +208,7 @@ iframe {
     opacity: 0.75;
     text-decoration: none;
     font-size: 30px;
-    font-family: "Arial Rounded MT";
-    font-weight: bold;
+    font-weight: 800;
     transition: opacity 0.25s ease;
 }
 
@@ -239,7 +239,7 @@ iframe {
     display: block;
     width: 50px;
     aspect-ratio: 1 / 1;
-    background: url("../Images/Yoshimi_pfp.jpg") center no-repeat;
+    background: url("../Images/Yoimiya_pfp.png") center no-repeat;
     background-size: cover;
     border-radius: 50%;
 }
@@ -272,7 +272,7 @@ iframe {
     display: inline-block;
     position: relative;
     font-size: 40px;
-    font-family: "Arial Rounded MT";
+    font-weight: 800;
     margin: -20px 0 50px 50px;
     white-space: nowrap;
     animation: reveal 0.5s cubic-bezier(0.7, 0, 0.3, 1) forwards;

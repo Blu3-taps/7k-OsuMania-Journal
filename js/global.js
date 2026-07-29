@@ -85,6 +85,8 @@ document.addEventListener("click", function(event) { // Start the loading screen
 
     if (destination.hostname !== current.hostname) return; // If navigating to external links, loading isn't triggered
 
+    if (link.hasAttribute("download")) return;
+
     event.preventDefault(); // Stops link from navigating instantly
 
     loadingScreen.style.opacity = "1";

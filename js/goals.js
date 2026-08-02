@@ -7,7 +7,13 @@ const achievementTitle = document.querySelector(".achievement-title");
 const achievementTier = document.querySelector(".achievement-tier");
 const achievementsList = document.querySelector(".achievements-list");
 
+const MAX_SPARKLES = 5;
+let activeSparkleCount = 0;
+const sparkleStates = new Map();
+const waitingSparkles = new Set();
+
 const tiers = [null, "Bronze", "Silver", "Gold", "Diamond", "Prismatic"];
+
 
 const achievementData = { // Data of Achievements
     starRating: [ // Star Rating Achievements
@@ -200,7 +206,7 @@ const achievementData = { // Data of Achievements
             name: "6,000pp",
             achievements: [
                 { goal: "5,250pp", achieved: true, date: "18th July 2026" },
-                { goal: "5,500pp", achieved: false, date: "" },
+                { goal: "5,500pp", achieved: true, date: "31st July 2026" },
                 { goal: "5,750pp", achieved: false, date: "" },
                 { goal: "6,000pp", achieved: false, date: "" }
             ]
@@ -550,8 +556,19 @@ function randomNumber(min, max) { // Returns a random number within a given rang
 }
 
 function spawnSparkles(spawnTarget) { // Spawn sparkle elements for diamond tier medals
+    const sparkleState = sparkleStates.get(spawnTarget);
+    if (sparkleState.isAnimating || !sparkleState.isOnScreen) return;
+
+    if (activeSparkleCount >= MAX_SPARKLES) { // If more than the limit, queue the sparkle to the waiting list
+        waitingSparkles.add(spawnTarget);
+        return;
+    }
+
     const sparkle = document.createElement("div");
     sparkle.classList.add("sparkle");
+
+    sparkleState.isAnimating = true;
+    activeSparkleCount++;
 
     let sparkleX = Number(randomNumber(0, 100).toFixed(1));
     let sparkleY = Number(randomNumber(0, 100).toFixed(1));
@@ -575,11 +592,44 @@ function spawnSparkles(spawnTarget) { // Spawn sparkle elements for diamond tier
 
     sparkle.addEventListener("animationend", () => {
         sparkle.remove();
+        sparkleState.isAnimating = false;
+        activeSparkleCount--;
 
-        const timeUntilNextSpawn = Math.round(randomNumber(250, 1000));
-        setTimeout(() => spawnSparkles(spawnTarget), timeUntilNextSpawn);
+        const nextSparkle = waitingSparkles.values().next().value;
+
+        // If there's a sparkle in the waiting list, remove it and start it's animation
+        if (nextSparkle) {
+            waitingSparkles.delete(nextSparkle);
+            spawnSparkles(nextSparkle);
+        }
+
+        // If a diamond medal is still on screen, recall the function after a random delay
+        if (sparkleState.isOnScreen) {
+            const timeUntilNextSpawn = Math.round(randomNumber(250, 1000));
+            setTimeout(() => spawnSparkles(spawnTarget), timeUntilNextSpawn);
+        }
     });
 }
+
+const diamondMedalObserver = new IntersectionObserver((entries) => { // Spawns sparkles if diamond medals are on the screen
+    entries.forEach(entry => {
+        const wrapper = entry.target;
+        const sparkleState = sparkleStates.get(wrapper);
+
+        sparkleState.isOnScreen = entry.isIntersecting;
+
+        if (sparkleState.isOnScreen) { // Spawn sparkle if on screen
+            const timeUntilSpawn = Math.round(randomNumber(0, 500));
+            setTimeout(() => {
+                spawnSparkles(wrapper);
+            }, timeUntilSpawn);
+        } else {
+            waitingSparkles.delete(wrapper); // remove sparkle form waiting list if not on screen
+        }
+    });
+}, {
+    threshold: 0.5
+});
 
 document.querySelectorAll(".medal").forEach(medal => {
     const medalId = medal.dataset.id;
@@ -596,7 +646,8 @@ document.querySelectorAll(".medal").forEach(medal => {
     // Adds a sparkle effect for medals that are diamond tier
     if (medal.classList.contains("diamond")) {
         const medalWrapper = medal.parentElement;
-        spawnSparkles(medalWrapper);
+        sparkleStates.set(medalWrapper, { isOnScreen: false, isAnimating: false });
+        diamondMedalObserver.observe(medalWrapper);
     }
 
     // When medal is clicked, trigger animation and display it's achievement data on overlay

@@ -209,6 +209,7 @@
 
 .chart-container { /* Used for controlling the structure of charts made with <canvas> */
     width: 75%;
+    aspect-ratio: 16 / 9;
     margin: 0 auto;
 }
 

@@ -4,6 +4,8 @@
 const scriptSrc = document.currentScript.src;
 const BASE_PATH = new URL(scriptSrc).pathname.split("/js/")[0];
 
+const pageTitle = document.querySelector(".page-title");
+
 const loadingScreen = document.createElement("div"); // Loading screen overlay background
 loadingScreen.classList.add("page-loading-screen");
 
@@ -59,6 +61,12 @@ function createOverlay() { // Creates the loading screen
 
 function fadeOutLoadingScreen() { // Fade out the loading screen and clear any running processes
     loadingScreen.style.opacity = "0";
+
+    // Trigger the page title reveal animation only when
+    // page has fully loaded and when fading out
+    if (pageTitle) {
+        pageTitle.classList.add("reveal");
+    }
 
     sessionStorage.removeItem("navigating");
     sessionStorage.removeItem("transitionStartTime");

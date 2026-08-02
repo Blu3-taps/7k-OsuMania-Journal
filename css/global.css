@@ -99,7 +99,8 @@ mark {
 }
 
 ::selection { /* Changes the color of selection highlight */
-    background: rgb(130, 188, 255, 0.5);
+    background: rgba(93, 169, 255, 0.5);
+    color: rgb(194, 222, 255);
 }
 
 code {
@@ -199,7 +200,7 @@ iframe {
     padding: 0;
     margin: 0;
     background: rgb(206, 90, 97);
-    box-shadow: 0 0 20px inset rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px inset rgba(0, 0, 0, 0.5);
 }
 
 .navbar a:not(:has([class])) { /* Applies Default design to items without a class */
@@ -275,7 +276,7 @@ iframe {
     font-weight: 800;
     margin: -20px 0 50px 50px;
     white-space: nowrap;
-    animation: reveal 0.5s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+    clip-path: inset(0 calc(100% - 4px) 0 0);
 }
 
 .page-title::before {
@@ -286,6 +287,13 @@ iframe {
     left: 0;
     top: 0;
     background: white;
+}
+
+.page-title.reveal {
+    animation: reveal 0.5s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+}
+
+.page-title.reveal::before {
     animation: swipe 0.5s cubic-bezier(0.7, 0, 0.3, 1) forwards, shrink 0.25s cubic-bezier(1, 0, 1, 1) 0.5s forwards;
 }
 

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>7k Month 15</title>
+    <link rel="icon" type="image/png" href="../../../Images/Favicon.png">
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../css/journal.css">
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <!-- Navigation Bar -->
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <a href="../../../index.html">
+                        <div class="homepage-icon"></div>
+                    </a>
+                </li>
+                <li><a href="../../journal.html">Journal</a></li>
+                <li><a href="../../goals.html">Goals</a></li>
+                <li><a href="../../tips.html">Tips</a></li>
+                <li><a href="../../calculation.html">Calculation</a></li>
+            </ul>
+        </nav>
+
+        <!-- Banner Image & Page Title -->
+        <img class="banner" style="object-position: 0 40%;" src="../../../Images/Banners/Barbara_Banner.jpg">
+        <div class="page-title">Osu!Mania 7k Month 15</div>
+
+        <!-- Back Button -->
+        <a class="back-button" href="index.html">Back⮌</a>
+
+        <!-- The Chart Selection Navigation Bar -->
+        <div class="chart-selector">
+            <button class="chart-type" onclick="switchChart('pp')">Total pp</button>
+            <button class="chart-type" onclick="switchChart('sr')">Star Range(★)</button>
+        </div>
+
+        <!-- Chart Element -->
+        <div class="chart-container">
+            <canvas id="chart"></canvas>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------>
+        <!--   WEEK 62 ENTRIES  -->
+        <!------------------------>
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 62">Week 62</p>
+                <p class="week-subtitle">Getting my head out the gutters</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="5604">5,604pp (<span class="gain">+4pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.5" data-upper="5.1">4.5★ ~ 5.1★</span>
+                <span class="week-stat rank">#27,088 (<span class="loss">-#230</span>)</span>
+            </div>
+        </div>
+
+        <!-- 17 August 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">17 August 2026</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+                <p>Forgot to record but didn't do anything much.</p>
+            </div>
+        </div>
+
+        <!-- 18 August 2026 -->
+        <div class="callout fair">
+            <p class="callout-title">18 August 2026</p>
+            <div class="thoughts">
+                <p>Fair Session</p>
+                <p>Was feeling kind of sluggish</p>
+                <p>Slowly trying to get better</p>
+                <p>
+                    I think the main problem is my lack of finger control,
+                    I cannot effectively hit patterns or conserve stamina
+                    if I have to constantly compensate with hitting harder, especially at my level.
+                    I'll keep in mind to practice finger control every night, even if at least a little
+                </p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">5,600pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">33min</p>
+                <p class="rank">#26,913 (<span class="loss">-#55</span>)</p>
+            </div>
+        </div>
+
+        <!-- 19 August 2026 -->
+        <div class="callout amazing">
+            <p class="callout-title">19 August 2026</p>
+            <div class="thoughts">
+                <p>Amazing Session</p>
+                <p>I was able to tap lightly and relaxed</p>
+                <p>I was barely tired at all and was able to play longer</p>
+                <p>
+                    Relaxing made my accuracy drop a bit but not by much, this ia a good
+                    position to keep training, now it's about hitting lightly AND accurately.
+                </p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">5,603pp (<span class="gain">+3pp</span>)</p>
+                <p class="playtime">45min</p>
+                <p class="rank">#26,937 (<span class="loss">-#24</span>)</p>
+            </div>
+        </div>
+
+        <!-- 20 August 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">20 August 2026</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+                <p>Updated a bit of design like line divider and goals detail reveal animation</p>
+            </div>
+        </div>
+
+        <!-- 21 August 2026 -->
+        <div class="callout bad">
+            <p class="callout-title">21 August 2026</p>
+            <div class="thoughts">
+                <p>Not doing so well today</p>
+                <p>I'm improving very barely but it feels quite discouraging</p>
+                <p>I still can't get a grasp of LNs and complex streams</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">5,603pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">41min</p>
+                <p class="rank">#27,013 (<span class="loss">-#76</span>)</p>
+            </div>
+        </div>
+
+        <!-- 22 August 2026 -->
+        <div class="callout bad">
+            <p class="callout-title">22 August 2026</p>
+            <div class="thoughts">
+                <p>Not very good session</p>
+                <p>My fingers aren't very cooperative today.</p>
+                <p>
+                    I'm barely making improvements, my scores are barely 
+                    any better that they might as well be no better
+                </p>
+                <p>I think I might be expecting too much but it's really making me demotivated</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">5,604pp (<span class="gain">+1pp</span>)</p>
+                <p class="playtime">26min</p>
+                <p class="rank">#27,049 (<span class="loss">-#36</span>)</p>
+            </div>
+        </div>
+
+        <!-- 23 August 2026 -->
+        <div class="callout decent">
+            <p class="callout-title">23 August 2026</p>
+            <div class="thoughts">
+                <p>Decent Session</p>
+                <p>Mainly focused on playing LN songs and trying to hit patterns I couldn't before</p>
+                <p>Did pretty well, at least better than my expectations</p>
+                <p>
+                    I did some reflection, my expectations were too high. 
+                    Ever since I hit 5★'s, my expectations shifted that it should be my baseline. 
+                    But I forgot that 5★'s is my limit not my base.
+                </p>
+                <p>
+                    5★'s is the range at which my 4k limits are roughly at as well, 
+                    I can't expect to just surpass myself that easily. Especially since 
+                    I've never reached the territory of playing 5.3★ and above in any gamemode.
+                </p>
+                <p>I'm going to lower my expectations and simply train</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">5,604pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">28min</p>
+                <p class="rank">#27,088 (<span class="loss">-#39</span>)</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------>
+        <!--   WEEK 63 ENTRIES  -->
+        <!------------------------>
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 63">Week 63</p>
+                <p class="week-subtitle">-</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="5604">5,604pp (<span class="gain">+4pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.5" data-upper="5.1">4.5★ ~ 5.1★</span>
+                <span class="week-stat rank">#27,088 (<span class="loss">-#230</span>)</span>
+            </div>
+        </div>
+
+        <!-- 24 August 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">24 August 2026</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+                <p>Mulling over how to make my website mobile friendly</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/global.js"></script>
+    <script src="../../../js/chart.min.js"></script>
+    <script src="../../../js/journal.js"></script>
+</body>
+
+</html>

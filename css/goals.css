@@ -3,33 +3,42 @@
 ============================ */
 
 .medal-display { /* Container for displaying medals */
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 60px);
-    justify-content: center;
-    gap: 50px;
+    display: block;
     position: relative;
     width: 75%;
     height: max-content;
     margin: 2rem auto;
-    padding: 4rem 3rem;
-    background: rgba(0, 4, 20, 0.6);
-    border-radius: 5px;
+    padding: 2rem;
+    background: rgb(25, 26, 30);
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.1);
     box-sizing: border-box;
     user-select: none;
 }
 
-.medal-type { /* Medal display container's header */
+.medal-display::after { /* Frame decoration for medal display container */
+    content: "";
     display: block;
     position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0.5rem;
-    color: rgb(122, 186, 255);
-    font-size: 1.5rem;
-    font-weight: 700;
-    background: rgb(36, 50, 81);
+    inset: 0.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 5px;
-    transform: translateY(-50%) skewX(-10deg);
+    pointer-events: none;
+}
+
+.medal-grid { /* Grid used to contain and arrange medals */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 60px);
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    height: max-content;
+    margin: 2rem 0 4rem;
+}
+
+.medal-type { /* Medal Display section title */
+    font-size: 1.25rem;
+    font-weight: 900;
 }
 
 .medal-wrapper { /* A wrapper for medals that helps contain the medal and extra animation effects */
@@ -118,11 +127,11 @@
     z-index: -1;
 }
 
-.medal-display.pp .medal::after { /* Internal medal color for total pp medals */
+.medal-grid.pp .medal::after { /* Internal medal color for total pp medals */
     --medal-color: rgb(134, 180, 254);
 }
 
-.medal-display.top-play .medal::after { /* Internal medal color for top play pp medals */
+.medal-grid.top-play .medal::after { /* Internal medal color for top play pp medals */
     --medal-color: rgb(144, 136, 254);
 }
 
@@ -230,6 +239,7 @@
     position: relative;
     width: 100%;
     height: 0%;
+    max-height: 300px;
     background: rgba(0, 0, 0, 0.8);
     transition: 0.25s height cubic-bezier(0.25, 1, 0.25, 1);
     user-select: none;
@@ -241,7 +251,7 @@
     top: 110%;
     left: 50%;
     opacity: 0;
-    font-size: 1.25rem;
+    font-size: clamp(0.75rem, 2vw, 1.25rem);
     font-weight: 700;
     transform: translateX(-50%);
     pointer-events: none;
@@ -258,11 +268,10 @@
     transition: 0.25s opacity ease 0.1s;
 }
 
-.achievements-overlay-image { /* An image of Yoimiya cheering */
+.achievements-overlay-image { /* An image of a mascot for the achievements overlay */
     display: block;
     align-self: flex-end;
     height: 120%;
-    aspect-ratio: 1 / 1;
     opacity: 0;
     object-fit: cover;
     object-position: center;
@@ -321,8 +330,9 @@
     align-items: flex-start;
     width: max-content;
     max-width: 100%;
-    clip-path: inset(0 100% 0 0);
-    transition: clip-path 0.25s cubic-bezier(0, 1, 1, 1);
+    opacity: 0;
+    transform: translateX(25px);
+    transition: opacity 0.5s cubic-bezier(0.17, 0.75, 0.25, 1), transform 1s cubic-bezier(0.1, 0.54, 0, 1);
 }
 
 .achievements-list p::before { /* Little tier rank icon colored accordingly using JavaScript */
@@ -338,6 +348,7 @@
     box-sizing: border-box;
 }
 
-.achievements-list p.reveal { /* Reveals the achievement with a swipe animation */
-    clip-path: inset(0 0 0 0);
+.achievements-list p.reveal { /* Reveals the achievement by fading and sliding them in from the right */
+    opacity: 1;
+    transform: translateX(0);
 }

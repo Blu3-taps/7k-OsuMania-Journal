@@ -120,6 +120,10 @@ iframe {
     border: none;
 }
 
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 /* ============================
        LOADING TRANSITION
 ============================= */
@@ -319,7 +323,7 @@ iframe {
 .content-box {
     display: block;
     position: relative;
-    width: 100%;
+    width: auto;
     height: auto;
     padding: 0 0.75em;
     margin: 0.5em 0 1.5em 0.75em;
@@ -349,8 +353,20 @@ iframe {
 .divider {
     display: block;
     width: 90%;
-    height: 2.5px;
+    height: 10px;
     margin: 20px auto;
-    background: rgb(130, 130, 130);
-    border-radius: 99999px;
+    background: radial-gradient(circle at 50% 50%, rgb(211, 211, 211), rgb(129, 129, 129));
+    clip-path: polygon(
+        0 50%, 2% 0, 3% 37.5%, 43% 37.5%, 45% 18.75%,
+        47% 50%, 50% 0, 53% 50%, 55% 18.75%, 57% 37.5%,
+        97% 37.5%, 98% 0, 100% 50%, 98% 100%, 97% 62.5%,
+        57% 62.5%, 55% 81.25%, 53% 50%, 50% 100%, 47% 50%,
+        45% 81.25%, 43% 62.5%, 3% 62.5%, 2% 100%
+    );
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
 }

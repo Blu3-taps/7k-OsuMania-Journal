@@ -111,6 +111,7 @@ code {
 
 button {
     cursor: pointer;
+    font-family: inherit;
 }
 
 iframe {
@@ -143,7 +144,8 @@ iframe {
 }
 
 .page-loading-icon {
-    height: 50%;
+    width: 50vmin;
+    min-width: 375px;
     aspect-ratio: 1 / 1;
     transform-origin: 50% 100%;
     will-change: transform;
@@ -161,9 +163,40 @@ iframe {
     100% { transform: rotate(0deg); }
 }
 
+.page-loading-skip-button {
+    display: block;
+    position: absolute;
+    width: 25%;
+    padding: 1rem 0;
+    bottom: 75%;
+    right: 0;
+    opacity: 0;
+    color: rgb(25, 19, 13);
+    font-size: 1.5rem;
+    font-weight: 900;
+    background: rgb(98, 76, 49);
+    border: none;
+    border-radius: 99999px 0 0 99999px;
+    transform: translateX(100%);
+    transition: opacity 0.25s ease, transform 0.5s ease, background-color 0.25s ease;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.page-loading-skip-button:hover {
+    background: rgb(80, 62, 40);
+}
+
+.page-loading-skip-button.active {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
+}
+
 .page-loading-message {
     position: absolute;
-    top: 80%;
+    top: 75%;
     left: 50%;
     opacity: 0;
     color: rgb(255, 242, 221);

@@ -113,8 +113,8 @@ function snapToCenter(targetX) { // Slowly moves the track to align the nearest 
     animationId = requestAnimationFrame(() => snapToCenter(targetX));
 }
 
-function onDragStart(mouseEvent) { // Starts the dragging state and reset values
-    mouseEvent.preventDefault();
+function onDragStart(pointerEvent) { // Starts the dragging state and reset values
+    pointerEvent.preventDefault();
 
     if (animationId) {
         cancelAnimationFrame(animationId);
@@ -124,18 +124,18 @@ function onDragStart(mouseEvent) { // Starts the dragging state and reset values
     document.body.style.userSelect = "none";
     velocity = 0;
     isDragging = true;
-    dragStartX = mouseEvent.clientX;
-    previousX = mouseEvent.clientX;
+    dragStartX = pointerEvent.clientX;
+    previousX = pointerEvent.clientX;
 }
 
-function onDrag(mouseEvent) { // Moves the dates while dragging and tracks velocity
+function onDrag(pointerEvent) { // Moves the dates while dragging and tracks velocity
     if (isDragging) {
-        const displacement = mouseEvent.clientX - previousX;
+        const displacement = pointerEvent.clientX - previousX;
         xScroll += displacement;
         velocity = displacement;
-        previousX = mouseEvent.clientX;
+        previousX = pointerEvent.clientX;
 
-        if (!carousel.classList.contains("dragging") && Math.abs(mouseEvent.clientX - dragStartX) > DRAG_THRESHOLD) {
+        if (!carousel.classList.contains("dragging") && Math.abs(pointerEvent.clientX - dragStartX) > DRAG_THRESHOLD) {
             carousel.classList.add("dragging"); // .dragging class prevents browser behaviour from interfering
         }
 
@@ -170,9 +170,10 @@ function inertia() { // Applies inertial momentum from drag velocity
 }
 
 if (carousel) { // Checks if .carousel exists before initializing
-    carousel.addEventListener("mousedown", onDragStart);
-    window.addEventListener("mousemove", onDrag);
-    window.addEventListener("mouseup", onDragEnd);
+    carousel.addEventListener("pointerdown", onDragStart);
+    window.addEventListener("pointermove", onDrag);
+    window.addEventListener("pointerup", onDragEnd);
+    window.addEventListener("pointercancel", onDragEnd);
     window.addEventListener("resize", updatePerspective);
 
     buildTrack();

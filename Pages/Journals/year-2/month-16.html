@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>7k Month 16</title>
+    <link rel="icon" type="image/png" href="../../../Images/Favicon.png">
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../css/journal.css">
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <!-- Navigation Bar -->
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <a href="../../../index.html">
+                        <div class="homepage-icon"></div>
+                    </a>
+                </li>
+                <li><a href="../../journal.html">Journal</a></li>
+                <li><a href="../../goals.html">Goals</a></li>
+                <li><a href="../../tips.html">Tips</a></li>
+                <li><a href="../../calculation.html">Calculation</a></li>
+            </ul>
+        </nav>
+
+        <!-- Banner Image & Page Title -->
+        <img class="banner" style="object-position: 0 50%;" src="../../../Images/Banners/Ayaka_Banner.jpg">
+        <div class="page-title">Osu!Mania 7k Month 16</div>
+
+        <!-- Back Button -->
+        <a class="back-button" href="index.html">Back⮌</a>
+
+        <!-- The Chart Selection Navigation Bar -->
+        <div class="chart-selector">
+            <button class="chart-type" onclick="switchChart('pp')">Total pp</button>
+            <button class="chart-type" onclick="switchChart('sr')">Star Range(★)</button>
+        </div>
+
+        <!-- Chart Element -->
+        <div class="chart-container">
+            <canvas id="chart"></canvas>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------>
+        <!--   WEEK 67 ENTRIES  -->
+        <!------------------------>
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 67">Week 67</p>
+                <p class="week-subtitle">Trying to do better</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="5815">5,815pp (<span class="gain">+97pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.6" data-upper="5.2">4.6★ ~ 5.2★</span>
+                <span class="week-stat rank">#27,124 (<span class="gain">+#327</span>)</span>
+            </div>
+        </div>
+
+        <!-- 21 September 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">21 September 2026</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+            </div>
+        </div>
+
+        <!-- 22 September 2026 -->
+        <div class="callout decent">
+            <p class="callout-title">22 September 2026</p>
+            <div class="thoughts">
+                <p>Decent Session</p>
+                <p>Played 5★'s and set some scores</p>
+                <p>My accuracy is a little off today.</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">5,744pp (<span class="gain">+26pp</span>)</p>
+                <p class="playtime">30min</p>
+                <p class="rank">#27,384 (<span class="gain">+#67</span>)</p>
+            </div>
+        </div>
+
+        <!-- 23 September 2026 -->
+        <div class="callout good">
+            <p class="callout-title">23 September 2026</p>
+            <div class="thoughts">
+                <p>Good Session</p>
+                <p>My acc is back now</p>
+                <p>Played some 5★'s and patched up past scores</p>
+                <p>I'm doing pretty well today, gotta keep going!</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">5,756pp (<span class="gain">+12pp</span>)</p>
+                <p class="playtime">28min</p>
+                <p class="rank">#27,378 (<span class="gain">+#6</span>)</p>
+            </div>
+        </div>
+
+        <!-- 24 September 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">24 September 2026</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+            </div>
+        </div>
+
+        <!-- 25 September 2026 -->
+        <div class="callout good">
+            <p class="callout-title">25 September 2026</p>
+            <div class="thoughts">
+                <p>Good Session</p>
+                <p>Focused on higher difficulties today</p>
+                <p>I blundered a 300pp play and missed it by a bit (T-T)</p>
+                <p>Overall I did pretty well</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">5,790pp (<span class="gain">+34pp</span>)</p>
+                <p class="playtime">31min</p>
+                <p class="rank">#27,196 (<span class="gain">+#182</span>)</p>
+            </div>
+        </div>
+
+        <!-- 26 September 2026 -->
+        <div class="callout decent">
+            <p class="callout-title">26 September 2026</p>
+            <div class="thoughts">
+                <p>Decent Session</p>
+                <p>Just played some songs and tried to push my limits</p>
+                <p>Tried a 5.5★ song, managed to pass but I struggled and only got a 96.83%</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">5,809pp (<span class="gain">+19pp</span>)</p>
+                <p class="playtime">26min</p>
+                <p class="rank">#27,116 (<span class="gain">+#80</span>)</p>
+            </div>
+        </div>
+
+        <!-- 27 September 2026 -->
+        <div class="callout bad">
+            <p class="callout-title">27 September 2026</p>
+            <div class="thoughts">
+                <p>Bad Session</p>
+                <p>My acc was worse today</p>
+                <p>
+                    My hands also felt really cold for some reason, 
+                    made my stamina worse and affected my speed and finger control.
+                </p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">5,815 (<span class="gain">+6pp</span>)</p>
+                <p class="playtime">22min</p>
+                <p class="rank">#27,124 (<span class="loss">-#8</span>)</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------>
+        <!--   WEEK 68 ENTRIES  -->
+        <!------------------------>
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 68">Week 68</p>
+                <p class="week-subtitle">-</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="5826">5,826pp (<span class="gain">+11pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.6" data-upper="5.2">4.6★ ~ 5.2★</span>
+                <span class="week-stat rank">#27,143 (<span class="loss">-#19</span>)</span>
+            </div>
+        </div>
+
+        <!-- 28 September 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">28 September 2026</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+            </div>
+        </div>
+
+        <!-- 29 September 2026 -->
+        <div class="callout bad">
+            <p class="callout-title">28 September 2026</p>
+            <div class="thoughts">
+                <p>Not very good session</p>
+                <p>Played multiple different songs but hardly improved on any of them</p>
+                <p>Not feeling it today</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">5,826pp (<span class="gain">+11pp</span>)</p>
+                <p class="playtime">24min</p>
+                <p class="rank">#27,118 (<span class="gain">+#6</span>)</p>
+            </div>
+        </div>
+
+        <!-- 30 September 2026 -->
+        <div class="callout terrible">
+            <p class="callout-title">30 September 2026</p>
+            <div class="thoughts">
+                <p>Terrible Session</p>
+                <p>I was doing really badly on 5★</p>
+                <p>I had neither speed nor stamina today</p>
+                <p>A pretty bad day.</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">5,826pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">29min</p>
+                <p class="rank">#27,143 (<span class="loss">-#25</span>)</p>
+            </div>
+        </div>
+
+        <!-- 1 October 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">1 October 2026</p>
+            <div class="thoughts">
+                <p>Rest Day</p>
+            </div>
+        </div>
+
+        <!-- 2 October 2026 -->
+        <div class="callout no-data">
+            <p class="callout-title">2 October 2026</p>
+            <div class="thoughts">
+                <p>No Recording</p>
+            </div>
+        </div>
+
+        <!-- 3 October 2026 -->
+        <div class="callout no-data">
+            <p class="callout-title">3 October 2026</p>
+            <div class="thoughts">
+                <p>No Recording</p>
+            </div>
+        </div>
+
+        <!-- 4 October 2026 -->
+        <div class="callout no-data">
+            <p class="callout-title">4 October 2026</p>
+            <div class="thoughts">
+                <p>No Recording</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------>
+        <!--   WEEK 69 ENTRIES  -->
+        <!------------------------>
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 69">Week 69</p>
+                <p class="week-subtitle">-</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="5826">5,826pp (<span class="gain">+0pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.6" data-upper="5.2">4.6★ ~ 5.2★</span>
+                <span class="week-stat rank">#27,399 (<span class="loss">-#256</span>)</span>
+            </div>
+        </div>
+
+        <!-- 5 October 2026 -->
+        <div class="callout no-data">
+            <p class="callout-title">5 October 2026</p>
+            <div class="thoughts">
+                <p>No Recording</p>
+            </div>
+        </div>
+
+        <!-- 6 October 2026 -->
+        <div class="callout no-data">
+            <p class="callout-title">6 October 2026</p>
+            <div class="thoughts">
+                <p>No Recording</p>
+            </div>
+        </div>
+
+        <!-- 7 October 2026 -->
+        <div class="callout no-data">
+            <p class="callout-title">7 October 2026</p>
+            <div class="thoughts">
+                <p>No Recording</p>
+            </div>
+        </div>
+
+        <!-- 8 October 2026 -->
+        <div class="callout no-data">
+            <p class="callout-title">8 October 2026</p>
+            <div class="thoughts">
+                <p>No Recording</p>
+            </div>
+        </div>
+
+        <!-- 9 October 2026 -->
+        <div class="callout fair">
+            <p class="callout-title">9 October 2026</p>
+            <div class="thoughts">
+                <p>Fair Session</p>
+                <p>Could still play but wasn't doinig exceptionally well</p>
+                <p>Feel a bit less sharp than normal but not much change</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">5,826pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">24min</p>
+                <p class="rank">#27,383 (<span class="loss">-#240</span>)</p>
+            </div>
+        </div>
+
+        <!-- 10 October 2026 -->
+        <div class="callout fair">
+            <p class="callout-title">10 October 2026</p>
+            <div class="thoughts">
+                <p>Fair Session</p>
+                <p>Tried to patch up some songs</p>
+                <p>Attempted to play harder 5★'s, could not play them</p>
+                <p>I should step back in difficulty.</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">5,826pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">25min</p>
+                <p class="rank">#27,399 (<span class="loss">-#16</span>)</p>
+            </div>
+        </div>
+
+        <!-- 11 October 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">11 October 2026</p>
+            <div class="thoughts">
+                <p>Decided to rest instead</p>
+                <p>Didn't feel like playing.</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------>
+        <!--   WEEK 70 ENTRIES  -->
+        <!------------------------>
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 70">Week 70</p>
+                <p class="week-subtitle">-</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="5826">5,826pp (<span class="gain">+0pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.6" data-upper="5.2">4.6★ ~ 5.2★</span>
+                <span class="week-stat rank">#27,679 (<span class="loss">-#280</span>)</span>
+            </div>
+        </div>
+
+        <!-- 12 October 2026 -->
+        <div class="callout no-data">
+            <p class="callout-title">12 October 2026</p>
+            <div class="thoughts">
+                <p>No Recording</p>
+            </div>
+        </div>
+
+        <!-- 13 October 2026 -->
+        <div class="callout no-data">
+            <p class="callout-title">13 October 2026</p>
+            <div class="thoughts">
+                <p>No Recording</p>
+            </div>
+        </div>
+
+        <!-- 14 October 2026 -->
+        <div class="callout no-data">
+            <p class="callout-title">14 October 2026</p>
+            <div class="thoughts">
+                <p>No Recording</p>
+            </div>
+        </div>
+
+        <!-- 15 October 2026 -->
+        <div class="callout no-data">
+            <p class="callout-title">15 October 2026</p>
+            <div class="thoughts">
+                <p>No Recording</p>
+            </div>
+        </div>
+
+        <!-- 16 October 2026 -->
+        <div class="callout rest">
+            <p class="callout-title">16 October 2026</p>
+            <div class="thoughts">
+                <p>Didnt play much 7k</p>
+                <p>Decided to play 6k instead and Taiko</p>
+                <p>Probably going to play 7k less or stop and focus on other gamemodes to rest</p>
+            </div>
+        </div>
+
+        <!-- 17 October 2026 -->
+        <div class="callout no-data">
+            <p class="callout-title">17 October 2026</p>
+            <div class="thoughts">
+                <p>No Recording</p>
+            </div>
+        </div>
+
+        <!-- 18 October 2026 -->
+        <div class="callout no-data">
+            <p class="callout-title">18 October 2026</p>
+            <div class="thoughts">
+                <p>No Recording</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/global.js"></script>
+    <script src="../../../js/chart.min.js"></script>
+    <script src="../../../js/journal.js"></script>
+</body>
+
+</html>

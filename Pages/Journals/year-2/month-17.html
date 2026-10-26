@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>7k Month 17</title>
+    <link rel="icon" type="image/png" href="../../../Images/Favicon.png">
+    <link rel="stylesheet" href="../../../css/global.css">
+    <link rel="stylesheet" href="../../../css/journal.css">
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <!-- Navigation Bar -->
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <a href="../../../index.html">
+                        <div class="homepage-icon"></div>
+                    </a>
+                </li>
+                <li><a href="../../journal.html">Journal</a></li>
+                <li><a href="../../goals.html">Goals</a></li>
+                <li><a href="../../tips.html">Tips</a></li>
+                <li><a href="../../calculation.html">Calculation</a></li>
+            </ul>
+        </nav>
+
+        <!-- Banner Image & Page Title -->
+        <img class="banner" style="object-position: 0 50%;" src="../../../Images/Banners/Furina_Banner.jpg">
+        <div class="page-title">Osu!Mania 7k Month 17</div>
+
+        <!-- Back Button -->
+        <a class="back-button" href="index.html">Back⮌</a>
+
+        <!-- The Chart Selection Navigation Bar -->
+        <div class="chart-selector">
+            <button class="chart-type" onclick="switchChart('pp')">Total pp</button>
+            <button class="chart-type" onclick="switchChart('sr')">Star Range(★)</button>
+        </div>
+
+        <!-- Chart Element -->
+        <div class="chart-container">
+            <canvas id="chart"></canvas>
+        </div>
+
+        <div class="divider"></div>
+
+        <!------------------------>
+        <!--   WEEK 71 ENTRIES  -->
+        <!------------------------>
+        <div class="week-header">
+            <div>
+                <p class="week-title" data-week="Week 71">Week 71</p>
+                <p class="week-subtitle">-</p>
+            </div>
+            <div class="week-stats-box">
+                <span class="week-stat pp" data-pp="5826">5,826pp (<span class="gain">+0pp</span>)</span>
+                <span class="week-stat SR" data-lower="4.6" data-upper="5.2">4.6★ ~ 5.2★</span>
+                <span class="week-stat rank">#27,930 (<span class="loss">-#251</span>)</span>
+            </div>
+        </div>
+
+        <!-- 19 October 2026 -->
+        <div class="callout no-data">
+            <p class="callout-title">19 October 2026</p>
+            <div class="thoughts">
+                <p>No Recording</p>
+            </div>
+        </div>
+
+        <!-- 20 October 2026 -->
+        <div class="callout no-data">
+            <p class="callout-title">20 October 2026</p>
+            <div class="thoughts">
+                <p>No Recording</p>
+            </div>
+        </div>
+
+        <!-- 21 October 2026 -->
+        <div class="callout no-data">
+            <p class="callout-title">21 October 2026</p>
+            <div class="thoughts">
+                <p>No Recording</p>
+            </div>
+        </div>
+
+        <!-- 22 October 2026 -->
+        <div class="callout no-data">
+            <p class="callout-title">22 October 2026</p>
+            <div class="thoughts">
+                <p>No Recording</p>
+            </div>
+        </div>
+
+        <!-- 23 October 2026 -->
+        <div class="callout no-data">
+            <p class="callout-title">23 October 2026</p>
+            <div class="thoughts">
+                <p>No Recording</p>
+            </div>
+        </div>
+
+        <!-- 24 October 2026 -->
+        <div class="callout terrible">
+            <p class="callout-title">24 October 2026</p>
+            <div class="thoughts">
+                <p>Pretty bad session</p>
+                <p>After not playing for some time Ive rusted some bit, 
+                   I've lost that edge though my abilities are relatively the same.
+                </p>
+                <p>My motivation to play has dipped quite some bit</p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">5,826pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">14min</p>
+                <p class="rank">#27,898 (<span class="loss">-#499</span>)</p>
+            </div>
+        </div>
+
+        <!-- 25 October 2026 -->
+        <div class="callout bad">
+            <p class="callout-title">25 October 2026</p>
+            <div class="thoughts">
+                <p>Still a bad session but not as bad as before</p>
+                <p>I'm not playing to standard and it's pretty frustrating</p>
+                <p>
+                    I'll probably take it slow and try to strengthen myself in other aspects 
+                    that can still benefit me indirectly.
+                </p>
+            </div>
+
+            <div class="session-stats">
+                <p class="total-pp">5,826pp (<span class="gain">+0pp</span>)</p>
+                <p class="playtime">20min</p>
+                <p class="rank">#27,930 (<span class="loss">-#32</span>)</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+    </div>
+
+    <script src="../../../js/global.js"></script>
+    <script src="../../../js/chart.min.js"></script>
+    <script src="../../../js/journal.js"></script>
+</body>
+
+</html>

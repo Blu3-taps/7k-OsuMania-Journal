@@ -413,6 +413,11 @@
     --callout-icon: url("../svgs/heart-pulse_icon.svg");
 }
 
+.no-data { 
+    background: rgb(82, 82, 82);
+    --callout-icon: url("../svgs/no-data_icon.svg");
+}
+
 .song-title-wrapper { /* Wrapper to align all elements around the song title */
     display: flex;
     align-items: center;

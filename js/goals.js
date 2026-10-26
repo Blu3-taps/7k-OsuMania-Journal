@@ -207,7 +207,7 @@ const achievementData = { // Data of Achievements
             achievements: [
                 { goal: "5,250pp", achieved: true, date: "18th July 2026" },
                 { goal: "5,500pp", achieved: true, date: "31st July 2026" },
-                { goal: "5,750pp", achieved: false, date: "" },
+                { goal: "5,750pp", achieved: true, date: "23rd September 2026" },
                 { goal: "6,000pp", achieved: false, date: "" }
             ]
         },
